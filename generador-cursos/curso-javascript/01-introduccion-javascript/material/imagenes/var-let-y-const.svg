@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 500" width="960" height="500" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+<title id="t">var, let y const</title>
+<desc id="d">Comparación de var, let y const. var se reasigna, se puede redeclarar, tiene alcance de función y se puede usar antes de declararla con valor undefined. let se reasigna, no se redeclara, tiene alcance de bloque y usarla antes da error. const no se reasigna, no se redeclara, tiene alcance de bloque, exige un valor inicial y es la opción por defecto.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#64748b"/></marker></defs>
+<rect x="1" y="1" width="958" height="498" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="480" y="34" text-anchor="middle" font-size="18" font-weight="700" fill="#1f2937">Tres formas de declarar una variable</text>
+<rect x="300" y="56" width="190" height="50" rx="12" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+<text x="395.0" y="76.25" text-anchor="middle" font-size="15" font-weight="700" fill="#1f2937">var</text>
+<text x="395.0" y="96.25" text-anchor="middle" font-size="15" font-weight="400" fill="#1f2937">la clásica (ES5)</text>
+<rect x="500" y="56" width="190" height="50" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="595.0" y="76.25" text-anchor="middle" font-size="15" font-weight="700" fill="#1f2937">let</text>
+<text x="595.0" y="96.25" text-anchor="middle" font-size="15" font-weight="400" fill="#1f2937">cambia (ES2015)</text>
+<rect x="700" y="56" width="190" height="50" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<text x="795.0" y="76.25" text-anchor="middle" font-size="15" font-weight="700" fill="#1f2937">const</text>
+<text x="795.0" y="96.25" text-anchor="middle" font-size="15" font-weight="400" fill="#1f2937">no cambia (ES2015)</text>
+<text x="30" y="146" text-anchor="start" font-size="14" font-weight="700" fill="#1f2937">Se reasigna</text>
+<rect x="300" y="118" width="190" height="36" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+<text x="395" y="142" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">✔</text>
+<rect x="500" y="118" width="190" height="36" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+<text x="595" y="142" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">✔</text>
+<rect x="700" y="118" width="190" height="36" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+<text x="795" y="142" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">✘</text>
+<text x="30" y="190" text-anchor="start" font-size="14" font-weight="700" fill="#1f2937">Se redeclara</text>
+<rect x="300" y="162" width="190" height="36" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+<text x="395" y="186" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">✔</text>
+<rect x="500" y="162" width="190" height="36" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+<text x="595" y="186" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">✘ error</text>
+<rect x="700" y="162" width="190" height="36" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+<text x="795" y="186" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">✘ error</text>
+<text x="30" y="234" text-anchor="start" font-size="14" font-weight="700" fill="#1f2937">Alcance</text>
+<rect x="300" y="206" width="190" height="36" rx="6" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="395" y="230" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">función</text>
+<rect x="500" y="206" width="190" height="36" rx="6" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="595" y="230" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">bloque { }</text>
+<rect x="700" y="206" width="190" height="36" rx="6" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="795" y="230" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">bloque { }</text>
+<text x="30" y="278" text-anchor="start" font-size="14" font-weight="700" fill="#1f2937">Usada antes de declarar</text>
+<rect x="300" y="250" width="190" height="36" rx="6" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="395" y="274" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">undefined</text>
+<rect x="500" y="250" width="190" height="36" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+<text x="595" y="274" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">error</text>
+<rect x="700" y="250" width="190" height="36" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+<text x="795" y="274" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">error</text>
+<text x="30" y="322" text-anchor="start" font-size="14" font-weight="700" fill="#1f2937">Exige valor inicial</text>
+<rect x="300" y="294" width="190" height="36" rx="6" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="395" y="318" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">no</text>
+<rect x="500" y="294" width="190" height="36" rx="6" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="595" y="318" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">no</text>
+<rect x="700" y="294" width="190" height="36" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+<text x="795" y="318" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">sí</text>
+<rect x="30" y="350" width="900" height="130" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="50" y="376" text-anchor="start" font-size="14" font-weight="700" fill="#1f2937">El alcance: hasta dónde «se ve» la variable</text>
+<text x="50" y="404" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14" font-weight="400" fill="#1f2937" xml:space="preserve">{</text>
+<text x="70" y="428" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14" font-weight="400" fill="#1f2937" xml:space="preserve">var  a = 1;   let  b = 2;</text>
+<text x="50" y="452" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14" font-weight="400" fill="#1f2937" xml:space="preserve">}</text>
+<text x="380" y="404" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="13" font-weight="400" fill="#16a34a" xml:space="preserve">a  →  1          (var no respeta los bloques)</text>
+<text x="380" y="432" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="13" font-weight="400" fill="#dc2626" xml:space="preserve">b  →  ReferenceError: b is not defined</text>
+<text x="610" y="462" text-anchor="middle" font-size="12.5" font-weight="700" fill="#64748b">Regla práctica: const por defecto; let si cambia; var, evitarla.</text>
+</svg>

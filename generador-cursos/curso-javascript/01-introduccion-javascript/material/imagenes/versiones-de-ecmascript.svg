@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 470" width="960" height="470" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+<title id="t">Las versiones de ECMAScript</title>
+<desc id="d">Línea de tiempo de ECMAScript. ES5, en diciembre de 2009. Desde ES2015, en junio de 2015, hay una edición por año, cada junio. ES2015 aportó let, const y las plantillas de texto. ES2016 aportó el operador de potencia. ES2020 aportó el operador ?? y BigInt. ES2021 aportó los operadores lógicos de asignación.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#64748b"/></marker></defs>
+<rect x="1" y="1" width="958" height="468" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="480" y="34" text-anchor="middle" font-size="18" font-weight="700" fill="#1f2937">ECMAScript: una edición por año desde 2015</text>
+<rect x="466.0" y="212" width="438.0" height="62" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="695.0" y="204" text-anchor="middle" font-size="13" font-weight="700" fill="#16a34a">una edición cada junio</text>
+<line x1="70" y1="240" x2="890" y2="240" stroke="#1f2937" stroke-width="3"/>
+<line x1="70.0" y1="232" x2="70.0" y2="248" stroke="#1f2937" stroke-width="2"/>
+<text x="70.0" y="266" text-anchor="middle" font-size="12" font-weight="400" fill="#64748b">2009</text>
+<line x1="138.33333333333331" y1="232" x2="138.33333333333331" y2="248" stroke="#1f2937" stroke-width="2"/>
+<text x="138.33333333333331" y="266" text-anchor="middle" font-size="12" font-weight="400" fill="#64748b">2010</text>
+<line x1="206.66666666666666" y1="232" x2="206.66666666666666" y2="248" stroke="#1f2937" stroke-width="2"/>
+<text x="206.66666666666666" y="266" text-anchor="middle" font-size="12" font-weight="400" fill="#64748b">2011</text>
+<line x1="275.0" y1="232" x2="275.0" y2="248" stroke="#1f2937" stroke-width="2"/>
+<text x="275.0" y="266" text-anchor="middle" font-size="12" font-weight="400" fill="#64748b">2012</text>
+<line x1="343.3333333333333" y1="232" x2="343.3333333333333" y2="248" stroke="#1f2937" stroke-width="2"/>
+<text x="343.3333333333333" y="266" text-anchor="middle" font-size="12" font-weight="400" fill="#64748b">2013</text>
+<line x1="411.6666666666667" y1="232" x2="411.6666666666667" y2="248" stroke="#1f2937" stroke-width="2"/>
+<text x="411.6666666666667" y="266" text-anchor="middle" font-size="12" font-weight="400" fill="#64748b">2014</text>
+<line x1="480.0" y1="232" x2="480.0" y2="248" stroke="#1f2937" stroke-width="2"/>
+<text x="480.0" y="266" text-anchor="middle" font-size="12" font-weight="400" fill="#64748b">2015</text>
+<line x1="548.3333333333334" y1="232" x2="548.3333333333334" y2="248" stroke="#1f2937" stroke-width="2"/>
+<text x="548.3333333333334" y="266" text-anchor="middle" font-size="12" font-weight="400" fill="#64748b">2016</text>
+<line x1="616.6666666666666" y1="232" x2="616.6666666666666" y2="248" stroke="#1f2937" stroke-width="2"/>
+<text x="616.6666666666666" y="266" text-anchor="middle" font-size="12" font-weight="400" fill="#64748b">2017</text>
+<line x1="685.0" y1="232" x2="685.0" y2="248" stroke="#1f2937" stroke-width="2"/>
+<text x="685.0" y="266" text-anchor="middle" font-size="12" font-weight="400" fill="#64748b">2018</text>
+<line x1="753.3333333333334" y1="232" x2="753.3333333333334" y2="248" stroke="#1f2937" stroke-width="2"/>
+<text x="753.3333333333334" y="266" text-anchor="middle" font-size="12" font-weight="400" fill="#64748b">2019</text>
+<line x1="821.6666666666666" y1="232" x2="821.6666666666666" y2="248" stroke="#1f2937" stroke-width="2"/>
+<text x="821.6666666666666" y="266" text-anchor="middle" font-size="12" font-weight="400" fill="#64748b">2020</text>
+<line x1="890.0" y1="232" x2="890.0" y2="248" stroke="#1f2937" stroke-width="2"/>
+<text x="890.0" y="266" text-anchor="middle" font-size="12" font-weight="400" fill="#64748b">2021</text>
+<line x1="70.0" y1="130" x2="70.0" y2="232" stroke="#94a3b8" stroke-width="2"/>
+<rect x="20" y="72" width="140" height="58" rx="8" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2"/>
+<text x="90.0" y="87.875" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1f2937">ES5</text>
+<text x="90.0" y="105.375" text-anchor="middle" font-size="12.5" font-weight="400" fill="#1f2937">dic. 2009</text>
+<text x="90.0" y="122.875" text-anchor="middle" font-size="12.5" font-weight="400" fill="#1f2937">base del lenguaje</text>
+<line x1="480.0" y1="274" x2="480.0" y2="300" stroke="#2563eb" stroke-width="2"/>
+<rect x="410.0" y="300" width="140" height="76" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="480.0" y="316.125" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1f2937">ES2015</text>
+<text x="480.0" y="333.625" text-anchor="middle" font-size="12.5" font-weight="400" fill="#1f2937">jun. 2015</text>
+<text x="480.0" y="351.125" text-anchor="middle" font-size="12.5" font-weight="400" fill="#1f2937">let y const</text>
+<text x="480.0" y="368.625" text-anchor="middle" font-size="12.5" font-weight="400" fill="#1f2937">plantillas de texto</text>
+<line x1="548.3333333333334" y1="130" x2="548.3333333333334" y2="232" stroke="#7c3aed" stroke-width="2"/>
+<rect x="478.33333333333337" y="72" width="140" height="58" rx="8" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+<text x="548.3333333333334" y="87.875" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1f2937">ES2016</text>
+<text x="548.3333333333334" y="105.375" text-anchor="middle" font-size="12.5" font-weight="400" fill="#1f2937">jun. 2016</text>
+<text x="548.3333333333334" y="122.875" text-anchor="middle" font-size="12.5" font-weight="400" fill="#1f2937">operador **</text>
+<line x1="821.6666666666666" y1="274" x2="821.6666666666666" y2="300" stroke="#d97706" stroke-width="2"/>
+<rect x="751.6666666666666" y="300" width="140" height="76" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+<text x="821.6666666666666" y="316.125" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1f2937">ES2020</text>
+<text x="821.6666666666666" y="333.625" text-anchor="middle" font-size="12.5" font-weight="400" fill="#1f2937">jun. 2020</text>
+<text x="821.6666666666666" y="351.125" text-anchor="middle" font-size="12.5" font-weight="400" fill="#1f2937">operador ??</text>
+<text x="821.6666666666666" y="368.625" text-anchor="middle" font-size="12.5" font-weight="400" fill="#1f2937">BigInt (10n)</text>
+<line x1="890.0" y1="130" x2="890.0" y2="232" stroke="#dc2626" stroke-width="2"/>
+<rect x="800" y="72" width="140" height="58" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+<text x="870.0" y="87.875" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1f2937">ES2021</text>
+<text x="870.0" y="105.375" text-anchor="middle" font-size="12.5" font-weight="400" fill="#1f2937">jun. 2021</text>
+<text x="870.0" y="122.875" text-anchor="middle" font-size="12.5" font-weight="400" fill="#1f2937">&amp;&amp;=   ||=   ??=</text>
+<text x="480" y="440" text-anchor="middle" font-size="13" font-weight="400" fill="#64748b">Cada edición suma características nuevas sin quitar las anteriores: el código viejo sigue funcionando.</text>
+</svg>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Práctica 3: var, let y const | Café Aroma</title>
+  </head>
+  <body>
+    <h1 id="titulo">Café Aroma</h1>
+    <p>Abrí la consola (F12) y seguí las instrucciones del ejercicio.</p>
+
+    <!-- errores-a-proposito: cuatro scripts independientes, cada uno con un error que tenés que corregir -->
+    <script>
+      // Script 1: el IVA cambia a 0.19
+      const iva = 0.21;
+      iva = 0.19;
+      console.log('IVA:', iva);
+    </script>
+
+    <script>
+      // Script 2: la cantidad pasa de 2 a 3
+      let cantidad = 2;
+      let cantidad = 3;
+      console.log('Cantidad:', cantidad);
+    </script>
+
+    <script>
+      // Script 3: mostrar el total
+      console.log('Total:', total);
+      let total = 10;
+    </script>
+
+    <script>
+      // Script 4: mostrar la etiqueta fuera del bloque
+      {
+        let etiqueta = 'Café';
+      }
+      console.log('Etiqueta:', etiqueta);
+    </script>
+  </body>
+</html>

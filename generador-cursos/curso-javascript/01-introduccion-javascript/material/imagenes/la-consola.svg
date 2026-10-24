@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" width="960" height="480" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+<title id="t">La consola del navegador</title>
+<desc id="d">Una ventana de navegador con el panel de la consola abierto. Se escribe 2 más 3 y la consola devuelve 5. Con console.log se imprime Hola, Aroma y la consola devuelve undefined. Al escribir un nombre que no existe aparece un error en rojo: Uncaught ReferenceError: precioCafe is not defined.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#64748b"/></marker></defs>
+<rect x="1" y="1" width="958" height="478" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="480" y="34" text-anchor="middle" font-size="18" font-weight="700" fill="#1f2937">La consola: escribís, pulsás Enter y ves el resultado</text>
+<rect x="40" y="60" width="880" height="400" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+<rect x="40" y="60" width="880" height="40" rx="10" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="2"/>
+<circle cx="66" cy="80" r="7" fill="#f87171"/>
+<circle cx="90" cy="80" r="7" fill="#fbbf24"/>
+<circle cx="114" cy="80" r="7" fill="#4ade80"/>
+<text x="480" y="86" text-anchor="middle" font-size="13" font-weight="400" fill="#64748b">Café Aroma — mi página</text>
+<rect x="60" y="112" width="840" height="90" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+<text x="80" y="140" text-anchor="start" font-size="22" font-weight="700" fill="#92400e">Café Aroma</text>
+<text x="80" y="170" text-anchor="start" font-size="15" font-weight="400" fill="#1f2937">Total de tu pedido: 13.5</text>
+<rect x="60" y="214" width="840" height="232" rx="8" fill="#0f172a" stroke="#1e293b" stroke-width="2"/>
+<text x="80" y="238" text-anchor="start" font-size="12" font-weight="400" fill="#94a3b8">Elementos     Consola     Red</text>
+<line x1="150" y1="244" x2="224" y2="244" stroke="#38bdf8" stroke-width="2"/>
+<text x="80" y="276" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14" font-weight="400" fill="#e2e8f0" xml:space="preserve">&gt; 2 + 3</text>
+<text x="80" y="300" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14" font-weight="400" fill="#86efac" xml:space="preserve">&lt; 5</text>
+<text x="80" y="324" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14" font-weight="400" fill="#e2e8f0" xml:space="preserve">&gt; console.log('Hola, Aroma')</text>
+<text x="80" y="348" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14" font-weight="400" fill="#e2e8f0" xml:space="preserve">Hola, Aroma</text>
+<text x="80" y="372" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14" font-weight="400" fill="#94a3b8" xml:space="preserve">&lt; undefined</text>
+<text x="80" y="396" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14" font-weight="400" fill="#e2e8f0" xml:space="preserve">&gt; precioCafe</text>
+<text x="80" y="420" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14" font-weight="400" fill="#fca5a5" xml:space="preserve">Uncaught ReferenceError: precioCafe is not defined</text>
+<text x="880" y="276" text-anchor="end" font-size="12" font-weight="400" fill="#fbbf24">lo que escribís</text>
+<text x="880" y="300" text-anchor="end" font-size="12" font-weight="400" fill="#fbbf24">el resultado</text>
+<text x="880" y="348" text-anchor="end" font-size="12" font-weight="400" fill="#fbbf24">lo que imprime console.log</text>
+<text x="880" y="372" text-anchor="end" font-size="12" font-weight="400" fill="#fbbf24">console.log no devuelve nada</text>
+<text x="880" y="420" text-anchor="end" font-size="12" font-weight="400" fill="#fbbf24">un error (en rojo)</text>
+</svg>

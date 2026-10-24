@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 470" width="960" height="470" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+<title id="t">Los tipos de datos</title>
+<desc id="d">Los valores de JavaScript se dividen en siete tipos primitivos y los objetos. Los primitivos son number, string, boolean, undefined, null, bigint y symbol. Con typeof se obtiene el nombre del tipo; typeof null da object por un resto histórico.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#64748b"/></marker></defs>
+<rect x="1" y="1" width="958" height="468" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="480" y="34" text-anchor="middle" font-size="18" font-weight="700" fill="#1f2937">Siete tipos primitivos y los objetos</text>
+<rect x="380" y="56" width="200" height="40" rx="12" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2"/>
+<text x="480.0" y="81.25" text-anchor="middle" font-size="15" font-weight="700" fill="#1f2937">Valores</text>
+<line x1="480" y1="96" x2="480" y2="120" stroke="#cbd5e1" stroke-width="2"/>
+<line x1="240" y1="120" x2="740" y2="120" stroke="#cbd5e1" stroke-width="2"/>
+<line x1="240" y1="120" x2="240" y2="140" stroke="#cbd5e1" stroke-width="2"/>
+<line x1="740" y1="120" x2="740" y2="140" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="60" y="140" width="360" height="40" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="240.0" y="164.9" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2937">Primitivos (7)</text>
+<rect x="570" y="140" width="340" height="40" rx="12" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+<text x="740.0" y="164.9" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2937">Objetos</text>
+<rect x="60" y="196" width="360" height="30" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+<text x="74" y="216" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" font-weight="700" fill="#1f2937" xml:space="preserve">typeof → number</text>
+<text x="214" y="216" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" font-weight="400" fill="#1f2937" xml:space="preserve">42 · 3.14 · NaN</text>
+<text x="410" y="216" text-anchor="end" font-size="11" font-weight="400" fill="#64748b">número</text>
+<rect x="60" y="232" width="360" height="30" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+<text x="74" y="252" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" font-weight="700" fill="#1f2937" xml:space="preserve">typeof → string</text>
+<text x="214" y="252" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" font-weight="400" fill="#1f2937" xml:space="preserve">'Aroma'</text>
+<text x="410" y="252" text-anchor="end" font-size="11" font-weight="400" fill="#64748b">texto</text>
+<rect x="60" y="268" width="360" height="30" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+<text x="74" y="288" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" font-weight="700" fill="#1f2937" xml:space="preserve">typeof → boolean</text>
+<text x="214" y="288" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" font-weight="400" fill="#1f2937" xml:space="preserve">true · false</text>
+<text x="410" y="288" text-anchor="end" font-size="11" font-weight="400" fill="#64748b">verdadero o falso</text>
+<rect x="60" y="304" width="360" height="30" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+<text x="74" y="324" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" font-weight="700" fill="#1f2937" xml:space="preserve">typeof → undefined</text>
+<text x="214" y="324" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" font-weight="400" fill="#1f2937" xml:space="preserve">undefined</text>
+<text x="410" y="324" text-anchor="end" font-size="11" font-weight="400" fill="#64748b">sin valor asignado</text>
+<rect x="60" y="340" width="360" height="30" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+<text x="74" y="360" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" font-weight="700" fill="#1f2937" xml:space="preserve">typeof → null</text>
+<text x="214" y="360" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" font-weight="400" fill="#1f2937" xml:space="preserve">null</text>
+<text x="410" y="360" text-anchor="end" font-size="11" font-weight="400" fill="#64748b">ausencia de valor</text>
+<rect x="60" y="376" width="360" height="30" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+<text x="74" y="396" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" font-weight="700" fill="#1f2937" xml:space="preserve">typeof → bigint</text>
+<text x="214" y="396" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" font-weight="400" fill="#1f2937" xml:space="preserve">10n</text>
+<text x="410" y="396" text-anchor="end" font-size="11" font-weight="400" fill="#64748b">entero muy grande</text>
+<rect x="60" y="412" width="360" height="30" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+<text x="74" y="432" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" font-weight="700" fill="#1f2937" xml:space="preserve">typeof → symbol</text>
+<text x="214" y="432" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" font-weight="400" fill="#1f2937" xml:space="preserve">Symbol('id')</text>
+<text x="410" y="432" text-anchor="end" font-size="11" font-weight="400" fill="#64748b">identificador único</text>
+<rect x="570" y="196" width="340" height="30" rx="6" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+<text x="584" y="216" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" font-weight="400" fill="#1f2937" xml:space="preserve">{ nombre: 'Aroma' }</text>
+<text x="900" y="216" text-anchor="end" font-size="11" font-weight="400" fill="#64748b">un objeto</text>
+<rect x="570" y="232" width="340" height="30" rx="6" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+<text x="584" y="252" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" font-weight="400" fill="#1f2937" xml:space="preserve">[ 1, 2, 3 ]</text>
+<text x="900" y="252" text-anchor="end" font-size="11" font-weight="400" fill="#64748b">un arreglo</text>
+<rect x="570" y="268" width="340" height="30" rx="6" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+<text x="584" y="288" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" font-weight="400" fill="#1f2937" xml:space="preserve">function</text>
+<text x="900" y="288" text-anchor="end" font-size="11" font-weight="400" fill="#64748b">una función</text>
+<text x="740" y="330" text-anchor="middle" font-size="12" font-weight="400" fill="#64748b">se estudian en otros módulos</text>
+<rect x="570" y="360" width="340" height="70" rx="8" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+<text x="740" y="384" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2937">⚠️ typeof null es  'object'</text>
+<text x="740" y="408" text-anchor="middle" font-size="12" font-weight="400" fill="#64748b">un resto histórico del lenguaje, no un error tuyo</text>
+</svg>

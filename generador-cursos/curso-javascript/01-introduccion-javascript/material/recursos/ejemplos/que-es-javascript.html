@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Café Aroma | HTML, CSS y JavaScript</title>
+    <style>
+      /* CSS: el aspecto */
+      h1 {
+        color: #92400e;
+      }
+
+      #total {
+        font-weight: bold;
+        color: #166534;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HTML: el contenido -->
+    <h1>Café Aroma</h1>
+    <p>Total de tu pedido: <span id="total">?</span></p>
+
+    <script>
+      // JavaScript: el comportamiento (acá, un cálculo)
+      const precio = 4.5;
+      const cantidad = 3;
+      const total = precio * cantidad;
+
+      // Una vista previa: JavaScript también puede cambiar la página
+      document.getElementById('total').textContent = total;
+
+      console.log('Total calculado:', total);
+      console.log('La página ahora dice:', document.getElementById('total').textContent);
+    </script>
+  </body>
+</html>

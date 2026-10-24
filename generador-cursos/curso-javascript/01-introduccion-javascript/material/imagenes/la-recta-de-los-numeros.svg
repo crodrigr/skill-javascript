@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 470" width="960" height="470" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+<title id="t">La recta de los números</title>
+<desc id="d">Una recta numérica de menos infinito a más infinito. En el centro está el cero. A los lados, en menos y más 9007199254740991, están los límites de los enteros seguros. Más allá de esos límites los enteros pierden precisión. En los extremos están Infinity y menos Infinity. NaN no está en la recta: es el resultado de una operación sin resultado válido.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#64748b"/></marker></defs>
+<rect x="1" y="1" width="958" height="468" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="480" y="34" text-anchor="middle" font-size="18" font-weight="700" fill="#1f2937">Los números de JavaScript</text>
+<line x1="70" y1="180" x2="890" y2="180" stroke="#1f2937" stroke-width="3"/>
+<path d="M884 180 L900 180" fill="none" stroke="#1f2937" stroke-width="3" marker-end="url(#ah)"/>
+<path d="M76 180 L60 180" fill="none" stroke="#1f2937" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="230" y="150" width="500" height="60" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="480" y="144" text-anchor="middle" font-size="13" font-weight="700" fill="#16a34a">enteros seguros: se guardan con exactitud</text>
+<line x1="70" y1="170" x2="70" y2="190" stroke="#1f2937" stroke-width="2.5"/>
+<text x="70" y="234" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1f2937">-Infinity</text>
+<text x="70" y="254" text-anchor="middle" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="10.5" font-weight="400" fill="#64748b" xml:space="preserve">-1 / 0</text>
+<line x1="230" y1="170" x2="230" y2="190" stroke="#1f2937" stroke-width="2.5"/>
+<text x="230" y="234" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1f2937">-9007199254740991</text>
+<text x="230" y="254" text-anchor="middle" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="10.5" font-weight="400" fill="#64748b" xml:space="preserve">-MAX_SAFE_INTEGER</text>
+<line x1="480" y1="170" x2="480" y2="190" stroke="#1f2937" stroke-width="2.5"/>
+<text x="480" y="234" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1f2937">0</text>
+<line x1="730" y1="170" x2="730" y2="190" stroke="#1f2937" stroke-width="2.5"/>
+<text x="730" y="234" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1f2937">9007199254740991</text>
+<text x="730" y="254" text-anchor="middle" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="10.5" font-weight="400" fill="#64748b" xml:space="preserve">MAX_SAFE_INTEGER</text>
+<line x1="890" y1="170" x2="890" y2="190" stroke="#1f2937" stroke-width="2.5"/>
+<text x="890" y="234" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1f2937">Infinity</text>
+<text x="890" y="254" text-anchor="middle" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="10.5" font-weight="400" fill="#64748b" xml:space="preserve">1 / 0</text>
+<text x="150" y="130" text-anchor="middle" font-size="11.5" font-weight="400" fill="#dc2626">fuera de rango:</text>
+<text x="150" y="146" text-anchor="middle" font-size="11.5" font-weight="400" fill="#dc2626">se pierde precisión</text>
+<text x="810" y="130" text-anchor="middle" font-size="11.5" font-weight="400" fill="#dc2626">fuera de rango:</text>
+<text x="810" y="146" text-anchor="middle" font-size="11.5" font-weight="400" fill="#dc2626">se pierde precisión</text>
+<rect x="330" y="290" width="300" height="90" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+<text x="480" y="322" text-anchor="middle" font-size="26" font-weight="700" fill="#1f2937">NaN</text>
+<text x="480" y="346" text-anchor="middle" font-size="13" font-weight="400" fill="#1f2937">no está en la recta</text>
+<text x="480" y="366" text-anchor="middle" font-size="12.5" font-weight="700" fill="#dc2626">NaN === NaN  →  false</text>
+<text x="40" y="330" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12.5" font-weight="400" fill="#1f2937" xml:space="preserve">0 / 0  →  NaN</text>
+<text x="690" y="330" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12.5" font-weight="400" fill="#1f2937" xml:space="preserve">Number('abc')  →  NaN</text>
+<text x="480" y="420" text-anchor="middle" font-size="13.5" font-weight="700" fill="#64748b">Dividir entre cero no es un error: da infinito. Una operación sin sentido da NaN.</text>
+<text x="480" y="444" text-anchor="middle" font-size="12.5" font-weight="400" fill="#64748b">0.1 + 0.2  →  0.30000000000000004  (los decimales son aproximados)</text>
+</svg>

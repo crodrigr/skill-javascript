@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript en línea | Café Aroma</title>
+    <script>
+      console.log('1. Script en el head');
+      console.log('   ¿Existe el título todavía?', document.getElementById('titulo'));
+    </script>
+  </head>
+  <body>
+    <h1 id="titulo">Café Aroma</h1>
+
+    <script>
+      console.log('2. Script al final del body');
+      console.log('   El título dice:', document.getElementById('titulo').textContent);
+      console.log(totalPedido);
+      console.log('3. Esta línea ya no se ejecuta');
+    </script>
+  </body>
+</html>
