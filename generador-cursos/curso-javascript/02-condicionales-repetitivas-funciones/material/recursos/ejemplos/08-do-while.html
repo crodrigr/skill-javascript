@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 08 — El bucle do...while | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 08 — El bucle do...while</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      let intento = 0;
+      do {
+        intento++;
+        console.log('Intento', intento);
+      } while (intento < 3);
+
+      let stock = 0;
+      do {
+        console.log('Se muestra una vez, aunque el stock sea', stock);
+      } while (stock > 0);
+
+      let reposicion = 0;
+      while (reposicion > 0) {
+        console.log('Con while, esto no se muestra');
+      }
+      console.log('Fin');
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 17 — Elevación (hoisting) de funciones | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 17 — Elevación (hoisting) de funciones</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+    <!-- errores-a-proposito: esta página falla a propósito; mirá el error en la consola (F12) -->
+
+    <script>
+      console.log(despedir('Lucía'));
+
+      const despedir = function (nombre) {
+        return 'Chau, ' + nombre;
+      };
+    </script>
+
+    <script>
+      console.log(typeof avisar);
+      avisar('Lucía');
+
+      var avisar = function (nombre) {
+        return 'Aviso para ' + nombre;
+      };
+    </script>
+  </body>
+</html>

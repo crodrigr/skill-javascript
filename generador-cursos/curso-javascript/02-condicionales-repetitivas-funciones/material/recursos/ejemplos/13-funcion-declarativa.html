@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 13 — Funciones declarativas | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 13 — Funciones declarativas</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      function calcularTotal(precio, cantidad) {
+        return precio * cantidad;
+      }
+
+      console.log(calcularTotal(4.5, 3));
+      console.log(calcularTotal(3.2, 2));
+
+      const totalCafe = calcularTotal(4.5, 4);
+      console.log('Total del café:', totalCafe);
+
+      function saludar(nombre) {
+        return 'Hola, ' + nombre;
+      }
+      console.log(saludar('Lucía'));
+
+      function aplicaEnvioGratis(total) {
+        if (total >= 20) {
+          return true;
+        }
+        return false;
+      }
+      console.log(aplicaEnvioGratis(13.5), aplicaEnvioGratis(22.5));
+    </script>
+  </body>
+</html>

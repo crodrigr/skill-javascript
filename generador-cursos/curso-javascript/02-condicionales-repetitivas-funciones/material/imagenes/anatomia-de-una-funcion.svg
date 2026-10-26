@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 500" width="960" height="500" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+<title id="t">Anatomía de una función</title>
+<desc id="d">Una función calcularTotal con los parámetros precio y cantidad y un cuerpo que devuelve precio por cantidad. Se la llama con los argumentos 4.5 y 3; cada argumento se asigna al parámetro de su posición y la función devuelve 13.5, que se guarda en una constante.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#64748b"/></marker></defs>
+<rect x="1" y="1" width="958" height="498" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="480" y="34" text-anchor="middle" font-size="18" font-weight="700" fill="#1f2937">Una función: nombre, parámetros, cuerpo y return</text>
+<rect x="60" y="60" width="500" height="150" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+<text x="80" y="92" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="15" font-weight="700" fill="#1f2937" xml:space="preserve">function calcularTotal(precio, cantidad) {</text>
+<text x="80" y="126" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="15" font-weight="400" fill="#1f2937" xml:space="preserve">  const subtotal = precio * cantidad;</text>
+<text x="80" y="156" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="15" font-weight="700" fill="#dc2626" xml:space="preserve">  return subtotal;</text>
+<text x="80" y="190" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="15" font-weight="700" fill="#1f2937" xml:space="preserve">}</text>
+<rect x="600" y="60" width="150" height="34" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="675.0" y="81.55" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">nombre</text>
+<path d="M600 78 L468 90" fill="none" stroke="#2563eb" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="600" y="106" width="150" height="34" rx="12" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+<text x="675.0" y="127.55" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">parámetros</text>
+<path d="M600 123 L540 100" fill="none" stroke="#d97706" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="600" y="152" width="150" height="34" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<text x="675.0" y="173.55" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">cuerpo</text>
+<path d="M600 169 L470 135" fill="none" stroke="#16a34a" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="600" y="198" width="150" height="34" rx="12" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+<text x="675.0" y="219.55" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">return</text>
+<path d="M600 215 L262 165" fill="none" stroke="#dc2626" stroke-width="2" marker-end="url(#ah)"/>
+<text x="80" y="270" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="17" font-weight="700" fill="#1f2937" xml:space="preserve">const total = calcularTotal(4.5, 3);</text>
+<rect x="60" y="240" width="500" height="56" rx="8" fill="none" stroke="#2563eb" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="580" y="262" text-anchor="start" font-size="13" font-weight="700" fill="#2563eb">llamada</text>
+<rect x="110" y="340" width="150" height="50" rx="12" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+<text x="185.0" y="360.55" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">precio</text>
+<text x="185.0" y="378.55" text-anchor="middle" font-size="13" font-weight="400" fill="#1f2937">recibe 4.5</text>
+<rect x="300" y="340" width="150" height="50" rx="12" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+<text x="375.0" y="360.55" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">cantidad</text>
+<text x="375.0" y="378.55" text-anchor="middle" font-size="13" font-weight="400" fill="#1f2937">recibe 3</text>
+<path d="M168 296 L168 336" fill="none" stroke="#d97706" stroke-width="2" marker-end="url(#ah)"/>
+<path d="M360 296 L360 336" fill="none" stroke="#d97706" stroke-width="2" marker-end="url(#ah)"/>
+<text x="168" y="322" text-anchor="middle" font-size="11.5" font-weight="400" fill="#64748b">argumento 1</text>
+<text x="360" y="322" text-anchor="middle" font-size="11.5" font-weight="400" fill="#64748b">argumento 2</text>
+<path d="M450 365 L560 365" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="570" y="340" width="200" height="50" rx="12" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+<text x="670.0" y="360.55" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">precio * cantidad</text>
+<text x="670.0" y="378.55" text-anchor="middle" font-size="13" font-weight="400" fill="#1f2937">return 13.5</text>
+<path d="M670 390 L670 424 L560 424" fill="none" stroke="#dc2626" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="330" y="408" width="230" height="34" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<text x="445.0" y="429.9" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2937">total vale 13.5</text>
+<rect x="60" y="454" width="840" height="34" rx="8" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+<text x="480" y="476" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">Declarar no ejecuta nada: la función trabaja cuando se la llama.</text>
+</svg>

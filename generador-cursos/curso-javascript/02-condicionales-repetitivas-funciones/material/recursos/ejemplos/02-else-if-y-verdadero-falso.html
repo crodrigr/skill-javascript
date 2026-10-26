@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 02 — else if y valores verdaderos y falsos | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 02 — else if y valores verdaderos y falsos</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      const total = 35;
+      let porcentaje;
+
+      if (total >= 50) {
+        porcentaje = 10;
+      } else if (total >= 20) {
+        porcentaje = 5;
+      } else {
+        porcentaje = 0;
+      }
+
+      console.log('Total:', total, '→ descuento del', porcentaje + '%');
+
+      // ¿Qué valores cuentan como verdaderos o falsos?
+      console.log(Boolean(0), Boolean(''), Boolean(NaN), Boolean(null), Boolean(undefined));
+      console.log(Boolean(1), Boolean(-1), Boolean('Aroma'), Boolean('0'), Boolean('false'));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 03 — Errores comunes con if | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 03 — Errores comunes con if</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      // 1. Una asignación (=) en lugar de una comparación (===)
+      let stock = 5;
+      if (stock = 0) {
+        console.log('Sin stock');
+      } else {
+        console.log('Hay stock:', stock);
+      }
+    </script>
+
+    <script>
+      // 2. Un punto y coma de más después del if
+      const cantidad = 0;
+      if (cantidad > 0); {
+        console.log('Esto se ejecuta aunque la cantidad sea', cantidad);
+      }
+    </script>
+
+    <script>
+      // 3. Un if sin llaves y un else que se engancha con el if equivocado
+      const hayCafe = true;
+      const hayLeche = false;
+      if (hayCafe)
+        if (hayLeche) console.log('Café con leche');
+      else console.log('Sin café');
+    </script>
+  </body>
+</html>

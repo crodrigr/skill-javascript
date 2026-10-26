@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 20 — Elegir la forma de definir una función | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 20 — Elegir la forma de definir una función</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      function totalA(precio, cantidad) {
+        return precio * cantidad;
+      }
+
+      const totalB = function (precio, cantidad) {
+        return precio * cantidad;
+      };
+
+      const totalC = (precio, cantidad) => precio * cantidad;
+
+      const totalD = (function (precio, cantidad) {
+        return precio * cantidad;
+      })(4.5, 3);
+
+      console.log(totalA(4.5, 3));
+      console.log(totalB(4.5, 3));
+      console.log(totalC(4.5, 3));
+      console.log(totalD);
+    </script>
+  </body>
+</html>

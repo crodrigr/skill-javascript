@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 05 — El switch sin break (cascada) | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 05 — El switch sin break (cascada)</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      const nivel = 2;
+
+      // Sin break: la ejecución "cae" en los casos siguientes
+      switch (nivel) {
+        case 1:
+          console.log('Beneficio del nivel 1');
+        case 2:
+          console.log('Beneficio del nivel 2');
+        case 3:
+          console.log('Beneficio del nivel 3');
+          break;
+        default:
+          console.log('Nivel desconocido');
+      }
+
+      console.log('---');
+
+      // Con break: se ejecuta solo el caso que coincide
+      const nivelB = 2;
+      switch (nivelB) {
+        case 1:
+          console.log('Beneficio del nivel 1');
+          break;
+        case 2:
+          console.log('Beneficio del nivel 2');
+          break;
+        case 3:
+          console.log('Beneficio del nivel 3');
+          break;
+        default:
+          console.log('Nivel desconocido');
+      }
+    </script>
+  </body>
+</html>

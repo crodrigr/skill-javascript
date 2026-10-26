@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 21 — Un pedido completo: decisiones, bucle y funciones | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 21 — Un pedido completo: decisiones, bucle y funciones</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      const precio = 4.5;
+      const envioGratisDesde = 20;
+
+      function subtotal(precio, cantidad) {
+        return precio * cantidad;
+      }
+
+      const porcentajeDescuento = total => total >= 50 ? 10 : total >= 20 ? 5 : 0;
+
+      function totalConDescuento(total) {
+        return total - total * porcentajeDescuento(total) / 100;
+      }
+
+      for (let cantidad = 1; cantidad <= 8; cantidad++) {
+        const sub = subtotal(precio, cantidad);
+        const final = totalConDescuento(sub);
+        console.log('Cantidad', cantidad, '→ subtotal', sub.toFixed(2), '→ total', final.toFixed(2));
+        if (final >= envioGratisDesde) {
+          console.log('Desde la cantidad', cantidad, 'el envío es gratis');
+          break;
+        }
+      }
+    </script>
+  </body>
+</html>

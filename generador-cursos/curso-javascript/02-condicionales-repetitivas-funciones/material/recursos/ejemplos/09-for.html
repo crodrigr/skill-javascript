@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 09 — El bucle for | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 09 — El bucle for</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      for (let i = 1; i <= 5; i++) {
+        console.log('3 x', i, '=', 3 * i);
+      }
+
+      let vueltas = 0;
+      for (let k = 0; k < 5; k++) {
+        vueltas++;
+      }
+      console.log('k < 5 hace', vueltas, 'vueltas');
+
+      vueltas = 0;
+      for (let k = 0; k <= 5; k++) {
+        vueltas++;
+      }
+      console.log('k <= 5 hace', vueltas, 'vueltas');
+
+      for (let j = 10; j > 0; j -= 3) {
+        console.log('j vale', j);
+      }
+    </script>
+  </body>
+</html>

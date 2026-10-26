@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 10 — El bucle infinito | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 10 — El bucle infinito</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      // Versión con "seguro": si algo sale mal, el bucle se detiene igual
+      let cuenta = 3;
+      let seguro = 0;
+      while (cuenta > 0 && seguro < 5) {
+        console.log('Faltan', cuenta);
+        seguro++;            // aquí se olvidó cuenta-- : solo el seguro lo frena
+      }
+      console.log('Salí por el seguro, cuenta sigue en', cuenta);
+
+      // Un bucle "infinito" a propósito, controlado con break
+      let vuelta = 0;
+      while (true) {
+        vuelta++;
+        console.log('Vuelta', vuelta);
+        if (vuelta >= 3) {
+          break;
+        }
+      }
+      console.log('Salí del bucle con break');
+    </script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 17 — Elevación (hoisting) de funciones | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 17 — Elevación (hoisting) de funciones</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      console.log(saludar('Lucía'));
+
+      function saludar(nombre) {
+        return 'Hola, ' + nombre;
+      }
+
+      console.log(typeof saludar);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 11 — break: salir del bucle | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 11 — break: salir del bucle</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      for (let n = 1; n <= 20; n++) {
+        console.log('Probando', n);
+        if (n % 7 === 0) {
+          console.log('Primer múltiplo de 7:', n);
+          break;
+        }
+      }
+      console.log('Fin de la búsqueda');
+
+      // ¿Cuántos cafés de 4 alcanzan con un saldo de 10?
+      let saldo = 10;
+      let cafes = 0;
+      while (true) {
+        if (saldo < 4) {
+          break;
+        }
+        saldo -= 4;
+        cafes++;
+      }
+      console.log('Cafés:', cafes, '— sobran', saldo);
+    </script>
+  </body>
+</html>

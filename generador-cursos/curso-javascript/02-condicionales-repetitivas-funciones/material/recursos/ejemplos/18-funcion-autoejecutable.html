@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 18 — Funciones autoejecutables (IIFE) | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 18 — Funciones autoejecutables (IIFE)</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      (function () {
+        const secreto = 'oferta del día';
+        console.log('Dentro:', secreto);
+      })();
+
+      console.log('Fuera:', typeof secreto);
+
+      const total = (function (precio, cantidad) {
+        return precio * cantidad;
+      })(4.5, 3);
+      console.log('Total:', total);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 500" width="960" height="500" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+<title id="t">Función autoejecutable (IIFE)</title>
+<desc id="d">Una caja grande representa el programa y una caja interior, la función autoejecutable, que contiene la constante secreto. Dentro de la función se puede leer secreto; desde afuera, typeof secreto da undefined, porque la variable no existe fuera de la función.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#64748b"/></marker></defs>
+<rect x="1" y="1" width="958" height="498" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="480" y="34" text-anchor="middle" font-size="17" font-weight="700" fill="#1f2937">(function () { ... })();  →  se define y se ejecuta al instante</text>
+<rect x="40" y="60" width="880" height="380" rx="14" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+<text x="60" y="88" text-anchor="start" font-size="14" font-weight="700" fill="#64748b">Programa (ámbito global)</text>
+<rect x="80" y="110" width="520" height="220" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+<text x="100" y="138" text-anchor="start" font-size="14" font-weight="700" fill="#16a34a">Función autoejecutable</text>
+<text x="100" y="176" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="15" font-weight="400" fill="#1f2937" xml:space="preserve">(function () {</text>
+<text x="120" y="204" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14" font-weight="700" fill="#1f2937" xml:space="preserve">const secreto = 'oferta del día';</text>
+<text x="120" y="232" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14" font-weight="400" fill="#1f2937" xml:space="preserve">console.log('Dentro:', secreto);</text>
+<text x="100" y="260" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="15" font-weight="400" fill="#1f2937" xml:space="preserve">})();</text>
+<text x="110" y="304" text-anchor="start" font-size="12.5" font-weight="700" fill="#16a34a">secreto solo existe aquí dentro</text>
+<rect x="640" y="150" width="250" height="150" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+<text x="656" y="184" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="13" font-weight="400" fill="#1f2937" xml:space="preserve">console.log(</text>
+<text x="668" y="206" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="13" font-weight="700" fill="#1f2937" xml:space="preserve">typeof secreto</text>
+<text x="656" y="228" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="13" font-weight="400" fill="#1f2937" xml:space="preserve">);</text>
+<text x="765" y="262" text-anchor="middle" font-size="15" font-weight="700" fill="#dc2626">→ 'undefined'</text>
+<text x="765" y="284" text-anchor="middle" font-size="12.5" font-weight="400" fill="#64748b">afuera no se ve</text>
+<path d="M640 225 L612 225" stroke="#dc2626" stroke-width="3" marker-end="url(#ah)" fill="none"/>
+<line x1="600" y1="205" x2="614" y2="245" stroke="#dc2626" stroke-width="5"/>
+<text x="480" y="372" text-anchor="middle" font-size="13" font-weight="400" fill="#64748b">Los paréntesis son obligatorios: sin ellos, JavaScript lee «function» como una declaración sin nombre.</text>
+<text x="480" y="400" text-anchor="middle" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="13" font-weight="700" fill="#dc2626" xml:space="preserve">SyntaxError: Function statements require a function name</text>
+<rect x="40" y="454" width="880" height="34" rx="8" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+<text x="480" y="476" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">Sirve para ejecutar código una vez y aislar sus variables.</text>
+</svg>

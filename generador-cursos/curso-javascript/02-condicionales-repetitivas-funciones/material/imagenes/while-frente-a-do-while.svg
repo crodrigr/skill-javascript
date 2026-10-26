@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 500" width="960" height="500" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+<title id="t">while frente a do while</title>
+<desc id="d">Dos diagramas de flujo. En while la condición se evalúa antes del cuerpo: con stock igual a 0, el cuerpo se ejecuta 0 veces. En do while el cuerpo se ejecuta primero y la condición se evalúa al final: con stock igual a 0, el cuerpo se ejecuta 1 vez.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#64748b"/></marker></defs>
+<rect x="1" y="1" width="958" height="498" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="480" y="34" text-anchor="middle" font-size="18" font-weight="700" fill="#1f2937">La condición va antes o después del cuerpo (stock = 0)</text>
+<rect x="30" y="56" width="430" height="40" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="245.0" y="80.9" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2937">while (stock &gt; 0) { ... }</text>
+<polygon points="245,130.0 360.0,170 245,210.0 130.0,170" fill="#fef9c3" stroke="#ca8a04" stroke-width="2"/>
+<text x="245" y="166.55" text-anchor="middle" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="13" font-weight="700" fill="#1f2937" xml:space="preserve">stock &gt; 0 ?</text>
+<text x="245" y="182.55" text-anchor="middle" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="13" font-weight="400" fill="#1f2937" xml:space="preserve">falsa</text>
+<rect x="145" y="250" width="200" height="50" rx="12" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2"/>
+<text x="245.0" y="270.55" text-anchor="middle" font-size="13" font-weight="700" fill="#64748b">cuerpo</text>
+<text x="245.0" y="288.55" text-anchor="middle" font-size="13" font-weight="400" fill="#64748b">no se ejecuta</text>
+<path d="M245 96 L245 130" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#ah)"/>
+<path d="M130 170 L50 170 L50 340 L185 340" fill="none" stroke="#ea580c" stroke-width="3" marker-end="url(#ah)"/>
+<text x="60" y="200" text-anchor="start" font-size="12" font-weight="700" fill="#ea580c">falsa: sale</text>
+<path d="M245 210 L245 246" fill="none" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#ah)"/>
+<rect x="145" y="320" width="200" height="40" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="245.0" y="344.55" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">sigue el programa</text>
+<text x="245" y="392" text-anchor="middle" font-size="18" font-weight="700" fill="#ea580c">0 vueltas</text>
+<rect x="500" y="56" width="430" height="40" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<text x="715.0" y="80.9" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2937">do { ... } while (stock &gt; 0);</text>
+<rect x="615" y="120" width="200" height="50" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<text x="715.0" y="140.55" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">cuerpo</text>
+<text x="715.0" y="158.55" text-anchor="middle" font-size="13" font-weight="400" fill="#1f2937">se ejecuta 1 vez</text>
+<path d="M715 96 L715 116" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#ah)"/>
+<path d="M715 170 L715 200" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#ah)"/>
+<polygon points="715,200.0 830.0,240 715,280.0 600.0,240" fill="#fef9c3" stroke="#ca8a04" stroke-width="2"/>
+<text x="715" y="236.55" text-anchor="middle" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="13" font-weight="700" fill="#1f2937" xml:space="preserve">stock &gt; 0 ?</text>
+<text x="715" y="252.55" text-anchor="middle" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="13" font-weight="400" fill="#1f2937" xml:space="preserve">falsa</text>
+<path d="M715 280 L715 316" fill="none" stroke="#ea580c" stroke-width="3" marker-end="url(#ah)"/>
+<text x="727" y="304" text-anchor="start" font-size="12" font-weight="700" fill="#ea580c">falsa: sale</text>
+<rect x="615" y="320" width="200" height="40" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="715.0" y="344.55" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">sigue el programa</text>
+<text x="715" y="392" text-anchor="middle" font-size="18" font-weight="700" fill="#16a34a">1 vuelta</text>
+<rect x="30" y="420" width="900" height="60" rx="8" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+<text x="480" y="446" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2937">while evalúa primero: puede no ejecutar el cuerpo nunca.</text>
+<text x="480" y="468" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2937">do...while ejecuta primero: el cuerpo corre al menos una vez.</text>
+</svg>

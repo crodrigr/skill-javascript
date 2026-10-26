@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 12 — continue: saltar una vuelta | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 12 — continue: saltar una vuelta</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      for (let n = 1; n <= 6; n++) {
+        if (n % 2 === 0) {
+          continue;
+        }
+        console.log('Impar:', n);
+      }
+      console.log('Fin del for');
+
+      let i = 0;
+      while (i < 5) {
+        i++;
+        if (i === 3) {
+          continue;
+        }
+        console.log('i vale', i);
+      }
+      console.log('Fin del while');
+    </script>
+  </body>
+</html>

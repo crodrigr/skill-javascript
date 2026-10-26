@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 01 — if y else: ¿envío gratis? | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 01 — if y else: ¿envío gratis?</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      const precio = 4.5;
+      const cantidad = 3;
+      const total = precio * cantidad;
+      const envioGratisDesde = 20;
+
+      console.log('Total:', total);
+
+      if (total >= envioGratisDesde) {
+        console.log('Envío gratis');
+      } else {
+        console.log('Envío con costo');
+        console.log('Te faltan', envioGratisDesde - total, 'para el envío gratis');
+      }
+
+      if (total > 0) {
+        console.log('El pedido tiene productos');
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 06 — El operador condicional ? : | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 06 — El operador condicional ? :</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      const total = 13.5;
+
+      const envio = total >= 20 ? 'gratis' : 'con costo';
+      console.log('Envío:', envio);
+
+      console.log(`Total: ${total} (${total > 0 ? 'con productos' : 'vacío'})`);
+
+      // Se puede encadenar, pero se lee con dificultad
+      const tramo = total >= 50 ? 10 : total >= 20 ? 5 : 0;
+      console.log('Descuento:', tramo + '%');
+    </script>
+  </body>
+</html>

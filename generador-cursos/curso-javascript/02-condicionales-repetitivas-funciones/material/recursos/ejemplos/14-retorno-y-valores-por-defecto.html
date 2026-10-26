@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 14 — Retorno, undefined y valores por defecto | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 14 — Retorno, undefined y valores por defecto</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      function mostrarTotal(precio, cantidad) {
+        console.log('Total:', precio * cantidad);
+      }
+      const resultado = mostrarTotal(4.5, 3);
+      console.log('resultado vale', resultado);
+
+      function calcularTotal(precio, cantidad, descuento = 0) {
+        return precio * cantidad * (1 - descuento);
+      }
+      console.log(calcularTotal(4.5, 3));
+      console.log(calcularTotal(4.5, 3, 0.1));
+      console.log(calcularTotal(4.5));
+    </script>
+  </body>
+</html>

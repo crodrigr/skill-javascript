@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 19 — Funciones de flecha | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 19 — Funciones de flecha</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      const calcularTotal = (precio, cantidad) => precio * cantidad;
+      console.log(calcularTotal(4.5, 3));
+
+      const doble = n => n * 2;
+      console.log(doble(21));
+
+      const saludo = () => 'Hola, Aroma';
+      console.log(saludo());
+
+      const conLlaves = (precio, cantidad) => {
+        const subtotal = precio * cantidad;
+        return subtotal;
+      };
+      console.log(conLlaves(4.5, 3));
+
+      const sinReturn = (precio, cantidad) => {
+        precio * cantidad;
+      };
+      console.log(sinReturn(4.5, 3));
+
+      const tipoEnvio = total => total >= 20 ? 'gratis' : 'con costo';
+      console.log(tipoEnvio(13.5), tipoEnvio(22.5));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" width="960" height="520" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+<title id="t">El switch con y sin break</title>
+<desc id="d">Dos columnas con un switch sobre nivel igual a 2. Sin break, la ejecución entra al case 2 y continúa por los siguientes: se ejecutan los casos 2, 3. Con break en cada caso, se ejecuta solo el case 2.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#64748b"/></marker></defs>
+<rect x="1" y="1" width="958" height="518" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="480" y="34" text-anchor="middle" font-size="18" font-weight="700" fill="#1f2937">switch (nivel) con nivel = 2</text>
+<rect x="30" y="56" width="430" height="40" rx="12" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+<text x="245.0" y="81.25" text-anchor="middle" font-size="15" font-weight="700" fill="#1f2937">SIN break (cascada)</text>
+<rect x="30" y="120" width="430" height="80" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="44" y="146" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14" font-weight="700" fill="#64748b" xml:space="preserve">case 1:</text>
+<text x="44" y="170" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b" xml:space="preserve">console.log('Nivel 1');</text>
+<text x="445" y="150" text-anchor="end" font-size="12" font-weight="400" fill="#64748b">no se ejecuta</text>
+<rect x="30" y="220" width="430" height="80" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+<text x="44" y="246" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14" font-weight="700" fill="#1f2937" xml:space="preserve">case 2:</text>
+<text x="44" y="270" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="13" font-weight="400" fill="#1f2937" xml:space="preserve">console.log('Nivel 2');</text>
+<text x="445" y="250" text-anchor="end" font-size="12" font-weight="700" fill="#dc2626">se ejecuta</text>
+<rect x="30" y="320" width="430" height="80" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+<text x="44" y="346" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14" font-weight="700" fill="#1f2937" xml:space="preserve">case 3:</text>
+<text x="44" y="370" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="13" font-weight="400" fill="#1f2937" xml:space="preserve">console.log('Nivel 3');</text>
+<text x="44" y="390" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="13" font-weight="700" fill="#dc2626" xml:space="preserve">break;</text>
+<text x="445" y="350" text-anchor="end" font-size="12" font-weight="700" fill="#dc2626">se ejecuta</text>
+<rect x="500" y="56" width="430" height="40" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<text x="715.0" y="81.25" text-anchor="middle" font-size="15" font-weight="700" fill="#1f2937">CON break</text>
+<rect x="500" y="120" width="430" height="80" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="514" y="146" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14" font-weight="700" fill="#64748b" xml:space="preserve">case 1:</text>
+<text x="514" y="170" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b" xml:space="preserve">console.log('Nivel 1');</text>
+<text x="514" y="190" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="13" font-weight="700" fill="#64748b" xml:space="preserve">break;</text>
+<text x="915" y="150" text-anchor="end" font-size="12" font-weight="400" fill="#64748b">no se ejecuta</text>
+<rect x="500" y="220" width="430" height="80" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<text x="514" y="246" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14" font-weight="700" fill="#1f2937" xml:space="preserve">case 2:</text>
+<text x="514" y="270" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="13" font-weight="400" fill="#1f2937" xml:space="preserve">console.log('Nivel 2');</text>
+<text x="514" y="290" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="13" font-weight="700" fill="#dc2626" xml:space="preserve">break;</text>
+<text x="915" y="250" text-anchor="end" font-size="12" font-weight="700" fill="#16a34a">se ejecuta</text>
+<rect x="500" y="320" width="430" height="80" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="514" y="346" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14" font-weight="700" fill="#64748b" xml:space="preserve">case 3:</text>
+<text x="514" y="370" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b" xml:space="preserve">console.log('Nivel 3');</text>
+<text x="514" y="390" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="13" font-weight="700" fill="#64748b" xml:space="preserve">break;</text>
+<text x="915" y="350" text-anchor="end" font-size="12" font-weight="400" fill="#64748b">no se ejecuta</text>
+<path d="M18 230 L18 330" fill="none" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="6 4" marker-end="url(#ah)"/>
+<rect x="30" y="424" width="900" height="76" rx="8" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+<text x="480" y="452" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2937">Sin break: nivel 2 → se ejecutan los casos 2, 3 (2 mensajes). Con break: solo el 2.</text>
+<text x="480" y="478" text-anchor="middle" font-size="13" font-weight="400" fill="#64748b">El switch entra por el case que coincide y sigue hasta encontrar un break o llegar al final.</text>
+</svg>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 04 — switch: elegir entre varias opciones | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 04 — switch: elegir entre varias opciones</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      const categoria = 'bebida';
+
+      switch (categoria) {
+        case 'bebida':
+          console.log('Pasillo 1');
+          break;
+        case 'postre':
+          console.log('Pasillo 2');
+          break;
+        case 'snack':
+        case 'galleta':
+          console.log('Pasillo 3');
+          break;
+        default:
+          console.log('Categoría desconocida');
+      }
+
+      // switch compara con === (mismo valor y mismo tipo)
+      const codigo = 3;
+      switch (codigo) {
+        case '3':
+          console.log('Es el texto "3"');
+          break;
+        case 3:
+          console.log('Es el número 3');
+          break;
+      }
+    </script>
+  </body>
+</html>

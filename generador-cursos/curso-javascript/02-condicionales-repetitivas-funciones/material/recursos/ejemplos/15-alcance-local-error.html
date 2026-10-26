@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 15 — Alcance local de las variables | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 15 — Alcance local de las variables</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+    <!-- errores-a-proposito: esta página falla a propósito; mirá el error en la consola (F12) -->
+
+    <script>
+      function totalConIva(precio, cantidad) {
+        const subtotal = precio * cantidad;
+        return subtotal * 1.21;
+      }
+
+      console.log(totalConIva(10, 2));
+      console.log(subtotal);
+    </script>
+
+    <script>
+      function sumar(a, b) {
+        return a + b;
+      }
+      sumar(1, 2);
+      console.log(a);
+    </script>
+  </body>
+</html>

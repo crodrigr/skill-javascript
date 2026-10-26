@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 16 — Funciones de expresión | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 16 — Funciones de expresión</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      const calcularTotal = function (precio, cantidad) {
+        return precio * cantidad;
+      };
+
+      console.log(calcularTotal(4.5, 3));
+      console.log(typeof calcularTotal);
+
+      const copia = calcularTotal;
+      console.log(copia(3.2, 2));
+
+      const total = function calcular(precio, cantidad) {
+        return precio * cantidad;
+      };
+      console.log(total(4.5, 4));
+      console.log(typeof calcular);
+    </script>
+  </body>
+</html>

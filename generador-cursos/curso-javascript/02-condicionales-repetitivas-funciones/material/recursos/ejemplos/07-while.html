@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 07 — El bucle while | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 07 — El bucle while</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      let cuenta = 3;
+      while (cuenta > 0) {
+        console.log('Faltan', cuenta);
+        cuenta--;
+      }
+      console.log('¡Listo!');
+
+      let suma = 0;
+      let n = 1;
+      while (n <= 5) {
+        suma += n;
+        n++;
+      }
+      console.log('Suma del 1 al 5:', suma);
+
+      let precio = 10;
+      while (precio < 5) {
+        console.log('Esta línea no se ejecuta nunca');
+      }
+      console.log('Fin');
+    </script>
+  </body>
+</html>
