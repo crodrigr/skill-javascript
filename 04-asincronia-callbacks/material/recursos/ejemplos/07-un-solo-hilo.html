@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 07 — Un solo hilo: una tarea a la vez | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 07 — Un solo hilo: una tarea a la vez</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      function tarea(nombre) {
+        setTimeout(() => {
+          console.log(nombre + ' empieza');
+          for (let i = 0; i < 1000; i++) { }
+          console.log(nombre + ' termina');
+        }, 0);
+      }
+
+      tarea('Barista');
+      tarea('Cajero');
+      tarea('Repartidor');
+    </script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 03 — Primero lo síncrono, después lo programado | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 03 — Primero lo síncrono, después lo programado</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      console.log('Primero');
+
+      setTimeout(() => {
+        console.log('Tercero (temporizador de 0 ms)');
+      }, 0);
+
+      console.log('Segundo');
+    </script>
+  </body>
+</html>

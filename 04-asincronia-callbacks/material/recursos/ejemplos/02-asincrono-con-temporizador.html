@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 02 — Lo asíncrono no se queda esperando | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 02 — Lo asíncrono no se queda esperando</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      console.log('1. Lucía pide un café');
+
+      setTimeout(() => {
+        console.log('3. ☕ El café está listo');
+      }, 1000);
+
+      console.log('2. Lucía se sienta a esperar');
+    </script>
+  </body>
+</html>

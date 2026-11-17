@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 04 — Un bucle largo bloquea todo | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 04 — Un bucle largo bloquea todo</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      console.log('1. Empieza el bucle largo');
+
+      setTimeout(() => {
+        console.log('3. El temporizador de 0 ms recién se ejecuta ahora');
+      }, 0);
+
+      for (let i = 0; i < 300000000; i++) { }
+
+      console.log('2. Terminó el bucle largo');
+    </script>
+  </body>
+</html>

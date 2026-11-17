@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 13 — Olvidar pasar el callback | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 13 — Olvidar pasar el callback</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+    <!-- errores-a-proposito: esta página falla a propósito; mirá el error en la consola (F12) -->
+
+    <script>
+      function hacerAlgo(callback) {
+        console.log('Voy a llamar al callback');
+        callback();
+      }
+
+      hacerAlgo();
+    </script>
+  </body>
+</html>

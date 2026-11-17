@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 05 — Esperar sin bloquear | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 05 — Esperar sin bloquear</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      function pedir(producto, milisegundos) {
+        console.log('📥 Pedido de ' + producto);
+        setTimeout(() => {
+          console.log('✅ Listo: ' + producto);
+        }, milisegundos);
+      }
+
+      pedir('Café', 1000);
+      pedir('Té', 500);
+      console.log('🧑‍🍳 Mientras tanto, seguimos atendiendo');
+    </script>
+  </body>
+</html>

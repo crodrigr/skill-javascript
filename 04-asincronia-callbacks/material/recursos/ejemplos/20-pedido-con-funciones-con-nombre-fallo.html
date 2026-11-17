@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 20 — El pedido 102 con la tarjeta rechazada | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 20 — El pedido 102 con la tarjeta rechazada</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      function validar(pedido, siguiente) {
+        setTimeout(() => {
+          console.log('✅ Validado');
+          siguiente(null, pedido);
+        }, 300);
+      }
+
+      function cobrar(pedido, siguiente) {
+        setTimeout(() => {
+          if (pedido.tarjetaValida === false) {
+            siguiente('Tarjeta rechazada');
+            return;
+          }
+          console.log('💳 Cobrado $' + pedido.total);
+          siguiente(null, pedido);
+        }, 500);
+      }
+
+      function preparar(pedido, siguiente) {
+        setTimeout(() => {
+          console.log('☕ Preparado');
+          siguiente(null, pedido);
+        }, 800);
+      }
+
+      function entregar(pedido, siguiente) {
+        setTimeout(() => {
+          console.log('🛵 Entregado');
+          siguiente(null, pedido);
+        }, 200);
+      }
+
+      function fallar(error) {
+        console.log('❌ El pedido se detuvo: ' + error);
+      }
+
+      function alEntregar(error, pedido) {
+        if (error !== null) {
+          fallar(error);
+          return;
+        }
+        console.log('🏁 Pedido ' + pedido.numero + ' terminado');
+      }
+
+      function alPreparar(error, pedido) {
+        if (error !== null) {
+          fallar(error);
+          return;
+        }
+        entregar(pedido, alEntregar);
+      }
+
+      function alCobrar(error, pedido) {
+        if (error !== null) {
+          fallar(error);
+          return;
+        }
+        preparar(pedido, alPreparar);
+      }
+
+      function alValidar(error, pedido) {
+        if (error !== null) {
+          fallar(error);
+          return;
+        }
+        cobrar(pedido, alCobrar);
+      }
+
+      const pedido = { numero: 102, cliente: 'Marcos', total: 6.7, tarjetaValida: false };
+      console.log('📥 Pedido ' + pedido.numero + ' recibido');
+      validar(pedido, alValidar);
+    </script>
+  </body>
+</html>

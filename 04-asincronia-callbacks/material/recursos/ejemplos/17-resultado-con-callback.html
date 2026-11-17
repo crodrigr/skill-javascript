@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 17 — Recibir el resultado en un callback | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 17 — Recibir el resultado en un callback</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      function buscarProducto(nombre, alTerminar) {
+        setTimeout(() => {
+          alTerminar({ nombre: nombre, precio: 4.5 });
+        }, 300);
+      }
+
+      let encontrado;
+
+      buscarProducto('Café', (producto) => {
+        encontrado = producto;
+        console.log('2. Dentro del callback: ' + producto.nombre + ' $' + producto.precio);
+      });
+
+      console.log('1. Fuera del callback: ' + encontrado);
+    </script>
+  </body>
+</html>

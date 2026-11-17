@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 13 — Pasar la función o llamarla | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 13 — Pasar la función o llamarla</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      function avisar(texto) {
+        console.log('🔔 ' + texto);
+      }
+
+      console.log('Inicio');
+      setTimeout(avisar('Mal escrito'), 500);
+      setTimeout(() => avisar('Bien escrito'), 500);
+      console.log('Fin');
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 500" width="960" height="500" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+<title id="t">El patrón error primero</title>
+<desc id="d">Una función asíncrona llama a su callback con dos parámetros, error y resultado. Si error es distinto de null, algo falló y se atiende el error, por ejemplo Agotado Té. Si error es null, todo salió bien y se usa el resultado, por ejemplo Reservado Café. El callback se llama una sola vez.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#64748b"/></marker></defs>
+<rect x="1" y="1" width="958" height="498" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="480" y="34" text-anchor="middle" font-size="18" font-weight="700" fill="#1f2937">callback(error, resultado)</text>
+<rect x="300" y="62" width="360" height="52" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="480.0" y="83.55" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">reservar(producto, alTerminar)</text>
+<text x="480.0" y="101.55" text-anchor="middle" font-size="13" font-weight="400" fill="#1f2937">termina la tarea asíncrona y llama al callback</text>
+<path d="M 480 116 L 480 150" fill="none" stroke="#64748b" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="330" y="152" width="300" height="44" rx="22" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+<text x="480" y="180" text-anchor="middle" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14" font-weight="700" fill="#1f2937" xml:space="preserve">alTerminar(error, resultado)</text>
+<path d="M 400 198 L 258 246" fill="none" stroke="#dc2626" stroke-width="3" marker-end="url(#ah)"/>
+<path d="M 560 198 L 702 246" fill="none" stroke="#16a34a" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="90" y="252" width="320" height="52" rx="12" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+<text x="250.0" y="273.4" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2937">error !== null</text>
+<text x="250.0" y="292.4" text-anchor="middle" font-size="14" font-weight="400" fill="#1f2937">algo falló</text>
+<rect x="550" y="252" width="320" height="52" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<text x="710.0" y="273.4" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2937">error === null</text>
+<text x="710.0" y="292.4" text-anchor="middle" font-size="14" font-weight="400" fill="#1f2937">todo salió bien</text>
+<path d="M 250 306 L 250 340" fill="none" stroke="#dc2626" stroke-width="2.5" marker-end="url(#ah)"/>
+<path d="M 710 306 L 710 340" fill="none" stroke="#16a34a" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="90" y="342" width="320" height="60" rx="12" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+<text x="250.0" y="367.55" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">❌ se atiende el error</text>
+<text x="250.0" y="385.55" text-anchor="middle" font-size="13" font-weight="400" fill="#1f2937">alTerminar('Agotado: Té')</text>
+<rect x="550" y="342" width="320" height="60" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<text x="710.0" y="367.55" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">✅ se usa el resultado</text>
+<text x="710.0" y="385.55" text-anchor="middle" font-size="13" font-weight="400" fill="#1f2937">alTerminar(null, 'Reservado: Café')</text>
+<rect x="60" y="424" width="840" height="56" rx="10" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+<text x="480" y="449" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2937">Revisá primero el error; si hay, atendelo y salí con return.</text>
+<text x="480" y="469" text-anchor="middle" font-size="14" font-weight="400" fill="#1f2937">Cada caso llama al callback una sola vez.</text>
+</svg>

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+<title id="t">La pila, la cola y el bucle de eventos</title>
+<desc id="d">Tres piezas. La pila de llamadas ejecuta el código síncrono: A, B y C. El navegador cuenta el tiempo de los temporizadores. Cuando vencen, sus funciones D, E y F pasan a la cola de tareas en orden. El bucle de eventos toma la primera de la cola y la lleva a la pila solo cuando la pila está vacía.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#64748b"/></marker></defs>
+<rect x="1" y="1" width="958" height="558" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="480" y="34" text-anchor="middle" font-size="18" font-weight="700" fill="#1f2937">Quién ejecuta qué y en qué orden</text>
+<text x="150" y="80" text-anchor="middle" font-size="15" font-weight="700" fill="#2563eb">Pila de llamadas</text>
+<rect x="50" y="92" width="200" height="230" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+<rect x="62" y="110" width="176" height="44" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="150.0" y="136.55" text-anchor="middle" font-size="13" font-weight="400" fill="#1f2937">A. Inicio</text>
+<rect x="62" y="166" width="176" height="44" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="150.0" y="192.55" text-anchor="middle" font-size="13" font-weight="400" fill="#1f2937">B. preparar()</text>
+<rect x="62" y="222" width="176" height="44" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="150.0" y="248.55" text-anchor="middle" font-size="13" font-weight="400" fill="#1f2937">C. Fin</text>
+<text x="60" y="346" text-anchor="start" font-size="12" font-weight="400" fill="#64748b">lo que se ejecuta ahora</text>
+<text x="60" y="364" text-anchor="start" font-size="12" font-weight="400" fill="#64748b">(código síncrono)</text>
+<text x="480" y="80" text-anchor="middle" font-size="15" font-weight="700" fill="#d97706">Navegador (cuenta el tiempo)</text>
+<rect x="340" y="92" width="280" height="160" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+<rect x="360" y="108" width="240" height="34" rx="17.0" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+<text x="480.0" y="129.2" text-anchor="middle" font-size="12" font-weight="700" fill="#1f2937">setTimeout → E a los 500 ms</text>
+<rect x="360" y="154" width="240" height="34" rx="17.0" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+<text x="480.0" y="175.2" text-anchor="middle" font-size="12" font-weight="700" fill="#1f2937">setTimeout → D a los 0 ms</text>
+<rect x="360" y="200" width="240" height="34" rx="17.0" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+<text x="480.0" y="221.2" text-anchor="middle" font-size="12" font-weight="700" fill="#1f2937">setTimeout → F a los 1000 ms</text>
+<text x="480" y="276" text-anchor="middle" font-size="12" font-weight="400" fill="#64748b">registra los temporizadores</text>
+<text x="480" y="294" text-anchor="middle" font-size="12" font-weight="400" fill="#64748b">y los vence a su tiempo</text>
+<text x="810" y="80" text-anchor="middle" font-size="15" font-weight="700" fill="#0d9488">Cola de tareas</text>
+<rect x="690" y="92" width="240" height="230" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+<rect x="702" y="108" width="216" height="50" rx="12" fill="#ccfbf1" stroke="#0d9488" stroke-width="2"/>
+<text x="810.0" y="128.7" text-anchor="middle" font-size="12" font-weight="400" fill="#1f2937">D. temporizador</text>
+<text x="810.0" y="145.7" text-anchor="middle" font-size="12" font-weight="400" fill="#1f2937">vence a los 0 ms</text>
+<rect x="702" y="170" width="216" height="50" rx="12" fill="#ccfbf1" stroke="#0d9488" stroke-width="2"/>
+<text x="810.0" y="190.7" text-anchor="middle" font-size="12" font-weight="400" fill="#1f2937">E. temporizador</text>
+<text x="810.0" y="207.7" text-anchor="middle" font-size="12" font-weight="400" fill="#1f2937">vence a los 500 ms</text>
+<rect x="702" y="232" width="216" height="50" rx="12" fill="#ccfbf1" stroke="#0d9488" stroke-width="2"/>
+<text x="810.0" y="252.7" text-anchor="middle" font-size="12" font-weight="400" fill="#1f2937">F. temporizador</text>
+<text x="810.0" y="269.7" text-anchor="middle" font-size="12" font-weight="400" fill="#1f2937">vence a los 1000 ms</text>
+<text x="700" y="346" text-anchor="start" font-size="12" font-weight="400" fill="#64748b">tareas listas, esperando turno</text>
+<text x="700" y="364" text-anchor="start" font-size="12" font-weight="400" fill="#64748b">(sale primero la de arriba)</text>
+<path d="M 620 172 L 686 172" fill="none" stroke="#d97706" stroke-width="2.5" marker-end="url(#ah)"/>
+<text x="654" y="160" text-anchor="middle" font-size="11" font-weight="400" fill="#64748b">al vencer</text>
+<path d="M 915 324 L 915 410 L 225 410 L 225 326" fill="none" stroke="#7c3aed" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="330" y="394" width="300" height="32" rx="16" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+<text x="480" y="415" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2937">🔁 Bucle de eventos</text>
+<text x="480" y="448" text-anchor="middle" font-size="13" font-weight="400" fill="#1f2937">Toma la primera tarea de la cola y la lleva a la pila</text>
+<text x="480" y="468" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">solo cuando la pila está vacía.</text>
+<rect x="60" y="490" width="840" height="48" rx="10" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+<text x="480" y="520" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2937">Orden de salida: A, B, C (pila) y después D, E, F (cola, según el tiempo).</text>
+</svg>

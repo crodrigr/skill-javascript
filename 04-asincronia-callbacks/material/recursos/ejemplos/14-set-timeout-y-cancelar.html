@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 14 — setTimeout con argumentos y cancelación | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 14 — setTimeout con argumentos y cancelación</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      function avisar(producto, mesa) {
+        console.log('🔔 ' + producto + ' listo para la mesa ' + mesa);
+      }
+
+      setTimeout(avisar, 300, 'Café', 4);
+      const idTe = setTimeout(avisar, 500, 'Té', 7);
+      setTimeout(avisar, 700, 'Brownie', 2);
+
+      clearTimeout(idTe);
+      console.log('Se canceló el aviso del té');
+    </script>
+  </body>
+</html>

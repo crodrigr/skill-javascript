@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" width="960" height="520" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+<title id="t">Bloqueante frente a no bloqueante</title>
+<desc id="d">Dos columnas. En la bloqueante, una operación larga ocupa el hilo y el clic y el temporizador que llegaron esperan sin poder ejecutarse. En la no bloqueante, la espera la gestiona el navegador, el hilo queda libre y el clic y el temporizador se atienden enseguida.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#64748b"/></marker></defs>
+<rect x="1" y="1" width="958" height="518" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="480" y="34" text-anchor="middle" font-size="18" font-weight="700" fill="#1f2937">El hilo de JavaScript, ocupado o libre</text>
+<rect x="60" y="62" width="380" height="44" rx="12" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+<text x="250.0" y="79.4" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2937">Bloqueante</text>
+<text x="250.0" y="98.4" text-anchor="middle" font-size="14" font-weight="400" fill="#1f2937">el programa espera</text>
+<rect x="520" y="62" width="380" height="44" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<text x="710.0" y="79.4" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2937">No bloqueante</text>
+<text x="710.0" y="98.4" text-anchor="middle" font-size="14" font-weight="400" fill="#1f2937">el programa sigue</text>
+<line x1="480" y1="70" x2="480" y2="490" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="250" y="140" text-anchor="middle" font-size="13" font-weight="400" fill="#64748b">Hilo de JavaScript</text>
+<rect x="70" y="152" width="360" height="60" rx="12" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+<text x="250.0" y="177.4" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2937">⏳ Leyendo un archivo lento…</text>
+<text x="250.0" y="196.4" text-anchor="middle" font-size="14" font-weight="400" fill="#1f2937">el hilo está ocupado</text>
+<text x="250" y="246" text-anchor="middle" font-size="13" font-weight="400" fill="#64748b">Esperan su turno, sin poder ejecutarse:</text>
+<rect x="80" y="260" width="165" height="44" rx="12" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2"/>
+<text x="162.5" y="286.55" text-anchor="middle" font-size="13" font-weight="400" fill="#1f2937">🖱️ clic en el botón</text>
+<rect x="255" y="260" width="165" height="44" rx="12" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2"/>
+<text x="337.5" y="286.55" text-anchor="middle" font-size="13" font-weight="400" fill="#1f2937">⏲️ temporizador</text>
+<text x="250" y="342" text-anchor="middle" font-size="14" font-weight="700" fill="#dc2626">La página no responde:</text>
+<text x="250" y="364" text-anchor="middle" font-size="13" font-weight="400" fill="#1f2937">botones y desplazamiento congelados</text>
+<text x="710" y="140" text-anchor="middle" font-size="13" font-weight="400" fill="#64748b">Hilo de JavaScript</text>
+<rect x="530" y="152" width="360" height="60" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<text x="710.0" y="177.4" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2937">✅ Libre: atiende clics</text>
+<text x="710.0" y="196.4" text-anchor="middle" font-size="14" font-weight="400" fill="#1f2937">y temporizadores</text>
+<text x="710" y="246" text-anchor="middle" font-size="13" font-weight="400" fill="#64748b">Mientras, el navegador gestiona la espera:</text>
+<rect x="530" y="260" width="360" height="44" rx="12" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+<text x="710.0" y="286.55" text-anchor="middle" font-size="13" font-weight="400" fill="#1f2937">⏳ Leyendo el archivo (en segundo plano)</text>
+<path d="M 710 306 L 710 330" fill="none" stroke="#64748b" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="560" y="334" width="300" height="44" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="710.0" y="360.55" text-anchor="middle" font-size="13" font-weight="400" fill="#1f2937">📬 Avisa al terminar con un callback</text>
+<text x="710" y="410" text-anchor="middle" font-size="14" font-weight="700" fill="#16a34a">La página sigue respondiendo.</text>
+<rect x="60" y="450" width="840" height="48" rx="10" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+<text x="480" y="480" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2937">JavaScript elige no bloquear: las esperas largas se delegan y se avisa con callbacks.</text>
+</svg>

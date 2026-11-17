@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 19 — Tareas encadenadas con callbacks | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 19 — Tareas encadenadas con callbacks</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      function validar(pedido, siguiente) {
+        setTimeout(() => {
+          console.log('✅ Validado');
+          siguiente(null, pedido);
+        }, 300);
+      }
+
+      function cobrar(pedido, siguiente) {
+        setTimeout(() => {
+          console.log('💳 Cobrado $' + pedido.total);
+          siguiente(null, pedido);
+        }, 500);
+      }
+
+      function preparar(pedido, siguiente) {
+        setTimeout(() => {
+          console.log('☕ Preparado');
+          siguiente(null, pedido);
+        }, 800);
+      }
+
+      function entregar(pedido, siguiente) {
+        setTimeout(() => {
+          console.log('🛵 Entregado');
+          siguiente(null, pedido);
+        }, 200);
+      }
+
+      const pedido = { numero: 101, cliente: 'Lucía', total: 6.7 };
+      console.log('📥 Pedido ' + pedido.numero + ' recibido');
+
+      validar(pedido, (e1, p1) => {
+        cobrar(p1, (e2, p2) => {
+          preparar(p2, (e3, p3) => {
+            entregar(p3, (e4, p4) => {
+              console.log('🏁 Pedido ' + p4.numero + ' terminado');
+            });
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 12 — Callbacks que se ejecutan enseguida | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 12 — Callbacks que se ejecutan enseguida</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      const precios = [4.5, 3.2, 1.8];
+
+      precios.forEach((precio) => console.log('Precio: $' + precio));
+
+      const caros = precios.filter((p) => p > 3);
+      console.log(caros);
+
+      function repetir(veces, accion) {
+        for (let i = 1; i <= veces; i++) {
+          accion(i);
+        }
+      }
+
+      console.log('Antes');
+      repetir(3, (n) => console.log('Vuelta ' + n));
+      console.log('Después');
+    </script>
+  </body>
+</html>

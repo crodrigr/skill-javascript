@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" width="960" height="480" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+<title id="t">Ciclo de setTimeout y setInterval</title>
+<desc id="d">Dos líneas de tiempo. setTimeout ejecuta su callback una sola vez, a los 500 milisegundos. setInterval con 300 milisegundos ejecuta su callback a los 300, 600 y 900 milisegundos, y a los 900 se detiene con clearInterval.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#64748b"/></marker></defs>
+<rect x="1" y="1" width="958" height="478" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="480" y="34" text-anchor="middle" font-size="18" font-weight="700" fill="#1f2937">Una vez o muchas veces</text>
+<text x="60" y="86" text-anchor="start" font-size="15" font-weight="700" fill="#2563eb">setTimeout(avisar, 500)</text>
+<line x1="120" y1="150" x2="820" y2="150" stroke="#64748b" stroke-width="2"/>
+<rect x="415.0" y="104" width="110" height="34" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="470.0" y="125.55" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">avisar()</text>
+<line x1="470.0" y1="138" x2="470.0" y2="150" stroke="#2563eb" stroke-width="2"/>
+<text x="536.0" y="126" text-anchor="start" font-size="12" font-weight="400" fill="#64748b">una sola vez</text>
+<text x="60" y="216" text-anchor="start" font-size="15" font-weight="700" fill="#0d9488">setInterval(contar, 300)</text>
+<line x1="120" y1="280" x2="820" y2="280" stroke="#64748b" stroke-width="2"/>
+<rect x="285.0" y="236" width="90" height="34" rx="12" fill="#ccfbf1" stroke="#0d9488" stroke-width="2"/>
+<text x="330.0" y="257.2" text-anchor="middle" font-size="12" font-weight="700" fill="#1f2937">contar() 1</text>
+<line x1="330.0" y1="270" x2="330.0" y2="280" stroke="#0d9488" stroke-width="2"/>
+<rect x="495.0" y="236" width="90" height="34" rx="12" fill="#ccfbf1" stroke="#0d9488" stroke-width="2"/>
+<text x="540.0" y="257.2" text-anchor="middle" font-size="12" font-weight="700" fill="#1f2937">contar() 2</text>
+<line x1="540.0" y1="270" x2="540.0" y2="280" stroke="#0d9488" stroke-width="2"/>
+<rect x="705.0" y="236" width="90" height="34" rx="12" fill="#ccfbf1" stroke="#0d9488" stroke-width="2"/>
+<text x="750.0" y="257.2" text-anchor="middle" font-size="12" font-weight="700" fill="#1f2937">contar() 3</text>
+<line x1="750.0" y1="270" x2="750.0" y2="280" stroke="#0d9488" stroke-width="2"/>
+<rect x="692.0" y="296" width="116" height="32" rx="12" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+<text x="750.0" y="316.2" text-anchor="middle" font-size="12" font-weight="700" fill="#1f2937">clearInterval</text>
+<text x="750.0" y="344" text-anchor="middle" font-size="12" font-weight="700" fill="#dc2626">se detiene</text>
+<line x1="120" y1="372" x2="120" y2="384" stroke="#64748b" stroke-width="2"/>
+<text x="120" y="404" text-anchor="middle" font-size="12" font-weight="400" fill="#64748b">0 ms</text>
+<line x1="330.0" y1="372" x2="330.0" y2="384" stroke="#64748b" stroke-width="2"/>
+<text x="330.0" y="404" text-anchor="middle" font-size="12" font-weight="400" fill="#64748b">300 ms</text>
+<line x1="470.0" y1="372" x2="470.0" y2="384" stroke="#64748b" stroke-width="2"/>
+<text x="470.0" y="404" text-anchor="middle" font-size="12" font-weight="400" fill="#64748b">500 ms</text>
+<line x1="540.0" y1="372" x2="540.0" y2="384" stroke="#64748b" stroke-width="2"/>
+<text x="540.0" y="404" text-anchor="middle" font-size="12" font-weight="400" fill="#64748b">600 ms</text>
+<line x1="750.0" y1="372" x2="750.0" y2="384" stroke="#64748b" stroke-width="2"/>
+<text x="750.0" y="404" text-anchor="middle" font-size="12" font-weight="400" fill="#64748b">900 ms</text>
+<line x1="120" y1="378" x2="820" y2="378" stroke="#64748b" stroke-width="2"/>
+<rect x="60" y="424" width="840" height="40" rx="10" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+<text x="480" y="450" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2937">Sin clearInterval, el intervalo se repite para siempre.</text>
+</svg>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 15 — Repetir con setInterval y detenerlo | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 15 — Repetir con setInterval y detenerlo</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      let segundos = 3;
+
+      const id = setInterval(() => {
+        console.log('⏳ Faltan ' + segundos + ' s');
+        segundos = segundos - 1;
+        if (segundos === 0) {
+          clearInterval(id);
+          console.log('🔔 ¡Tu pedido está listo!');
+        }
+      }, 300);
+
+      console.log('Cuenta regresiva iniciada');
+    </script>
+  </body>
+</html>

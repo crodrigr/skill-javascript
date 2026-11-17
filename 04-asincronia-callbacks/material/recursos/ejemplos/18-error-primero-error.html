@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 18 — Un error dentro de un callback asíncrono | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 18 — Un error dentro de un callback asíncrono</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+    <!-- errores-a-proposito: esta página falla a propósito; mirá el error en la consola (F12) -->
+
+    <script>
+      const precios = {};
+
+      console.log('Programo la consulta');
+
+      setTimeout(() => {
+        console.log(precios.cafe.valor);
+      }, 200);
+
+      console.log('El código terminó sin errores');
+    </script>
+  </body>
+</html>

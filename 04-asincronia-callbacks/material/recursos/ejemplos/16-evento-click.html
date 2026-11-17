@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 16 — Un clic dispara un callback | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 16 — Un clic dispara un callback</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+    <button id="pedir">Pedir un café</button>
+
+    <script>
+      const boton = document.getElementById('pedir');
+      let pedidos = 0;
+
+      console.log('1. Registro el callback del clic');
+
+      boton.addEventListener('click', () => {
+        pedidos = pedidos + 1;
+        console.log('🛎️ Pedido número ' + pedidos);
+      });
+
+      console.log('2. El código terminó: todavía no hay pedidos');
+    </script>
+  </body>
+</html>

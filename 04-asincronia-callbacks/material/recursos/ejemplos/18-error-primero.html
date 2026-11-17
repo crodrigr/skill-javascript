@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 18 — El patrón «error primero» | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 18 — El patrón «error primero»</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      const stock = { 'Café': 12, 'Té': 0 };
+
+      function reservar(producto, alTerminar) {
+        setTimeout(() => {
+          if (stock[producto] === undefined) {
+            alTerminar('No existe: ' + producto);
+            return;
+          }
+          if (stock[producto] === 0) {
+            alTerminar('Agotado: ' + producto);
+            return;
+          }
+          alTerminar(null, 'Reservado: ' + producto);
+        }, 200);
+      }
+
+      function mostrar(error, resultado) {
+        if (error !== null) {
+          console.log('❌ ' + error);
+          return;
+        }
+        console.log('✅ ' + resultado);
+      }
+
+      reservar('Café', mostrar);
+      reservar('Té', mostrar);
+      reservar('Pizza', mostrar);
+      console.log('Pedidos enviados');
+    </script>
+  </body>
+</html>

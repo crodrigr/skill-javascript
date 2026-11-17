@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 10 — Dos modelos de cafetería | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 10 — Dos modelos de cafetería</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      function atenderBloqueando(cliente) {
+        console.log('🧍 Atiende a ' + cliente + ' y se queda esperando');
+        for (let i = 0; i < 200000000; i++) { }
+        console.log('✅ ' + cliente + ' recibió su café');
+      }
+
+      function atenderSinBloquear(cliente) {
+        console.log('🧍 Toma el pedido de ' + cliente + ' y sigue con el próximo');
+        setTimeout(() => {
+          console.log('✅ ' + cliente + ' recibió su café');
+        }, 300);
+      }
+
+      console.log('--- Modelo bloqueante ---');
+      atenderBloqueando('Lucía');
+      atenderBloqueando('Marcos');
+
+      console.log('--- Modelo no bloqueante ---');
+      atenderSinBloquear('Sofía');
+      atenderSinBloquear('Diego');
+    </script>
+  </body>
+</html>

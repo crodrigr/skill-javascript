@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" width="960" height="520" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+<title id="t">Infierno de callbacks y funciones con nombre</title>
+<desc id="d">A la izquierda, cuatro pasos anidados que bajan en escalera hacia la derecha: validar, cobrar, preparar y entregar, cada uno dentro del callback del anterior. A la derecha, los mismos cuatro pasos como funciones con nombre en una lista plana, cada una pasando a la siguiente.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#64748b"/></marker></defs>
+<rect x="1" y="1" width="958" height="518" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="480" y="34" text-anchor="middle" font-size="18" font-weight="700" fill="#1f2937">El mismo pedido, dos formas de escribirlo</text>
+<rect x="40" y="58" width="420" height="40" rx="12" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+<text x="250.0" y="73.55" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">Callbacks anidados</text>
+<text x="250.0" y="91.55" text-anchor="middle" font-size="13" font-weight="400" fill="#1f2937">la pirámide hacia la derecha</text>
+<rect x="500" y="58" width="420" height="40" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<text x="710.0" y="73.55" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">Funciones con nombre</text>
+<text x="710.0" y="91.55" text-anchor="middle" font-size="13" font-weight="400" fill="#1f2937">una lista que se lee de arriba abajo</text>
+<line x1="480" y1="66" x2="480" y2="490" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="6 4"/>
+<rect x="50" y="124" width="410" height="66" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+<text x="62" y="150" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" font-weight="700" fill="#1f2937" xml:space="preserve">validar(pedido, (error, p1) =&gt; {</text>
+<text x="62" y="174" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="11" font-weight="400" fill="#64748b" xml:space="preserve">// el paso siguiente va adentro</text>
+<rect x="100" y="204" width="360" height="66" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+<text x="112" y="230" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" font-weight="700" fill="#1f2937" xml:space="preserve">cobrar(pedido, (error, p2) =&gt; {</text>
+<text x="112" y="254" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="11" font-weight="400" fill="#64748b" xml:space="preserve">// el paso siguiente va adentro</text>
+<rect x="150" y="284" width="310" height="66" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+<text x="162" y="310" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" font-weight="700" fill="#1f2937" xml:space="preserve">preparar(pedido, (error, p3) =&gt; {</text>
+<text x="162" y="334" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="11" font-weight="400" fill="#64748b" xml:space="preserve">// el paso siguiente va adentro</text>
+<rect x="200" y="364" width="260" height="66" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+<text x="212" y="390" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" font-weight="700" fill="#1f2937" xml:space="preserve">entregar(pedido, (error, p4) =&gt; {</text>
+<text x="212" y="414" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="11" font-weight="400" fill="#64748b" xml:space="preserve">// el paso siguiente va adentro</text>
+<text x="250" y="470" text-anchor="middle" font-size="13" font-weight="700" fill="#dc2626">Cada paso suma un nivel de sangría.</text>
+<rect x="520" y="124" width="380" height="56" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<text x="710.0" y="147.55" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">validar(pedido, alValidar)</text>
+<text x="710.0" y="165.55" text-anchor="middle" font-size="13" font-weight="400" fill="#1f2937">siguiente paso: cobrar</text>
+<path d="M 710 182 L 710 202" fill="none" stroke="#16a34a" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="520" y="204" width="380" height="56" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<text x="710.0" y="227.55" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">cobrar(pedido, alCobrar)</text>
+<text x="710.0" y="245.55" text-anchor="middle" font-size="13" font-weight="400" fill="#1f2937">siguiente paso: preparar</text>
+<path d="M 710 262 L 710 282" fill="none" stroke="#16a34a" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="520" y="284" width="380" height="56" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<text x="710.0" y="307.55" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">preparar(pedido, alPreparar)</text>
+<text x="710.0" y="325.55" text-anchor="middle" font-size="13" font-weight="400" fill="#1f2937">siguiente paso: entregar</text>
+<path d="M 710 342 L 710 362" fill="none" stroke="#16a34a" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="520" y="364" width="380" height="56" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<text x="710.0" y="387.55" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">entregar(pedido, alEntregar)</text>
+<text x="710.0" y="405.55" text-anchor="middle" font-size="13" font-weight="400" fill="#1f2937">siguiente paso: terminar</text>
+<text x="710" y="470" text-anchor="middle" font-size="13" font-weight="700" fill="#16a34a">Todos al mismo nivel, con los errores atendidos.</text>
+</svg>

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 11 — Una función también es un valor | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 11 — Una función también es un valor</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      function saludar(nombre) {
+        return 'Hola, ' + nombre;
+      }
+
+      const otra = saludar;
+      console.log(otra('Lucía'));
+
+      function aplicar(texto, transformar) {
+        return transformar(texto);
+      }
+
+      console.log(aplicar('café', (t) => t.toUpperCase()));
+      console.log(aplicar('café', saludar));
+      console.log(typeof saludar);
+    </script>
+  </body>
+</html>
