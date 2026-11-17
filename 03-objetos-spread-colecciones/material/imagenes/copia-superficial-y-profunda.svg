@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 570" width="960" height="570" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+<title id="t">Copia superficial y copia profunda</title>
+<desc id="d">Un pedido original tiene numero, total y un objeto cliente con la ciudad Rosario. Con la copia superficial, hecha con spread, el total es independiente, pero cliente apunta al mismo objeto que el original: cambiar la ciudad en la copia cambia también el original. Con la copia profunda, hecha con structuredClone, el cliente es otro objeto y el original no cambia.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#64748b"/></marker></defs>
+<rect x="1" y="1" width="958" height="568" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="480" y="34" text-anchor="middle" font-size="18" font-weight="700" fill="#1f2937">Qué se comparte y qué no</text>
+<rect x="30" y="60" width="290" height="210" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="175" y="84" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2937">pedido (original)</text>
+<text x="48" y="116" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14" font-weight="400" fill="#1f2937" xml:space="preserve">numero: 101</text>
+<text x="48" y="144" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14" font-weight="400" fill="#1f2937" xml:space="preserve">total: 13.5</text>
+<text x="48" y="172" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14" font-weight="400" fill="#1f2937" xml:space="preserve">cliente:</text>
+<rect x="140" y="152" width="160" height="74" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+<text x="150" y="178" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" font-weight="400" fill="#1f2937" xml:space="preserve">ciudad: 'Rosario'</text>
+<text x="150" y="200" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" font-weight="400" fill="#1f2937" xml:space="preserve">nombre: 'Lucía'</text>
+<text x="220" y="252" text-anchor="middle" font-size="11.5" font-weight="700" fill="#d97706">objeto cliente A</text>
+<rect x="340" y="60" width="290" height="210" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<text x="485" y="84" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2937">copia = { ...pedido }</text>
+<text x="358" y="116" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14" font-weight="400" fill="#1f2937" xml:space="preserve">numero: 101</text>
+<text x="358" y="144" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14" font-weight="400" fill="#1f2937" xml:space="preserve">total: 13.5</text>
+<text x="358" y="172" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14" font-weight="400" fill="#1f2937" xml:space="preserve">cliente:</text>
+<rect x="650" y="60" width="290" height="210" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<text x="795" y="84" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1f2937">profunda = structuredClone(pedido)</text>
+<text x="668" y="116" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14" font-weight="400" fill="#1f2937" xml:space="preserve">numero: 101</text>
+<text x="668" y="144" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14" font-weight="400" fill="#1f2937" xml:space="preserve">total: 13.5</text>
+<text x="668" y="172" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14" font-weight="400" fill="#1f2937" xml:space="preserve">cliente:</text>
+<rect x="790" y="152" width="140" height="74" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+<text x="798" y="178" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="11" font-weight="400" fill="#1f2937" xml:space="preserve">ciudad: 'Rosario'</text>
+<text x="798" y="200" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="11" font-weight="400" fill="#1f2937" xml:space="preserve">nombre: 'Lucía'</text>
+<text x="860" y="252" text-anchor="middle" font-size="11.5" font-weight="700" fill="#d97706">objeto cliente B</text>
+<path d="M436 170 L304 186" fill="none" stroke="#dc2626" stroke-width="3" marker-end="url(#ah)"/>
+<text x="500" y="214" text-anchor="middle" font-size="12.5" font-weight="700" fill="#dc2626">misma referencia</text>
+<text x="500" y="232" text-anchor="middle" font-size="12.5" font-weight="700" fill="#dc2626">al objeto A</text>
+<rect x="30" y="296" width="900" height="150" rx="10" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+<text x="480" y="324" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2937">Si se cambia copia.cliente.ciudad = 'Córdoba'</text>
+<text x="235" y="364" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">pedido.cliente.ciudad</text>
+<text x="235" y="390" text-anchor="middle" font-size="13" font-weight="700" fill="#dc2626">→ 'Córdoba' (cambió el original)</text>
+<text x="235" y="414" text-anchor="middle" font-size="12.5" font-weight="400" fill="#64748b">copia.cliente === pedido.cliente → true</text>
+<text x="715" y="364" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">Si se cambia profunda.cliente.ciudad</text>
+<text x="715" y="390" text-anchor="middle" font-size="13" font-weight="700" fill="#16a34a">pedido.cliente.ciudad sigue en 'Rosario'</text>
+<text x="715" y="414" text-anchor="middle" font-size="12.5" font-weight="400" fill="#64748b">profunda.cliente === pedido.cliente → false</text>
+<line x1="480" y1="342" x2="480" y2="434" stroke="#cbd5e1" stroke-width="2"/>
+<text x="480" y="478" text-anchor="middle" font-size="13" font-weight="400" fill="#64748b">Los valores simples (números, textos) se copian siempre; los objetos de adentro, solo con structuredClone.</text>
+<text x="480" y="502" text-anchor="middle" font-size="13" font-weight="400" fill="#64748b">structuredClone no copia funciones: da DataCloneError.</text>
+</svg>

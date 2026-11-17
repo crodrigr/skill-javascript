@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 02 — Propiedades: agregar, modificar, borrar y comprobar | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 02 — Propiedades: agregar, modificar, borrar y comprobar</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      const producto = { nombre: 'Café', precio: 4.5 };
+
+      producto.stock = 12;
+      producto.precio = 4.8;
+      console.log(producto);
+
+      delete producto.stock;
+      console.log(producto);
+
+      console.log('precio' in producto, 'stock' in producto);
+      console.log(producto.color);
+
+      const nombre = 'Té';
+      const precio = 3.2;
+      const otro = { nombre, precio };
+      console.log(otro);
+    </script>
+  </body>
+</html>

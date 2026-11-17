@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" width="960" height="520" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+<title id="t">Desestructuración y operador spread</title>
+<desc id="d">A la izquierda, la desestructuración: de un objeto con nombre, precio y stock se extraen las variables nombre y precio con una sola línea. A la derecha, el operador spread: al combinar a y b con spread, la última clave repetida gana; si se escribe a y luego b, y vale 20; si se escribe b y luego a, y vale 2.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#64748b"/></marker></defs>
+<rect x="1" y="1" width="958" height="518" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="480" y="34" text-anchor="middle" font-size="18" font-weight="700" fill="#1f2937">Extraer con { } = objeto  ·  expandir con ...</text>
+<rect x="30" y="56" width="440" height="40" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="250.0" y="81.25" text-anchor="middle" font-size="15" font-weight="700" fill="#1f2937">Desestructuración</text>
+<rect x="490" y="56" width="440" height="40" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<text x="710.0" y="81.25" text-anchor="middle" font-size="15" font-weight="700" fill="#1f2937">Operador spread (...)</text>
+<rect x="30" y="110" width="440" height="70" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+<text x="46" y="140" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" font-weight="400" fill="#1f2937" xml:space="preserve">producto = { nombre: 'Café', precio: 4.5, stock: 12 }</text>
+<text x="46" y="164" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14" font-weight="700" fill="#2563eb" xml:space="preserve">const { nombre, precio } = producto;</text>
+<rect x="60" y="214" width="180" height="50" rx="12" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+<text x="150.0" y="234.4" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2937">nombre</text>
+<text x="150.0" y="253.4" text-anchor="middle" font-size="14" font-weight="400" fill="#1f2937">'Café'</text>
+<path d="M150 182 L150 210" fill="none" stroke="#2563eb" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="260" y="214" width="180" height="50" rx="12" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+<text x="350.0" y="234.4" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2937">precio</text>
+<text x="350.0" y="253.4" text-anchor="middle" font-size="14" font-weight="400" fill="#1f2937">4.5</text>
+<path d="M350 182 L350 210" fill="none" stroke="#2563eb" stroke-width="2" marker-end="url(#ah)"/>
+<text x="46" y="296" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="11.5" font-weight="400" fill="#1f2937" xml:space="preserve">const { stock: unidades } = producto;   // unidades = 12</text>
+<text x="46" y="322" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="11.5" font-weight="400" fill="#1f2937" xml:space="preserve">const { color = 'sin color' } = producto;</text>
+<text x="46" y="344" text-anchor="start" font-size="12" font-weight="400" fill="#64748b">→ color vale</text>
+<text x="140" y="344" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" font-weight="700" fill="#16a34a" xml:space="preserve">'sin color'</text>
+<rect x="30" y="372" width="440" height="76" rx="8" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+<text x="250" y="398" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1f2937">Renombrar con ":" y valor por defecto con "="</text>
+<text x="250" y="420" text-anchor="middle" font-size="12.5" font-weight="400" fill="#64748b">El nombre de la variable coincide con la propiedad.</text>
+<rect x="490" y="110" width="440" height="70" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+<text x="506" y="138" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12.5" font-weight="400" fill="#1f2937" xml:space="preserve">a = { x: 1, y: 2 }     b = { y: 20, z: 30 }</text>
+<text x="506" y="164" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14" font-weight="700" fill="#16a34a" xml:space="preserve">{ ...a, ...b }</text>
+<rect x="490" y="200" width="440" height="60" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+<text x="506" y="224" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14" font-weight="700" fill="#1f2937" xml:space="preserve">{ ...a, ...b }</text>
+<text x="506" y="246" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14" font-weight="400" fill="#1f2937" xml:space="preserve">→ {x: 1, y: 20, z: 30}</text>
+<rect x="490" y="270" width="440" height="60" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+<text x="506" y="294" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14" font-weight="700" fill="#1f2937" xml:space="preserve">{ ...b, ...a }</text>
+<text x="506" y="316" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14" font-weight="400" fill="#1f2937" xml:space="preserve">→ {y: 2, z: 30, x: 1}</text>
+<text x="790" y="224" text-anchor="middle" font-size="12.5" font-weight="700" fill="#dc2626">y = 20: gana b</text>
+<text x="790" y="294" text-anchor="middle" font-size="12.5" font-weight="700" fill="#dc2626">y = 2: gana a</text>
+<rect x="490" y="346" width="440" height="102" rx="8" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+<text x="710" y="374" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1f2937">Gana la última clave repetida</text>
+<text x="710" y="398" text-anchor="middle" font-size="12.5" font-weight="400" fill="#1f2937">{ ...base, precio: 3.9 } copia base</text>
+<text x="710" y="418" text-anchor="middle" font-size="12.5" font-weight="400" fill="#1f2937">y cambia solo el precio.</text>
+<text x="480" y="484" text-anchor="middle" font-size="13" font-weight="400" fill="#64748b">Las dos sintaxis hacen copias superficiales: solo el primer nivel.</text>
+</svg>

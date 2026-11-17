@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 24 — FormData: los datos de un formulario | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 24 — FormData: los datos de un formulario</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <!-- sin-name-a-proposito: el último campo no tiene name para comprobar que FormData lo omite -->
+    <form id="pedido">
+      <input name="producto" value="Café">
+      <input name="cantidad" type="number" value="3">
+      <select name="tamano">
+        <option value="chico">Chico</option>
+        <option value="grande" selected>Grande</option>
+      </select>
+      <input value="sin nombre">
+    </form>
+
+    <script>
+      const formulario = document.getElementById('pedido');
+      const datos = new FormData(formulario);
+
+      console.log(datos.get('producto'), datos.get('cantidad'), typeof datos.get('cantidad'));
+      console.log(datos.get('inexistente'));
+
+      for (const [campo, valor] of datos) {
+        console.log(campo, '=', valor);
+      }
+
+      const pedido = Object.fromEntries(datos);
+      console.log(pedido);
+      console.log(Number(pedido.cantidad) * 4.5);
+    </script>
+  </body>
+</html>

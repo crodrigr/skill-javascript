@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 07 — Los objetos se comparan por referencia | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 07 — Los objetos se comparan por referencia</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      console.log({} === {});
+
+      const a = { x: 1 };
+      const b = { x: 1 };
+      const c = a;
+      console.log(a === b, a === c);
+
+      c.x = 99;
+      console.log(a.x, b.x);
+
+      console.log(JSON.stringify(a) === JSON.stringify(b));
+    </script>
+  </body>
+</html>

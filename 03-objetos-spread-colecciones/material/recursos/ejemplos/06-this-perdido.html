@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 06 — Cuando this se pierde | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 06 — Cuando this se pierde</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      const producto = {
+        nombre: 'Café',
+        precio: 4.5,
+        total() {
+          return this.precio * 2;
+        },
+        conFlecha: () => typeof this.precio
+      };
+
+      console.log(producto.total());
+
+      const suelto = producto.total;
+      console.log(suelto());
+
+      console.log(producto.conFlecha());
+      console.log(this === globalThis);
+
+      const envuelto = () => producto.total();
+      console.log(envuelto());
+    </script>
+  </body>
+</html>

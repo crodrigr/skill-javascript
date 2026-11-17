@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 19 — Buscar un valor: indexOf e includes | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 19 — Buscar un valor: indexOf e includes</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      const productos = ['Café', 'Té', 'Galleta', 'Café'];
+
+      console.log(productos.indexOf('Café'), productos.indexOf('Té'), productos.indexOf('Scone'));
+      console.log(productos.includes('Galleta'), productos.includes('Scone'));
+
+      if (productos.indexOf('Scone') === -1) {
+        console.log('Scone no está en la lista');
+      }
+
+      console.log(productos.includes('café'));
+      console.log([NaN].includes(NaN), [NaN].indexOf(NaN));
+    </script>
+  </body>
+</html>

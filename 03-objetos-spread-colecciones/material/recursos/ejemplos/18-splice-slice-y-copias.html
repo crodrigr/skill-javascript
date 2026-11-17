@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 18 — splice, slice, concat y copias de arreglos | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 18 — splice, slice, concat y copias de arreglos</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      const items = ['Café', 'Té', 'Galleta', 'Brownie', 'Medialuna'];
+
+      const tramo = items.slice(1, 3);
+      console.log(tramo, items);
+
+      const quitados = items.splice(1, 2);
+      console.log(quitados, items);
+
+      items.splice(1, 0, 'Scone', 'Muffin');
+      console.log(items);
+
+      items.splice(0, 1, 'Capuchino');
+      console.log(items);
+
+      const unidos = items.concat(['Alfajor']);
+      const unidos2 = [...items, 'Alfajor', ...quitados];
+      console.log(unidos);
+      console.log(unidos2);
+
+      const [primero, segundo, ...otros] = unidos2;
+      console.log(primero, segundo, otros);
+
+      const copia = [...items];
+      copia.push('Extra');
+      console.log(items.length, copia.length);
+    </script>
+  </body>
+</html>

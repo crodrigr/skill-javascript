@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 530" width="960" height="530" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+<title id="t">Anatomía de un objeto</title>
+<desc id="d">Un objeto producto escrito con llaves. Tiene tres propiedades, nombre con el valor Café, precio con 4.5 y stock con 12, y un método precioConIva que devuelve precio por 1.21, es decir 5.445. Cada propiedad es un par formado por una clave y un valor. Debajo se muestra cómo se leen: producto.nombre da Café, producto.precio da 4.5 y producto.precioConIva() da 5.445.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#64748b"/></marker></defs>
+<rect x="1" y="1" width="958" height="528" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="480" y="34" text-anchor="middle" font-size="18" font-weight="700" fill="#1f2937">Un objeto: pares clave-valor entre llaves</text>
+<rect x="60" y="60" width="520" height="256" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+<text x="80" y="92" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="16" font-weight="700" fill="#1f2937" xml:space="preserve">const producto = {</text>
+<text x="110" y="126" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="16" font-weight="700" fill="#2563eb" xml:space="preserve">nombre</text>
+<text x="166" y="126" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="16" font-weight="400" fill="#1f2937" xml:space="preserve">: 'Café',</text>
+<text x="110" y="158" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="16" font-weight="700" fill="#2563eb" xml:space="preserve">precio</text>
+<text x="166" y="158" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="16" font-weight="400" fill="#1f2937" xml:space="preserve">: 4.5,</text>
+<text x="110" y="190" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="16" font-weight="700" fill="#2563eb" xml:space="preserve">stock</text>
+<text x="158" y="190" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="16" font-weight="400" fill="#1f2937" xml:space="preserve">: 12,</text>
+<text x="110" y="222" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="16" font-weight="700" fill="#16a34a" xml:space="preserve">precioConIva() {</text>
+<text x="134" y="254" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="15" font-weight="400" fill="#1f2937" xml:space="preserve">return this.precio * 1.21;</text>
+<text x="110" y="280" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="16" font-weight="700" fill="#16a34a" xml:space="preserve">}</text>
+<text x="80" y="298" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="16" font-weight="700" fill="#1f2937" xml:space="preserve">};</text>
+<rect x="620" y="60" width="140" height="40" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="690.0" y="84.9" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2937">clave</text>
+<rect x="780" y="60" width="140" height="40" rx="12" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+<text x="850.0" y="84.9" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2937">valor</text>
+<line x1="690" y1="100" x2="690" y2="126" stroke="#2563eb" stroke-width="2"/>
+<text x="690" y="150" text-anchor="middle" font-size="14" font-weight="700" fill="#2563eb">nombre</text>
+<text x="850" y="150" text-anchor="middle" font-size="14" font-weight="700" fill="#d97706">'Café'</text>
+<text x="770" y="150" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2937">:</text>
+<line x1="850" y1="100" x2="850" y2="126" stroke="#d97706" stroke-width="2"/>
+<rect x="620" y="180" width="300" height="50" rx="12" fill="#ccfbf1" stroke="#0d9488" stroke-width="2"/>
+<text x="770.0" y="200.55" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">propiedad</text>
+<text x="770.0" y="218.55" text-anchor="middle" font-size="13" font-weight="400" fill="#1f2937">un dato del objeto</text>
+<rect x="620" y="244" width="300" height="50" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<text x="770.0" y="264.55" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">método</text>
+<text x="770.0" y="282.55" text-anchor="middle" font-size="13" font-weight="400" fill="#1f2937">una función guardada como propiedad</text>
+<rect x="60" y="336" width="860" height="130" rx="10" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+<text x="480" y="362" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2937">Cómo se lee</text>
+<text x="140" y="396" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="15" font-weight="700" fill="#1f2937" xml:space="preserve">producto.nombre</text>
+<text x="470" y="396" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2937">→</text>
+<text x="500" y="396" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="15" font-weight="700" fill="#16a34a" xml:space="preserve">'Café'</text>
+<text x="140" y="424" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="15" font-weight="700" fill="#1f2937" xml:space="preserve">producto.precio</text>
+<text x="470" y="424" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2937">→</text>
+<text x="500" y="424" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="15" font-weight="700" fill="#16a34a" xml:space="preserve">4.5</text>
+<text x="140" y="452" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="15" font-weight="700" fill="#1f2937" xml:space="preserve">producto.precioConIva()</text>
+<text x="470" y="452" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2937">→</text>
+<text x="500" y="452" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="15" font-weight="700" fill="#16a34a" xml:space="preserve">5.445</text>
+<text x="480" y="494" text-anchor="middle" font-size="13" font-weight="400" fill="#64748b">Un solo nombre (producto) reúne datos y comportamientos de una misma cosa.</text>
+</svg>

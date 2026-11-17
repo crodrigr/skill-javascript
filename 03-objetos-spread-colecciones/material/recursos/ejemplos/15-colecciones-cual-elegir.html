@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 15 — Colecciones de datos: ¿cuál elegir? | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 15 — Colecciones de datos: ¿cuál elegir?</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      const arreglo = ['Café', 'Té', 'Café', 'Medialuna'];
+      const objeto = { Café: 12, Té: 0, Medialuna: 25 };
+      const conjunto = new Set(arreglo);
+      const mapa = new Map([['Café', 12], ['Té', 0], ['Medialuna', 25]]);
+
+      console.log(arreglo);
+      console.log(objeto);
+      console.log(conjunto);
+      console.log(mapa);
+
+      console.log(arreglo.length, conjunto.size, mapa.size);
+      console.log(arreglo[0], objeto['Café'], mapa.get('Café'), conjunto.has('Té'));
+    </script>
+  </body>
+</html>

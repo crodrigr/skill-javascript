@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 04 — Acceso con punto y con corchetes | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 04 — Acceso con punto y con corchetes</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      const producto = {
+        nombre: 'Café',
+        precio: 4.5,
+        'país de origen': 'Colombia',
+        origen: { pais: 'Colombia', altura: 1800 }
+      };
+
+      console.log(producto.nombre, producto['nombre']);
+      console.log(producto['país de origen']);
+
+      const clave = 'precio';
+      console.log(producto[clave]);
+
+      console.log(producto.color);
+      console.log(producto.origen.pais);
+      console.log(producto.proveedor?.nombre);
+    </script>
+  </body>
+</html>

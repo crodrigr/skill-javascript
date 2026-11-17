@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 01 — Declarar un objeto | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 01 — Declarar un objeto</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      const producto = {
+        nombre: 'Café',
+        precio: 4.5,
+        stock: 12,
+        activo: true
+      };
+
+      console.log(producto);
+      console.log(typeof producto);
+      console.log(producto.nombre, producto.precio);
+
+      const vacio = {};
+      console.log(vacio);
+    </script>
+  </body>
+</html>

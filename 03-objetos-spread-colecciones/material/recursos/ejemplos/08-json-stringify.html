@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 08 — De objeto a texto: JSON.stringify() | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 08 — De objeto a texto: JSON.stringify()</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      const producto = {
+        nombre: 'Café',
+        precio: 4.5,
+        stock: 12,
+        activo: true,
+        origen: null,
+        nota: undefined,
+        total() {
+          return this.precio * 2;
+        }
+      };
+
+      const texto = JSON.stringify(producto);
+      console.log(texto);
+      console.log(typeof texto);
+
+      console.log(JSON.stringify(producto, null, 2));
+
+      console.log(JSON.stringify([1, 'a', true, null, undefined]));
+      console.log(JSON.stringify('hola'), JSON.stringify(42), JSON.stringify(undefined));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 03 — Métodos de un objeto | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 03 — Métodos de un objeto</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      const producto = {
+        nombre: 'Café',
+        precio: 4.5,
+        precioConIva: function () {
+          return this.precio * 1.21;
+        },
+        descripcion() {
+          return `${this.nombre}: $${this.precio}`;
+        }
+      };
+
+      console.log(producto.precioConIva());
+      console.log(producto.descripcion());
+      console.log(typeof producto.descripcion);
+      console.log(producto);
+    </script>
+  </body>
+</html>

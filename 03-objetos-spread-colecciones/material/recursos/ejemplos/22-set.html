@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 22 — Set: valores únicos | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 22 — Set: valores únicos</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      const ventas = ['Café', 'Té', 'Café', 'Medialuna', 'Té', 'Café'];
+      const unicos = new Set(ventas);
+      console.log(unicos, unicos.size);
+
+      unicos.add('Brownie');
+      unicos.add('Café');
+      console.log(unicos.size, unicos.has('Brownie'), unicos.has('Scone'));
+
+      unicos.delete('Té');
+      for (const producto of unicos) {
+        console.log('Vendido:', producto);
+      }
+
+      const lista = [...unicos];
+      console.log(lista, Array.isArray(lista));
+
+      console.log(new Set([{ a: 1 }, { a: 1 }]).size);
+    </script>
+  </body>
+</html>

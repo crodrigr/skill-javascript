@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 11 — Desestructuración de objetos | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 11 — Desestructuración de objetos</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      const producto = {
+        nombre: 'Café',
+        precio: 4.5,
+        stock: 12,
+        origen: { pais: 'Colombia', altura: 1800 }
+      };
+
+      const { nombre, precio } = producto;
+      console.log(nombre, precio);
+
+      const { stock: unidades } = producto;
+      console.log(unidades);
+
+      const { color = 'sin color', activo = true } = producto;
+      console.log(color, activo);
+
+      const { origen: { pais } } = producto;
+      console.log(pais);
+
+      const { nombre: titulo, ...resto } = producto;
+      console.log(titulo);
+      console.log(resto);
+
+      function describir({ nombre, precio }) {
+        return nombre + ': ' + precio;
+      }
+      console.log(describir(producto));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 20 — Buscar con una condición: find, findIndex y filter | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 20 — Buscar con una condición: find, findIndex y filter</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      const productos = [
+        { nombre: 'Café', precio: 4.5, stock: 12 },
+        { nombre: 'Té', precio: 3.2, stock: 0 },
+        { nombre: 'Galleta', precio: 1.8, stock: 40 },
+        { nombre: 'Medialuna', precio: 2.2, stock: 25 },
+        { nombre: 'Brownie', precio: 3.5, stock: 6 }
+      ];
+
+      const te = productos.find(function (p) {
+        return p.nombre === 'Té';
+      });
+      console.log(te);
+      console.log(te === productos[1]);
+
+      const caro = productos.find(p => p.precio > 4);
+      console.log(caro.nombre);
+      console.log(productos.find(p => p.precio > 10));
+
+      console.log(productos.findIndex(p => p.stock === 0), productos.findIndex(p => p.precio > 10));
+
+      const disponibles = productos.filter(p => p.stock > 0);
+      console.log(disponibles.length, productos.length);
+      console.log(productos.filter(p => p.precio > 10));
+
+      disponibles.forEach(p => console.log(p.nombre + ': ' + p.stock));
+    </script>
+  </body>
+</html>

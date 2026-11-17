@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 10 — El viaje de ida y vuelta entre objeto y JSON | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 10 — El viaje de ida y vuelta entre objeto y JSON</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      const original = {
+        nombre: 'Café',
+        precio: 4.5,
+        tamanos: ['chico', 'grande'],
+        origen: null,
+        nota: undefined,
+        ratio: NaN,
+        creado: new Date(0),
+        total() {
+          return 1;
+        }
+      };
+
+      const copia = JSON.parse(JSON.stringify(original));
+
+      console.log(copia);
+      console.log(typeof copia.creado);
+      console.log('total' in copia, 'nota' in copia, copia.ratio);
+      console.log(copia === original);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 12 — El operador spread en objetos | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 12 — El operador spread en objetos</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      const base = { nombre: 'Café', precio: 4.5, stock: 12 };
+
+      const oferta = { ...base, precio: 3.9 };
+      console.log(oferta);
+      console.log(base);
+
+      const a = { x: 1, y: 2 };
+      const b = { y: 20, z: 30 };
+      console.log({ ...a, ...b });
+      console.log({ ...b, ...a });
+
+      console.log({ precio: 1, ...base });
+      console.log({ ...base, activo: true, ...{ origen: 'Colombia' } });
+    </script>
+  </body>
+</html>

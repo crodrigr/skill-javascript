@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 13 — Copiar y combinar con Object.assign() | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 13 — Copiar y combinar con Object.assign()</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      const destino = { nombre: 'Café' };
+      const devuelto = Object.assign(destino, { precio: 4.5 }, { stock: 12, precio: 4.8 });
+
+      console.log(destino);
+      console.log(devuelto === destino);
+
+      const copia = Object.assign({}, destino);
+      console.log(copia, copia === destino);
+
+      const nuevo = { ...destino, nota: 'oferta' };
+      console.log(nuevo);
+      console.log(destino);
+    </script>
+  </body>
+</html>

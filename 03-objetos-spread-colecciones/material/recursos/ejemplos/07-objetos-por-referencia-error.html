@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 07 — Los objetos se comparan por referencia | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 07 — Los objetos se comparan por referencia</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+    <!-- errores-a-proposito: esta página falla a propósito; mirá el error en la consola (F12) -->
+
+    <script>
+      const producto = { nombre: 'Café' };
+      producto.nombre = 'Té';
+      console.log(producto.nombre);
+      producto = { nombre: 'Galleta' };
+    </script>
+  </body>
+</html>

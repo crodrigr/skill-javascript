@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 17 — Agregar y quitar elementos | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 17 — Agregar y quitar elementos</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      const pedido = ['Café', 'Té'];
+
+      console.log(pedido.push('Medialuna'), pedido);
+      console.log(pedido.unshift('Brownie'), pedido);
+      console.log(pedido.pop(), pedido);
+      console.log(pedido.shift(), pedido);
+
+      const vacio = [];
+      console.log(vacio.pop(), vacio.length);
+    </script>
+  </body>
+</html>

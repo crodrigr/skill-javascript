@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 500" width="960" height="500" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+<title id="t">Punto frente a corchetes</title>
+<desc id="d">Dos formas de leer propiedades del objeto producto. Con punto: producto.nombre da Café. Con corchetes: producto de corchete nombre también da Café; producto de corchete país de origen da Colombia, que solo funciona con corchetes porque la clave tiene un espacio; y con la variable clave igual a precio, producto de corchete clave da 4.5. Una propiedad que no existe da undefined.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#64748b"/></marker></defs>
+<rect x="1" y="1" width="958" height="498" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="480" y="34" text-anchor="middle" font-size="18" font-weight="700" fill="#1f2937">Dos maneras de leer una propiedad</text>
+<rect x="60" y="56" width="840" height="70" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+<text x="80" y="86" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14" font-weight="400" fill="#1f2937" xml:space="preserve">const producto = { nombre: 'Café', precio: 4.5, 'país de origen': 'Colombia' };</text>
+<text x="80" y="110" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14" font-weight="400" fill="#1f2937" xml:space="preserve">const clave = 'precio';</text>
+<rect x="60" y="146" width="400" height="40" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="260.0" y="171.25" text-anchor="middle" font-size="15" font-weight="700" fill="#1f2937">con punto</text>
+<rect x="500" y="146" width="400" height="40" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<text x="700.0" y="171.25" text-anchor="middle" font-size="15" font-weight="700" fill="#1f2937">con corchetes</text>
+<rect x="60" y="204" width="400" height="46" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+<text x="76" y="233" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14" font-weight="700" fill="#1f2937" xml:space="preserve">producto.nombre</text>
+<text x="440" y="233" text-anchor="end" font-size="13" font-weight="700" fill="#1f2937">→ 'Café'</text>
+<rect x="500" y="204" width="400" height="46" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+<text x="516" y="233" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14" font-weight="700" fill="#1f2937" xml:space="preserve">producto['nombre']</text>
+<text x="880" y="233" text-anchor="end" font-size="13" font-weight="700" fill="#1f2937">→ 'Café'</text>
+<rect x="60" y="260" width="400" height="46" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+<text x="76" y="289" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14" font-weight="700" fill="#1f2937" xml:space="preserve">producto.precio</text>
+<text x="440" y="289" text-anchor="end" font-size="13" font-weight="700" fill="#1f2937">→ 4.5</text>
+<rect x="500" y="260" width="400" height="46" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+<text x="516" y="289" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14" font-weight="700" fill="#1f2937" xml:space="preserve">producto['país de origen']</text>
+<text x="880" y="289" text-anchor="end" font-size="13" font-weight="700" fill="#1f2937">→ 'Colombia'</text>
+<rect x="60" y="316" width="400" height="46" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+<text x="76" y="345" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14" font-weight="700" fill="#1f2937" xml:space="preserve">producto.país de origen</text>
+<text x="440" y="345" text-anchor="end" font-size="13" font-weight="700" fill="#dc2626">→ error de sintaxis</text>
+<rect x="500" y="316" width="400" height="46" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+<text x="516" y="345" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14" font-weight="700" fill="#1f2937" xml:space="preserve">producto[clave]</text>
+<text x="880" y="345" text-anchor="end" font-size="13" font-weight="700" fill="#1f2937">→ 4.5</text>
+<rect x="60" y="372" width="400" height="46" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+<text x="76" y="401" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14" font-weight="700" fill="#1f2937" xml:space="preserve">producto.color</text>
+<text x="440" y="401" text-anchor="end" font-size="13" font-weight="700" fill="#1f2937">→ undefined</text>
+<rect x="500" y="372" width="400" height="46" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+<text x="516" y="401" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14" font-weight="700" fill="#1f2937" xml:space="preserve">producto['color']</text>
+<text x="880" y="401" text-anchor="end" font-size="13" font-weight="700" fill="#1f2937">→ undefined</text>
+<rect x="60" y="436" width="840" height="50" rx="8" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+<text x="480" y="458" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">Corchetes: claves con espacios o guiones, y claves guardadas en una variable.</text>
+<text x="480" y="477" text-anchor="middle" font-size="13" font-weight="400" fill="#64748b">Una propiedad que no existe da undefined (sin error).</text>
+</svg>

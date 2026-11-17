@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 23 — Map: pares clave-valor | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 23 — Map: pares clave-valor</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      const stock = new Map();
+      stock.set('Café', 12);
+      stock.set('Té', 0);
+      stock.set('Medialuna', 25);
+      console.log(stock, stock.size);
+
+      console.log(stock.get('Café'), stock.get('Scone'), stock.has('Té'));
+
+      stock.set('Café', 10);
+      stock.delete('Té');
+      for (const [producto, cantidad] of stock) {
+        console.log(producto, cantidad);
+      }
+      console.log([...stock.keys()], [...stock.values()]);
+
+      const clave = { id: 1 };
+      const pedidos = new Map([[clave, 'pedido 1']]);
+      console.log(pedidos.get(clave), pedidos.get({ id: 1 }));
+
+      const ventas = ['Café', 'Té', 'Café'];
+      const conteo = new Map();
+      for (const v of ventas) {
+        conteo.set(v, (conteo.get(v) || 0) + 1);
+      }
+      console.log(conteo);
+    </script>
+  </body>
+</html>

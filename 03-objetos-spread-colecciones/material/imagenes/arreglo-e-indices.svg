@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 460" width="960" height="460" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+<title id="t">Un arreglo y sus índices</title>
+<desc id="d">Un arreglo de precios con cuatro elementos: 4.5, 3.2, 1.8, 2.2. Los índices empiezan en 0: precios en la posición 0 vale 4.5 y en la posición 3 vale 2.2. La propiedad length vale 4 y el último elemento está en la posición length menos 1. Una posición que no existe, como la 10, da undefined.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#64748b"/></marker></defs>
+<rect x="1" y="1" width="958" height="458" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="480" y="34" text-anchor="middle" font-size="18" font-weight="700" fill="#1f2937">const precios = [4.5, 3.2, 1.8, 2.2];</text>
+<rect x="90" y="100" width="170" height="80" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="175" y="150" text-anchor="middle" font-size="26" font-weight="700" fill="#1f2937">4.5</text>
+<text x="175" y="90" text-anchor="middle" font-size="13" font-weight="700" fill="#64748b">posición 0</text>
+<text x="175" y="204" text-anchor="middle" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14" font-weight="700" fill="#2563eb" xml:space="preserve">precios[0]</text>
+<rect x="280" y="100" width="170" height="80" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="365" y="150" text-anchor="middle" font-size="26" font-weight="700" fill="#1f2937">3.2</text>
+<text x="365" y="90" text-anchor="middle" font-size="13" font-weight="700" fill="#64748b">posición 1</text>
+<text x="365" y="204" text-anchor="middle" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14" font-weight="700" fill="#2563eb" xml:space="preserve">precios[1]</text>
+<rect x="470" y="100" width="170" height="80" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="555" y="150" text-anchor="middle" font-size="26" font-weight="700" fill="#1f2937">1.8</text>
+<text x="555" y="90" text-anchor="middle" font-size="13" font-weight="700" fill="#64748b">posición 2</text>
+<text x="555" y="204" text-anchor="middle" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14" font-weight="700" fill="#2563eb" xml:space="preserve">precios[2]</text>
+<rect x="660" y="100" width="170" height="80" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="745" y="150" text-anchor="middle" font-size="26" font-weight="700" fill="#1f2937">2.2</text>
+<text x="745" y="90" text-anchor="middle" font-size="13" font-weight="700" fill="#64748b">posición 3</text>
+<text x="745" y="204" text-anchor="middle" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14" font-weight="700" fill="#2563eb" xml:space="preserve">precios[3]</text>
+<line x1="90" y1="236" x2="840" y2="236" stroke="#16a34a" stroke-width="3"/>
+<text x="465" y="262" text-anchor="middle" font-size="16" font-weight="700" fill="#16a34a">length = 4</text>
+<rect x="60" y="290" width="840" height="130" rx="10" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+<text x="100" y="326" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="15" font-weight="700" fill="#1f2937" xml:space="preserve">precios[0]</text>
+<text x="430" y="326" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2937">→</text>
+<text x="470" y="326" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="15" font-weight="700" fill="#16a34a" xml:space="preserve">4.5</text>
+<text x="100" y="360" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="15" font-weight="700" fill="#1f2937" xml:space="preserve">precios[precios.length - 1]</text>
+<text x="430" y="360" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2937">→</text>
+<text x="470" y="360" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="15" font-weight="700" fill="#16a34a" xml:space="preserve">2.2</text>
+<text x="100" y="394" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="15" font-weight="700" fill="#1f2937" xml:space="preserve">precios[10]</text>
+<text x="430" y="394" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2937">→</text>
+<text x="470" y="394" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="15" font-weight="700" fill="#dc2626" xml:space="preserve">undefined (no existe)</text>
+<text x="480" y="446" text-anchor="middle" font-size="13" font-weight="400" fill="#64748b">La primera posición es 0 y la última es length - 1.</text>
+</svg>

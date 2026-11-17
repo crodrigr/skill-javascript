@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 14 — Copia superficial y copia profunda | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 14 — Copia superficial y copia profunda</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      const pedido = {
+        numero: 101,
+        cliente: { nombre: 'Lucía', ciudad: 'Rosario' },
+        total: 13.5
+      };
+
+      const copia = { ...pedido };
+      copia.total = 20;
+      copia.cliente.ciudad = 'Córdoba';
+
+      console.log(pedido.total, pedido.cliente.ciudad);
+      console.log(copia.cliente === pedido.cliente);
+
+      const profunda = structuredClone(pedido);
+      profunda.cliente.ciudad = 'Salta';
+      console.log(pedido.cliente.ciudad, profunda.cliente.ciudad);
+      console.log(profunda.cliente === pedido.cliente);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 09 — De texto a objeto: JSON.parse() | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 09 — De texto a objeto: JSON.parse()</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+    <!-- errores-a-proposito: esta página falla a propósito; mirá el error en la consola (F12) -->
+
+    <script>
+      JSON.parse("{'nombre':'Café'}");
+    </script>
+
+    <script>
+      JSON.parse('{"nombre":"Café",}');
+    </script>
+
+    <script>
+      JSON.parse('{nombre:"Café"}');
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 05 — this dentro de un método | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 05 — this dentro de un método</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      const cafe = {
+        nombre: 'Café',
+        precio: 4.5,
+        stock: 12,
+        describir() {
+          return this.nombre + ' cuesta ' + this.precio;
+        },
+        vender(unidades) {
+          this.stock = this.stock - unidades;
+        }
+      };
+
+      const te = { nombre: 'Té', precio: 3.2, stock: 0, describir: cafe.describir };
+
+      console.log(cafe.describir());
+      console.log(te.describir());
+
+      cafe.vender(2);
+      console.log(cafe.stock, te.stock);
+    </script>
+  </body>
+</html>

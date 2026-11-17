@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 25 — El inventario completo | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 25 — El inventario completo</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      const productos = [
+        { nombre: 'Café', precio: 4.5, stock: 12 },
+        { nombre: 'Té', precio: 3.2, stock: 0 },
+        { nombre: 'Galleta', precio: 1.8, stock: 40 },
+        { nombre: 'Medialuna', precio: 2.2, stock: 25 },
+        { nombre: 'Brownie', precio: 3.5, stock: 6 }
+      ];
+
+      const ventas = ['Café', 'Galleta', 'Café', 'Medialuna', 'Galleta', 'Café'];
+      const distintos = new Set(ventas);
+
+      const conteo = new Map();
+      for (const venta of ventas) {
+        conteo.set(venta, (conteo.get(venta) || 0) + 1);
+      }
+
+      console.log('Productos distintos vendidos:', distintos.size);
+
+      let recaudado = 0;
+      for (const [nombre, cantidad] of conteo) {
+        const producto = productos.find(p => p.nombre === nombre);
+        const { precio } = producto;
+        const subtotal = cantidad * precio;
+        recaudado += subtotal;
+        console.log(nombre + ': ' + cantidad + ' x ' + precio + ' = ' + subtotal.toFixed(2));
+      }
+      console.log('Recaudado:', recaudado.toFixed(2));
+
+      const sinStock = productos.filter(p => p.stock === 0);
+      console.log('Sin stock:', sinStock[0].nombre);
+
+      const porPrecio = [...productos].sort((a, b) => a.precio - b.precio);
+      const nombresOrdenados = [];
+      for (const p of porPrecio) {
+        nombresOrdenados.push(p.nombre);
+      }
+      console.log(nombresOrdenados.join(', '));
+
+      const resumen = { ...productos[0], vendidos: conteo.get('Café') };
+      console.log(resumen);
+      console.log(JSON.stringify(resumen));
+    </script>
+  </body>
+</html>
