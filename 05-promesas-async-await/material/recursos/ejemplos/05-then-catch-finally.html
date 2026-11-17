@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 05 — then, catch y finally | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 05 — then, catch y finally</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      function cobrar(pedido) {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            if (pedido.tarjetaValida === false) {
+              reject('Tarjeta rechazada');
+              return;
+            }
+            resolve(pedido);
+          }, 500);
+        });
+      }
+
+      function intentar(pedido) {
+        cobrar(pedido)
+          .then((p) => console.log('💳 Cobrado $' + p.total))
+          .catch((motivo) => console.log('❌ ' + motivo))
+          .finally(() => console.log('🔚 Fin del intento del pedido ' + pedido.numero));
+      }
+
+      intentar({ numero: 101, total: 6.7 });
+      intentar({ numero: 102, total: 6.7, tarjetaValida: false });
+    </script>
+  </body>
+</html>

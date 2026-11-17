@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 07 — El pedido 102 con la tarjeta rechazada | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 07 — El pedido 102 con la tarjeta rechazada</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      function validar(pedido) {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            if (pedido.items.length === 0) {
+              reject('Pedido vacío');
+              return;
+            }
+            console.log('✅ Validado');
+            resolve(pedido);
+          }, 300);
+        });
+      }
+
+      function cobrar(pedido) {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            if (pedido.tarjetaValida === false) {
+              reject('Tarjeta rechazada');
+              return;
+            }
+            console.log('💳 Cobrado $' + pedido.total);
+            resolve(pedido);
+          }, 500);
+        });
+      }
+
+      function preparar(pedido) {
+        return new Promise((resolve) => {
+          setTimeout(() => {
+            console.log('☕ Preparado');
+            resolve(pedido);
+          }, 800);
+        });
+      }
+
+      function entregar(pedido) {
+        return new Promise((resolve) => {
+          setTimeout(() => {
+            console.log('🛵 Entregado');
+            resolve(pedido);
+          }, 200);
+        });
+      }
+
+      const pedido = { numero: 102, cliente: 'Marcos', items: ['Té'], total: 3.2, tarjetaValida: false };
+
+      console.log('📥 Pedido ' + pedido.numero + ' recibido');
+
+      validar(pedido)
+        .then(cobrar)
+        .then(preparar)
+        .then(entregar)
+        .then((p) => console.log('🏁 Pedido ' + p.numero + ' terminado'))
+        .catch((motivo) => console.log('❌ El pedido se detuvo: ' + motivo));
+    </script>
+  </body>
+</html>

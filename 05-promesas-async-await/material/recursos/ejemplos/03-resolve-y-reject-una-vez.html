@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 03 — Solo vale la primera vez | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 03 — Solo vale la primera vez</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      const promesa = new Promise((resolve, reject) => {
+        resolve('primero');
+        resolve('segundo');
+        reject('error');
+        console.log('El ejecutor terminó');
+      });
+
+      promesa.then((valor) => console.log('Valor: ' + valor));
+      promesa.catch((motivo) => console.log('Motivo: ' + motivo));
+    </script>
+  </body>
+</html>

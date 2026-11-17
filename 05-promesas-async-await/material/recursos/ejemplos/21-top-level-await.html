@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 21 — await en el nivel superior de un módulo | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 21 — await en el nivel superior de un módulo</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script type="module">
+      console.log('módulo: antes del await');
+
+      const respuesta = await new Promise((resolve) => {
+        setTimeout(() => resolve('Café: 4.5'), 300);
+      });
+
+      console.log('módulo: ' + respuesta);
+    </script>
+  </body>
+</html>

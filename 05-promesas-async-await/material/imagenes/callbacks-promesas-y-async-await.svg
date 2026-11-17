@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+<title id="t">El mismo flujo en tres formas</title>
+<desc id="d">Tres columnas con el mismo flujo de validar, cobrar y preparar un pedido. Con callbacks, cada paso se anida dentro del anterior y el código baja en escalera. Con promesas, los pasos se encadenan con then en una lista plana y un catch al final. Con async y await, los pasos se escriben en orden dentro de una función con try y catch.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#64748b"/></marker></defs>
+<rect x="1" y="1" width="958" height="558" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="480" y="34" text-anchor="middle" font-size="18" font-weight="700" fill="#1f2937">Validar → cobrar → preparar, escrito de tres formas</text>
+<rect x="30" y="62" width="280" height="380" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+<text x="170" y="92" text-anchor="middle" font-size="18" font-weight="700" fill="#1f2937">Callbacks</text>
+<text x="170" y="112" text-anchor="middle" font-size="12" font-weight="400" fill="#64748b">Clase 04</text>
+<text x="44" y="150" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="11.5" font-weight="700" fill="#1f2937" xml:space="preserve">validar(p, (e1, p1) =&gt; {</text>
+<text x="44" y="180" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="11.5" font-weight="400" fill="#1f2937" xml:space="preserve">  cobrar(p1, (e2, p2) =&gt; {</text>
+<text x="44" y="210" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="11.5" font-weight="400" fill="#1f2937" xml:space="preserve">    preparar(p2, (e3, p3) =&gt; {</text>
+<text x="44" y="240" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="11.5" font-weight="400" fill="#1f2937" xml:space="preserve">      // …y así</text>
+<text x="44" y="270" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="11.5" font-weight="400" fill="#1f2937" xml:space="preserve">    });</text>
+<text x="44" y="300" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="11.5" font-weight="400" fill="#1f2937" xml:space="preserve">  });</text>
+<text x="44" y="330" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="11.5" font-weight="400" fill="#1f2937" xml:space="preserve">});</text>
+<text x="170" y="420" text-anchor="middle" font-size="12" font-weight="700" fill="#dc2626">pirámide: baja hacia la derecha</text>
+<rect x="340" y="62" width="280" height="380" rx="12" fill="#ffffff" stroke="#d97706" stroke-width="2"/>
+<text x="480" y="92" text-anchor="middle" font-size="18" font-weight="700" fill="#1f2937">Promesas</text>
+<text x="480" y="112" text-anchor="middle" font-size="12" font-weight="400" fill="#64748b">Clase 05</text>
+<text x="354" y="150" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="11.5" font-weight="700" fill="#1f2937" xml:space="preserve">validar(p)</text>
+<text x="354" y="180" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="11.5" font-weight="400" fill="#1f2937" xml:space="preserve">  .then(cobrar)</text>
+<text x="354" y="210" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="11.5" font-weight="400" fill="#1f2937" xml:space="preserve">  .then(preparar)</text>
+<text x="354" y="240" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="11.5" font-weight="400" fill="#1f2937" xml:space="preserve">  .then(terminar)</text>
+<text x="354" y="270" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="11.5" font-weight="400" fill="#1f2937" xml:space="preserve">  .catch(fallar);</text>
+<text x="480" y="420" text-anchor="middle" font-size="12" font-weight="700" fill="#d97706">cadena plana, un catch</text>
+<rect x="650" y="62" width="280" height="380" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+<text x="790" y="92" text-anchor="middle" font-size="18" font-weight="700" fill="#1f2937">async / await</text>
+<text x="790" y="112" text-anchor="middle" font-size="12" font-weight="400" fill="#64748b">Clase 05</text>
+<text x="664" y="150" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="11.5" font-weight="700" fill="#1f2937" xml:space="preserve">async function f(p) {</text>
+<text x="664" y="180" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="11.5" font-weight="400" fill="#1f2937" xml:space="preserve">  try {</text>
+<text x="664" y="210" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="11.5" font-weight="400" fill="#1f2937" xml:space="preserve">    await validar(p);</text>
+<text x="664" y="240" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="11.5" font-weight="400" fill="#1f2937" xml:space="preserve">    await cobrar(p);</text>
+<text x="664" y="270" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="11.5" font-weight="400" fill="#1f2937" xml:space="preserve">    await preparar(p);</text>
+<text x="664" y="300" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="11.5" font-weight="400" fill="#1f2937" xml:space="preserve">  } catch (e) { fallar(e); }</text>
+<text x="664" y="330" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="11.5" font-weight="400" fill="#1f2937" xml:space="preserve">}</text>
+<text x="790" y="420" text-anchor="middle" font-size="12" font-weight="700" fill="#16a34a">se lee en orden, un try/catch</text>
+<rect x="60" y="462" width="840" height="64" rx="10" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+<text x="480" y="486" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2937">Las tres hacen lo mismo y dan la misma salida.</text>
+<text x="480" y="506" text-anchor="middle" font-size="14" font-weight="400" fill="#1f2937">Las promesas y async/await evitan la pirámide y atienden los errores en un solo lugar.</text>
+</svg>

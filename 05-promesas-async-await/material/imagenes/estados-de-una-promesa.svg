@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 490" width="960" height="490" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+<title id="t">Los tres estados de una promesa</title>
+<desc id="d">Una promesa empieza pendiente. Si se llama a resolve con un valor, pasa a cumplida y se ejecuta el then. Si se llama a reject con un motivo, pasa a rechazada y se ejecuta el catch. El finally se ejecuta en los dos casos. El cambio ocurre una sola vez: una promesa cumplida o rechazada no vuelve a cambiar.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#64748b"/></marker></defs>
+<rect x="1" y="1" width="958" height="488" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="480" y="34" text-anchor="middle" font-size="18" font-weight="700" fill="#1f2937">Una promesa cambia de estado una sola vez</text>
+<rect x="60" y="190" width="230" height="80" rx="12" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+<text x="175.0" y="225.25" text-anchor="middle" font-size="15" font-weight="700" fill="#1f2937">⏳ Pendiente</text>
+<text x="175.0" y="245.25" text-anchor="middle" font-size="15" font-weight="400" fill="#1f2937">todavía sin resultado</text>
+<rect x="670" y="80" width="230" height="80" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<text x="785.0" y="115.25" text-anchor="middle" font-size="15" font-weight="700" fill="#1f2937">✅ Cumplida</text>
+<text x="785.0" y="135.25" text-anchor="middle" font-size="15" font-weight="400" fill="#1f2937">tiene un valor</text>
+<rect x="670" y="300" width="230" height="80" rx="12" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+<text x="785.0" y="335.25" text-anchor="middle" font-size="15" font-weight="700" fill="#1f2937">❌ Rechazada</text>
+<text x="785.0" y="355.25" text-anchor="middle" font-size="15" font-weight="400" fill="#1f2937">tiene un motivo</text>
+<path d="M 292 214 L 666 130" fill="none" stroke="#16a34a" stroke-width="3" marker-end="url(#ah)"/>
+<path d="M 292 246 L 666 330" fill="none" stroke="#dc2626" stroke-width="3" marker-end="url(#ah)"/>
+<text x="480" y="150" text-anchor="middle" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="15" font-weight="700" fill="#16a34a" xml:space="preserve">resolve(valor)</text>
+<text x="480" y="346" text-anchor="middle" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="15" font-weight="700" fill="#dc2626" xml:space="preserve">reject(motivo)</text>
+<text x="780" y="60" text-anchor="middle" font-size="14" font-weight="700" fill="#16a34a">.then((valor) =&gt; …)</text>
+<text x="780" y="400" text-anchor="middle" font-size="14" font-weight="700" fill="#dc2626">.catch((motivo) =&gt; …)</text>
+<rect x="330" y="205" width="150" height="50" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="405" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#1f2937">.finally(() =&gt; …)</text>
+<text x="405" y="244" text-anchor="middle" font-size="11" font-weight="400" fill="#64748b">corre en los dos casos</text>
+<rect x="60" y="424" width="840" height="56" rx="10" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+<text x="480" y="457.0" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2937">Se asienta una sola vez: una promesa cumplida o rechazada ya no cambia.</text>
+</svg>

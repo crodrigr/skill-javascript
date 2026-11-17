@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 01 — Pendiente, cumplida o rechazada | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 01 — Pendiente, cumplida o rechazada</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      const exito = new Promise((resolve) => {
+        setTimeout(() => resolve('Café listo'), 300);
+      });
+
+      const fallo = new Promise((resolve, reject) => {
+        setTimeout(() => reject('Sin stock de té'), 300);
+      });
+
+      console.log('1. Las dos promesas están pendientes');
+
+      exito.then((valor) => console.log('2. Cumplida con: ' + valor));
+      fallo.catch((motivo) => console.log('3. Rechazada con: ' + motivo));
+    </script>
+  </body>
+</html>

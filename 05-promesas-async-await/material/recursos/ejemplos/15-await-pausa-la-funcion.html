@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 15 — await pausa la función, no el hilo | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 15 — await pausa la función, no el hilo</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      function esperar(milisegundos) {
+        return new Promise((resolve) => {
+          setTimeout(resolve, milisegundos);
+        });
+      }
+
+      async function atender(cliente) {
+        console.log('2. Empieza a atender a ' + cliente);
+        await esperar(500);
+        console.log('4. Termina de atender a ' + cliente);
+      }
+
+      console.log('1. Antes de llamar a atender');
+      atender('Lucía');
+      console.log('3. Después de llamar (atender sigue esperando)');
+    </script>
+  </body>
+</html>

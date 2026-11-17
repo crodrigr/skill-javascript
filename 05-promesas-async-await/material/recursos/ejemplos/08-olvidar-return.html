@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 08 — El return olvidado | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 08 — El return olvidado</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      function sumarUno(n) {
+        return new Promise((resolve) => {
+          setTimeout(() => resolve(n + 1), 100);
+        });
+      }
+
+      sumarUno(1)
+        .then((v) => {
+          console.log('Sin return, paso 1: ' + v);
+          sumarUno(v);
+        })
+        .then((v) => {
+          console.log('Sin return, paso 2 recibió: ' + v);
+        })
+        .then(() => sumarUno(1))
+        .then((v) => {
+          console.log('Con return, paso 1: ' + v);
+          return sumarUno(v);
+        })
+        .then((v) => {
+          console.log('Con return, paso 2 recibió: ' + v);
+        });
+    </script>
+  </body>
+</html>

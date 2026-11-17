@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 21 — El mismo await en un script clásico | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 21 — El mismo await en un script clásico</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+    <!-- errores-a-proposito: esta página falla a propósito; mirá el error en la consola (F12) -->
+
+    <script>
+      console.log('script clásico');
+
+      const respuesta = await Promise.resolve('Café: 4.5');
+
+      console.log(respuesta);
+    </script>
+  </body>
+</html>

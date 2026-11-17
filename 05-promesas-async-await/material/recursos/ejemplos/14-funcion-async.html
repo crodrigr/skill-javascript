@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 14 — Una función async devuelve una promesa | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 14 — Una función async devuelve una promesa</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      async function obtenerPrecio() {
+        return 4.5;
+      }
+
+      async function fallar() {
+        throw new Error('Sin conexión');
+      }
+
+      obtenerPrecio().then((precio) => console.log('Precio: ' + precio));
+      fallar().catch((error) => console.log('❌ ' + error.message));
+
+      console.log('Las dos funciones ya se llamaron');
+    </script>
+  </body>
+</html>

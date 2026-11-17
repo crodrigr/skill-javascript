@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 13 — Una promesa no impide bloquear | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 13 — Una promesa no impide bloquear</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      console.log('1. Antes de crear la promesa');
+
+      new Promise((resolve) => {
+        console.log('2. El ejecutor empieza el bucle largo');
+        for (let i = 0; i < 300000000; i++) { }
+        console.log('3. El ejecutor terminó el bucle');
+        resolve('listo');
+      }).then((valor) => console.log('5. .then: ' + valor));
+
+      console.log('4. Después de crear la promesa');
+    </script>
+  </body>
+</html>

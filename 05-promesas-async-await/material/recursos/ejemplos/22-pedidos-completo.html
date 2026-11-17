@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 22 — Varios pedidos a la vez | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 22 — Varios pedidos a la vez</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      function validar(pedido) {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            if (pedido.items.length === 0) {
+              reject('Pedido vacío');
+              return;
+            }
+            console.log('✅ Validado (' + pedido.numero + ')');
+            resolve(pedido);
+          }, 300);
+        });
+      }
+
+      function cobrar(pedido) {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            if (pedido.tarjetaValida === false) {
+              reject('Tarjeta rechazada');
+              return;
+            }
+            console.log('💳 Cobrado (' + pedido.numero + ')');
+            resolve(pedido);
+          }, 500);
+        });
+      }
+
+      function preparar(pedido) {
+        return new Promise((resolve) => {
+          setTimeout(() => {
+            console.log('☕ Preparado (' + pedido.numero + ')');
+            resolve(pedido);
+          }, 800);
+        });
+      }
+
+      async function procesarPedido(pedido) {
+        try {
+          await validar(pedido);
+          await cobrar(pedido);
+          await preparar(pedido);
+          return 'Pedido ' + pedido.numero + ' listo para ' + pedido.cliente;
+        } catch (motivo) {
+          throw new Error('Pedido ' + pedido.numero + ': ' + motivo);
+        }
+      }
+
+      async function main() {
+        const pedidos = [
+          { numero: 101, cliente: 'Lucía', items: ['Café'], total: 4.5 },
+          { numero: 102, cliente: 'Marcos', items: ['Té'], total: 3.2, tarjetaValida: false },
+          { numero: 103, cliente: 'Sofía', items: ['Brownie', 'Té'], total: 6.7 }
+        ];
+
+        const promesas = [];
+        for (const pedido of pedidos) {
+          promesas.push(procesarPedido(pedido));
+        }
+
+        const resultados = await Promise.allSettled(promesas);
+
+        console.log('--- Informe ---');
+        for (const r of resultados) {
+          if (r.status === 'fulfilled') {
+            console.log('🏁 ' + r.value);
+          } else {
+            console.log('❌ ' + r.reason.message);
+          }
+        }
+      }
+
+      main();
+    </script>
+  </body>
+</html>

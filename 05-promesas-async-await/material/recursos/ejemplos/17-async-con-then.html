@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 17 — async y .then() juntos | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 17 — async y .then() juntos</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      function esperar(milisegundos) {
+        return new Promise((resolve) => {
+          setTimeout(resolve, milisegundos);
+        });
+      }
+
+      async function procesar(pedido) {
+        await esperar(300);
+        if (pedido.items.length === 0) {
+          throw new Error('Pedido vacío');
+        }
+        return 'Pedido ' + pedido.numero + ' procesado';
+      }
+
+      procesar({ numero: 101, items: ['Café'] })
+        .then((mensaje) => console.log('✅ ' + mensaje))
+        .catch((error) => console.log('❌ ' + error.message))
+        .finally(() => console.log('Fin del pedido 101'));
+
+      procesar({ numero: 102, items: [] })
+        .then((mensaje) => console.log('✅ ' + mensaje))
+        .catch((error) => console.log('❌ ' + error.message))
+        .finally(() => console.log('Fin del pedido 102'));
+    </script>
+  </body>
+</html>

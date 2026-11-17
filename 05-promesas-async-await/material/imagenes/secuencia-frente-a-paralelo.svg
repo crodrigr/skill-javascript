@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" width="960" height="520" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+<title id="t">Secuencia frente a paralelo</title>
+<desc id="d">Dos formas de consultar tres tareas de 300, 500 y 700 milisegundos. Con await uno tras otro, cada tarea empieza cuando termina la anterior y el total es la suma, 1500 milisegundos. Con Promise.all, las tres empiezan a la vez y el total es el de la más lenta, 700 milisegundos.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#64748b"/></marker></defs>
+<rect x="1" y="1" width="958" height="518" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="480" y="34" text-anchor="middle" font-size="18" font-weight="700" fill="#1f2937">await uno tras otro, o Promise.all</text>
+<text x="60" y="86" text-anchor="start" font-size="15" font-weight="700" fill="#dc2626">Secuencia</text>
+<text x="60" y="106" text-anchor="start" font-size="12" font-weight="400" fill="#64748b">await, await, await</text>
+<rect x="190" y="70" width="120.0" height="40" rx="12" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+<text x="250.0" y="93.85" text-anchor="middle" font-size="11" font-weight="400" fill="#1f2937">precio 300 ms</text>
+<rect x="310.0" y="70" width="200.0" height="40" rx="12" fill="#ccfbf1" stroke="#0d9488" stroke-width="2"/>
+<text x="410.0" y="93.85" text-anchor="middle" font-size="11" font-weight="400" fill="#1f2937">stock 500 ms</text>
+<rect x="510.0" y="70" width="280.0" height="40" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="650.0" y="93.85" text-anchor="middle" font-size="11" font-weight="400" fill="#1f2937">proveedor 700 ms</text>
+<text x="804.0" y="96" text-anchor="start" font-size="15" font-weight="700" fill="#dc2626">total: 1500 ms</text>
+<line x1="60" y1="150" x2="900" y2="150" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="60" y="206" text-anchor="start" font-size="15" font-weight="700" fill="#16a34a">Paralelo</text>
+<text x="60" y="226" text-anchor="start" font-size="12" font-weight="400" fill="#64748b">Promise.all([…])</text>
+<rect x="190" y="170" width="120.0" height="38" rx="12" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+<text x="250.0" y="192.85" text-anchor="middle" font-size="11" font-weight="400" fill="#1f2937">precio 300 ms</text>
+<rect x="190" y="216" width="200.0" height="38" rx="12" fill="#ccfbf1" stroke="#0d9488" stroke-width="2"/>
+<text x="290.0" y="238.85" text-anchor="middle" font-size="11" font-weight="400" fill="#1f2937">stock 500 ms</text>
+<rect x="190" y="262" width="280.0" height="38" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="330.0" y="284.85" text-anchor="middle" font-size="11" font-weight="400" fill="#1f2937">proveedor 700 ms</text>
+<text x="484.0" y="232" text-anchor="start" font-size="15" font-weight="700" fill="#16a34a">total: 700 ms</text>
+<line x1="190" y1="330" x2="790.0" y2="330" stroke="#64748b" stroke-width="2"/>
+<line x1="190.0" y1="324" x2="190.0" y2="336" stroke="#64748b" stroke-width="2"/>
+<text x="190.0" y="356" text-anchor="middle" font-size="12" font-weight="400" fill="#64748b">0 ms</text>
+<line x1="310.0" y1="324" x2="310.0" y2="336" stroke="#64748b" stroke-width="2"/>
+<text x="310.0" y="356" text-anchor="middle" font-size="12" font-weight="400" fill="#64748b">300 ms</text>
+<line x1="470.0" y1="324" x2="470.0" y2="336" stroke="#64748b" stroke-width="2"/>
+<text x="470.0" y="356" text-anchor="middle" font-size="12" font-weight="400" fill="#64748b">700 ms</text>
+<line x1="590.0" y1="324" x2="590.0" y2="336" stroke="#64748b" stroke-width="2"/>
+<text x="590.0" y="356" text-anchor="middle" font-size="12" font-weight="400" fill="#64748b">1000 ms</text>
+<line x1="790.0" y1="324" x2="790.0" y2="336" stroke="#64748b" stroke-width="2"/>
+<text x="790.0" y="356" text-anchor="middle" font-size="12" font-weight="400" fill="#64748b">1500 ms</text>
+<rect x="60" y="384" width="840" height="64" rx="10" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+<text x="480" y="408" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2937">Si las tareas son independientes, Promise.all ahorra tiempo.</text>
+<text x="480" y="428" text-anchor="middle" font-size="14" font-weight="400" fill="#1f2937">Si una necesita el resultado de la anterior, hay que esperarla (secuencia).</text>
+</svg>

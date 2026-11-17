@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 12 — Síncrono, microtarea y temporizador | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 12 — Síncrono, microtarea y temporizador</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      console.log('1. Inicio');
+
+      setTimeout(() => console.log('5. Temporizador (0 ms)'), 0);
+
+      const promesa = new Promise((resolve) => {
+        console.log('2. Ejecutor (síncrono)');
+        resolve('listo');
+      });
+
+      promesa.then((valor) => console.log('4. .then (microtarea): ' + valor));
+
+      console.log('3. Fin del código síncrono');
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 02 — Declarar una promesa con new Promise | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 02 — Declarar una promesa con new Promise</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      console.log('1. Antes de crear la promesa');
+
+      const promesa = new Promise((resolve, reject) => {
+        console.log('2. El ejecutor se ejecuta de inmediato');
+        const hayStock = true;
+        if (hayStock) {
+          resolve('Hay stock de café');
+        } else {
+          reject('No hay stock de café');
+        }
+      });
+
+      console.log('3. Después de crear la promesa');
+
+      promesa.then((mensaje) => console.log('4. ' + mensaje));
+    </script>
+  </body>
+</html>

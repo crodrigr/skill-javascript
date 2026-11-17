@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+<title id="t">Pila, microtareas y cola de tareas</title>
+<desc id="d">Tres zonas. Primero se ejecuta el código síncrono en la pila: Inicio, el ejecutor y Fin. Después se vacía la cola de microtareas, donde esperan los then y los await: sale el then. Por último, la cola de tareas, donde esperan los temporizadores: sale el setTimeout de 0 milisegundos. El orden de salida es 1, 2, 3, 4 y 5.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#64748b"/></marker></defs>
+<rect x="1" y="1" width="958" height="538" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="480" y="34" text-anchor="middle" font-size="18" font-weight="700" fill="#1f2937">Primero lo síncrono, después las microtareas, al final las tareas</text>
+<text x="180" y="76" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2937">Pila de llamadas</text>
+<text x="180" y="96" text-anchor="middle" font-size="12" font-weight="400" fill="#64748b">código síncrono</text>
+<rect x="40" y="108" width="280" height="190" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+<rect x="54" y="122" width="252" height="46" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="180.0" y="149.55" text-anchor="middle" font-size="13" font-weight="400" fill="#1f2937">1. Inicio</text>
+<rect x="54" y="178" width="252" height="46" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="180.0" y="205.55" text-anchor="middle" font-size="13" font-weight="400" fill="#1f2937">2. Ejecutor (síncrono)</text>
+<rect x="54" y="234" width="252" height="46" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="180.0" y="261.55" text-anchor="middle" font-size="13" font-weight="400" fill="#1f2937">3. Fin del código síncrono</text>
+<text x="480" y="76" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2937">Cola de microtareas</text>
+<text x="480" y="96" text-anchor="middle" font-size="12" font-weight="400" fill="#64748b">.then, .catch, await</text>
+<rect x="340" y="108" width="280" height="190" rx="12" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+<rect x="354" y="122" width="252" height="46" rx="12" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+<text x="480.0" y="149.55" text-anchor="middle" font-size="13" font-weight="400" fill="#1f2937">4. .then (microtarea)</text>
+<text x="780" y="76" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2937">Cola de tareas</text>
+<text x="780" y="96" text-anchor="middle" font-size="12" font-weight="400" fill="#64748b">setTimeout, eventos</text>
+<rect x="640" y="108" width="280" height="190" rx="12" fill="#ffffff" stroke="#d97706" stroke-width="2"/>
+<rect x="654" y="122" width="252" height="46" rx="12" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+<text x="780.0" y="149.55" text-anchor="middle" font-size="13" font-weight="400" fill="#1f2937">5. Temporizador (0 ms)</text>
+<path d="M 322 200 L 336 200" fill="none" stroke="#64748b" stroke-width="2.5" marker-end="url(#ah)"/>
+<path d="M 622 200 L 636 200" fill="none" stroke="#64748b" stroke-width="2.5" marker-end="url(#ah)"/>
+<text x="480" y="326" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2937">① se vacía la pila  →  ② se vacía la cola de microtareas  →  ③ se toma UNA tarea de la cola de tareas</text>
+<rect x="60" y="352" width="840" height="64" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="80" y="380" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="13" font-weight="400" fill="#1f2937" xml:space="preserve">console.log('1. Inicio');  setTimeout(…, 0);  new Promise(…ejecutor…);</text>
+<text x="80" y="402" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="13" font-weight="400" fill="#1f2937" xml:space="preserve">promesa.then(…);  console.log('3. Fin del código síncrono');</text>
+<rect x="60" y="436" width="840" height="56" rx="10" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+<text x="480" y="460" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2937">Orden de salida: 1, 2, 3 (síncrono), 4 (.then) y 5 (setTimeout).</text>
+<text x="480" y="480" text-anchor="middle" font-size="14" font-weight="400" fill="#1f2937">Las microtareas siempre se atienden antes que los temporizadores.</text>
+</svg>

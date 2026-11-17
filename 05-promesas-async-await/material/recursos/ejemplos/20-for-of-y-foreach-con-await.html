@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 20 — for…of espera; forEach no | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 20 — for…of espera; forEach no</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      function esperar(milisegundos) {
+        return new Promise((resolve) => {
+          setTimeout(resolve, milisegundos);
+        });
+      }
+
+      const pedidos = [101, 102, 103];
+
+      async function procesar(numero, etiqueta) {
+        await esperar(200);
+        console.log(etiqueta + ': procesado el pedido ' + numero);
+      }
+
+      async function conForEach() {
+        pedidos.forEach(async (numero) => {
+          await procesar(numero, 'forEach');
+        });
+        console.log('forEach: el bucle terminó, pero los pedidos siguen en proceso');
+      }
+
+      async function conForOf() {
+        for (const numero of pedidos) {
+          await procesar(numero, 'for…of');
+        }
+        console.log('for…of: todos los pedidos están procesados');
+      }
+
+      async function main() {
+        conForEach();
+        await esperar(500);
+        await conForOf();
+      }
+
+      main();
+    </script>
+  </body>
+</html>

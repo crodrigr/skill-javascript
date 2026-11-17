@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 04 — Una función que devuelve una promesa | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 04 — Una función que devuelve una promesa</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+
+    <script>
+      function validar(pedido) {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            if (pedido.items.length === 0) {
+              reject('Pedido vacío');
+              return;
+            }
+            resolve(pedido);
+          }, 300);
+        });
+      }
+
+      validar({ numero: 101, items: ['Café'] })
+        .then((pedido) => console.log('✅ Pedido ' + pedido.numero + ' validado'))
+        .catch((motivo) => console.log('❌ ' + motivo));
+
+      validar({ numero: 102, items: [] })
+        .then((pedido) => console.log('✅ Pedido ' + pedido.numero + ' validado'))
+        .catch((motivo) => console.log('❌ ' + motivo));
+    </script>
+  </body>
+</html>

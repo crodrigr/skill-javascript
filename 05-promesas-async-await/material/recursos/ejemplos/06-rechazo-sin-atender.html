@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 06 — Un rechazo que nadie atiende | Café Aroma</title>
+  </head>
+  <body>
+    <h1>Ejemplo 06 — Un rechazo que nadie atiende</h1>
+    <p>Abrí la consola (F12) para ver el resultado.</p>
+    <!-- errores-a-proposito: esta página falla a propósito; mirá el error en la consola (F12) -->
+
+    <script>
+      function cobrar(pedido) {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            if (pedido.tarjetaValida === false) {
+              reject('Tarjeta rechazada');
+              return;
+            }
+            resolve(pedido);
+          }, 500);
+        });
+      }
+
+      console.log('Cobrando el pedido 102');
+      cobrar({ numero: 102, total: 6.7, tarjetaValida: false })
+        .then((p) => console.log('💳 Cobrado $' + p.total));
+    </script>
+  </body>
+</html>
