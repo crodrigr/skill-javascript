@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 11 — Un nombre con guion | Café Aroma</title>
+  </head>
+  <body>
+    <!-- errores-a-proposito: esta página falla a propósito; mirá el error en la consola (F12) -->
+    <p id="aviso">Café agotado</p>
+
+    <script>
+      const aviso = document.getElementById('aviso');
+      console.log('Antes de asignar');
+      aviso.style.background-color = 'gold';
+      console.log('Esta línea no se ejecuta');
+    </script>
+  </body>
+</html>

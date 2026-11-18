@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 13 — Armar una tarjeta de producto | Café Aroma</title>
+    <style>
+      .tarjeta { border: 1px solid #94a3b8; padding: 8px; margin: 4px; display: inline-block; }
+      .precio { font-weight: bold; }
+    </style>
+  </head>
+  <body>
+    <div id="carta"></div>
+
+    <script>
+      const productos = [
+        { nombre: 'Café', precio: 4.5 },
+        { nombre: 'Té', precio: 3.2 },
+        { nombre: 'Galleta', precio: 1.8 }
+      ];
+      const carta = document.getElementById('carta');
+
+      function crearTarjeta(producto) {
+        const tarjeta = document.createElement('article');
+        tarjeta.className = 'tarjeta';
+        tarjeta.dataset.precio = producto.precio;
+
+        const titulo = document.createElement('h2');
+        titulo.textContent = producto.nombre;
+
+        const precio = document.createElement('p');
+        precio.className = 'precio';
+        precio.textContent = '$' + producto.precio;
+
+        const boton = document.createElement('button');
+        boton.textContent = 'Pedir';
+
+        tarjeta.append(titulo, precio, boton);
+        return tarjeta;
+      }
+
+      for (const producto of productos) {
+        carta.append(crearTarjeta(producto));
+      }
+
+      console.log('Tarjetas en la página: ' + carta.children.length);
+      console.log(carta.children[0].outerHTML);
+      console.log('Precio de la última: ' + carta.children[2].dataset.precio);
+    </script>
+  </body>
+</html>

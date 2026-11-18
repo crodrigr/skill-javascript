@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 20 — children frente a childNodes: elementos y nodos | Café Aroma</title>
+  </head>
+  <body>
+    <ul id="menu">
+      <li>Café</li>
+      <li>Té</li>
+    </ul>
+
+    <script>
+      const menu = document.getElementById('menu');
+
+      console.log('children: ' + menu.children.length);
+      console.log('childNodes: ' + menu.childNodes.length);
+
+      const nombres = [];
+      for (const nodo of menu.childNodes) {
+        nombres.push(nodo.nodeName);
+      }
+      console.log('Nodos: ' + nombres.join(', '));
+
+      const soloElementos = [];
+      for (const hijo of menu.children) {
+        soloElementos.push(hijo.nodeName);
+      }
+      console.log('Elementos: ' + soloElementos.join(', '));
+
+      console.log('forEach en children: ' + typeof menu.children.forEach);
+      console.log('forEach en childNodes: ' + typeof menu.childNodes.forEach);
+    </script>
+  </body>
+</html>

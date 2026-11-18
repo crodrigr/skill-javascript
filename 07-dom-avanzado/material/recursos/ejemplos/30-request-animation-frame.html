@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 30 — requestAnimationFrame: animar cuadro a cuadro | Café Aroma</title>
+    <style>
+      .caja { width: 60px; height: 60px; background: #d97706; }
+    </style>
+  </head>
+  <body>
+    <div id="caja" class="caja"></div>
+
+    <script>
+      const caja = document.getElementById('caja');
+      let inicio;
+
+      function paso(marca) {
+        if (inicio === undefined) {
+          inicio = marca;
+        }
+        const avance = Math.min((marca - inicio) * 0.2, 200);
+        caja.style.transform = 'translateX(' + avance + 'px)';
+        if (avance < 200) {
+          requestAnimationFrame(paso);
+        } else {
+          console.log('Llegó a ' + avance + ' px y se detuvo');
+        }
+      }
+
+      requestAnimationFrame(paso);
+      console.log('Animación pedida');
+
+      const id = requestAnimationFrame(() => console.log('Este cuadro no se ejecuta'));
+      cancelAnimationFrame(id);
+      console.log('Segundo cuadro cancelado');
+    </script>
+  </body>
+</html>

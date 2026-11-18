@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+<title id="t">Qué hace cada método de nodos y dónde inserta</title>
+<desc id="d">Una lista ul con dos elementos, A y B. prepend inserta dentro al principio. before inserta antes de B. after inserta después de B. append inserta dentro al final. replaceWith cambia B por otro nodo. remove quita B. cloneNode crea una copia de B que no está en la página hasta insertarla. Insertar un nodo que ya está en la página lo mueve.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#64748b"/></marker></defs>
+<rect x="1" y="1" width="958" height="538" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="480" y="34" text-anchor="middle" font-size="18" font-weight="700" fill="#1f2937">Una lista, siete operaciones</text>
+<rect x="330" y="60" width="300" height="250" rx="12" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+<text x="480" y="84" text-anchor="middle" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="13" font-weight="700" fill="#1f2937" xml:space="preserve">&lt;ul id="menu"&gt;</text>
+<rect x="360" y="140" width="240" height="44" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="480.0" y="166.9" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2937">&lt;li&gt; A</text>
+<rect x="360" y="214" width="240" height="44" rx="12" fill="#ccfbf1" stroke="#0d9488" stroke-width="2"/>
+<text x="480.0" y="240.9" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2937">&lt;li&gt; B</text>
+<text x="480" y="296" text-anchor="middle" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="13" font-weight="700" fill="#1f2937" xml:space="preserve">&lt;/ul&gt;</text>
+<line x1="340" y1="104" x2="620" y2="104" stroke="#7c3aed" stroke-width="2" stroke-dasharray="5 4"/>
+<line x1="340" y1="200" x2="620" y2="200" stroke="#7c3aed" stroke-width="2" stroke-dasharray="5 4"/>
+<line x1="340" y1="276" x2="620" y2="276" stroke="#7c3aed" stroke-width="2" stroke-dasharray="5 4"/>
+<path d="M 150 104 L 336 104" fill="none" stroke="#7c3aed" stroke-width="2.5" marker-end="url(#ah)"/>
+<text x="40" y="98" text-anchor="start" font-size="13" font-weight="700" fill="#1f2937">prepend(x)</text>
+<text x="40" y="116" text-anchor="start" font-size="12" font-weight="400" fill="#64748b">dentro, al principio</text>
+<path d="M 150 200 L 336 200" fill="none" stroke="#7c3aed" stroke-width="2.5" marker-end="url(#ah)"/>
+<text x="40" y="194" text-anchor="start" font-size="13" font-weight="700" fill="#1f2937">A.after(x) / B.before(x)</text>
+<text x="40" y="212" text-anchor="start" font-size="12" font-weight="400" fill="#64748b">entre A y B</text>
+<path d="M 150 276 L 336 276" fill="none" stroke="#7c3aed" stroke-width="2.5" marker-end="url(#ah)"/>
+<text x="40" y="270" text-anchor="start" font-size="13" font-weight="700" fill="#1f2937">append(x)</text>
+<text x="40" y="288" text-anchor="start" font-size="12" font-weight="400" fill="#64748b">dentro, al final</text>
+<rect x="690" y="150" width="230" height="44" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+<text x="704" y="170" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" font-weight="700" fill="#1f2937" xml:space="preserve">replaceWith(x)</text>
+<text x="704" y="186" text-anchor="start" font-size="11" font-weight="400" fill="#1f2937">B cambia por x</text>
+<path d="M 686 172 L 606 226" fill="none" stroke="#d97706" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="690" y="202" width="230" height="44" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+<text x="704" y="222" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" font-weight="700" fill="#1f2937" xml:space="preserve">remove()</text>
+<text x="704" y="238" text-anchor="start" font-size="11" font-weight="400" fill="#1f2937">B sale de la página</text>
+<path d="M 686 224 L 606 238" fill="none" stroke="#dc2626" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="690" y="254" width="230" height="44" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+<text x="704" y="274" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" font-weight="700" fill="#1f2937" xml:space="preserve">cloneNode(true)</text>
+<text x="704" y="290" text-anchor="start" font-size="11" font-weight="400" fill="#1f2937">copia de B (sin padre)</text>
+<path d="M 686 276 L 606 250" fill="none" stroke="#16a34a" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="40" y="336" width="880" height="56" rx="10" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+<text x="480" y="360" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2937">Insertar un nodo que YA está en la página lo MUEVE: no lo copia.</text>
+<text x="480" y="380" text-anchor="middle" font-size="14" font-weight="400" fill="#1f2937">Para tener una copia: cloneNode(true) y después insertar el clon.</text>
+<rect x="40" y="410" width="880" height="100" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="60" y="440" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" font-weight="400" fill="#1f2937" xml:space="preserve">append / prepend / before / after   → aceptan varios nodos y textos; no devuelven valor</text>
+<text x="60" y="466" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" font-weight="400" fill="#1f2937" xml:space="preserve">appendChild / insertBefore / replaceChild / removeChild   → devuelven el nodo</text>
+<text x="60" y="492" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" font-weight="400" fill="#1f2937" xml:space="preserve">createElement / createTextNode / cloneNode   → crean un nodo FUERA de la página</text>
+</svg>

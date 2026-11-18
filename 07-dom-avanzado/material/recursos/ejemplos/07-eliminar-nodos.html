@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 07 — remove y removeChild | Café Aroma</title>
+    <style>
+      .producto { padding: 4px 8px; }
+      .destacado { background: #fef9c3; }
+    </style>
+  </head>
+  <body>
+    <ul id="menu">
+      <li id="cafe" class="producto">Café</li>
+      <li id="te" class="producto">Té</li>
+      <li id="galleta" class="producto">Galleta</li>
+    </ul>
+
+    <script>
+      const menu = document.getElementById('menu');
+      const cafe = document.getElementById('cafe');
+      const te = document.getElementById('te');
+
+      cafe.remove();
+      console.log('remove → productos: ' + menu.children.length);
+      console.log('El café sigue guardado en la variable: ' + cafe.textContent + ', padre: ' + cafe.parentNode);
+
+      const quitado = menu.removeChild(te);
+      console.log('removeChild → productos: ' + menu.children.length);
+      console.log('removeChild devuelve el nodo quitado: ' + (quitado === te));
+
+      cafe.remove();
+      console.log('remove otra vez sobre un nodo ya quitado: no da error');
+
+      menu.append(cafe);
+      console.log('Volví a agregar el café → productos: ' + menu.children.length);
+    </script>
+  </body>
+</html>

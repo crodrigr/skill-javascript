@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 05 — cloneNode: copiar un nodo | Café Aroma</title>
+    <style>
+      .producto { padding: 4px 8px; }
+      .destacado { background: #fef9c3; }
+    </style>
+  </head>
+  <body>
+    <ul id="menu">
+      <li id="cafe" class="producto">Café <b>(destacado)</b></li>
+    </ul>
+    <button id="avisar">Avisar</button>
+
+    <script>
+      const menu = document.getElementById('menu');
+      const cafe = document.getElementById('cafe');
+
+      cafe.addEventListener('click', () => console.log('clic en ' + cafe.textContent.trim()));
+
+      const superficial = cafe.cloneNode(false);
+      const profundo = cafe.cloneNode(true);
+      console.log('false → ' + superficial.outerHTML);
+      console.log('true  → ' + profundo.outerHTML);
+      console.log('El clon está en la página: ' + profundo.isConnected + ', padre: ' + profundo.parentNode);
+
+      profundo.id = 'cafe2';
+      menu.append(profundo, profundo);
+      console.log('Insertado dos veces → productos: ' + menu.children.length);
+
+      cafe.click();
+      profundo.click();
+      console.log('Fin: el clon no copió el controlador de clic');
+    </script>
+  </body>
+</html>

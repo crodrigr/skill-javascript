@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 16 — Una posición mal escrita | Café Aroma</title>
+  </head>
+  <body>
+    <!-- errores-a-proposito: esta página falla a propósito; mirá el error en la consola (F12) -->
+    <ul id="menu"><li id="te">Té</li></ul>
+
+    <script>
+      const menu = document.getElementById('menu');
+      console.log('Antes de insertar');
+      menu.insertAdjacentHTML('despues', '<li>Galleta</li>');
+      console.log('Esta línea no se ejecuta');
+    </script>
+  </body>
+</html>

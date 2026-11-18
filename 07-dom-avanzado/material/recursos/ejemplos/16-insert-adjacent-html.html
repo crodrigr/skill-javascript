@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 16 — insertAdjacentHTML: HTML en una posición | Café Aroma</title>
+  </head>
+  <body>
+    <ul id="menu"><li id="te">Té</li></ul>
+
+    <script>
+      const menu = document.getElementById('menu');
+
+      menu.insertAdjacentHTML('afterbegin', '<li><b>Café</b></li>');
+      menu.insertAdjacentHTML('beforeend', '<li>Galleta</li><li>Medialuna</li>');
+      menu.insertAdjacentHTML('BEFOREEND', '<li>Brownie</li>');
+
+      console.log(menu.outerHTML);
+      console.log('Productos: ' + menu.children.length);
+      console.log('Negritas: ' + menu.getElementsByTagName('b').length);
+    </script>
+  </body>
+</html>

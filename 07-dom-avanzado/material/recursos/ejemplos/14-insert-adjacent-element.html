@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 14 — insertAdjacentElement: las cuatro posiciones | Café Aroma</title>
+  </head>
+  <body>
+    <div id="caja"><p id="te">Té</p></div>
+
+    <script>
+      const caja = document.getElementById('caja');
+      const te = document.getElementById('te');
+
+      function crear(texto) {
+        const marca = document.createElement('b');
+        marca.textContent = texto;
+        return marca;
+      }
+
+      te.insertAdjacentElement('beforebegin', crear('1-antes'));
+      te.insertAdjacentElement('afterbegin', crear('2-dentro-al-principio'));
+      te.insertAdjacentElement('beforeend', crear('3-dentro-al-final'));
+      const devuelto = te.insertAdjacentElement('afterend', crear('4-despues'));
+
+      console.log(caja.innerHTML);
+      console.log('Devuelve el elemento insertado: ' + devuelto.textContent);
+    </script>
+  </body>
+</html>

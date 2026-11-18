@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 02 — createTextNode: un nodo de texto | Café Aroma</title>
+  </head>
+  <body>
+    <p id="nota">Café</p>
+
+    <script>
+      const parrafo = document.getElementById('nota');
+
+      const texto = document.createTextNode(' (precio: $4.5)');
+      console.log('Nombre del nodo: ' + texto.nodeName + ', tipo: ' + texto.nodeType);
+
+      parrafo.append(texto);
+      console.log('Texto del párrafo: ' + parrafo.textContent);
+
+      const conEtiquetas = document.createTextNode('<b>no es negrita</b>');
+      parrafo.append(conEtiquetas);
+      console.log('HTML del párrafo: ' + parrafo.innerHTML);
+      console.log('Elementos hijos: ' + parrafo.children.length);
+    </script>
+  </body>
+</html>

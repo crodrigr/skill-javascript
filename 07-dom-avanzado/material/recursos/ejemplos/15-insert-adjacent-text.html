@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 15 — insertAdjacentText: texto sin interpretar | Café Aroma</title>
+  </head>
+  <body>
+    <div id="caja"><p id="nota"><b>Café</b></p></div>
+
+    <script>
+      const nota = document.getElementById('nota');
+
+      nota.insertAdjacentText('afterbegin', '[nuevo] ');
+      nota.insertAdjacentText('beforeend', ' <i>no es cursiva</i>');
+      nota.insertAdjacentText('afterend', 'texto afuera');
+
+      console.log('Párrafo: ' + nota.innerHTML);
+      console.log('Caja: ' + document.getElementById('caja').innerHTML);
+      console.log('Elementos dentro del párrafo: ' + nota.children.length);
+    </script>
+  </body>
+</html>

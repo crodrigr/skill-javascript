@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 03 — prepend, before y after | Café Aroma</title>
+    <style>
+      .producto { padding: 4px 8px; }
+      .destacado { background: #fef9c3; }
+    </style>
+  </head>
+  <body>
+    <ul id="menu">
+      <li id="te" class="producto">Té</li>
+    </ul>
+
+    <script>
+      const menu = document.getElementById('menu');
+      const te = document.getElementById('te');
+
+      function crear(nombre) {
+        const li = document.createElement('li');
+        li.textContent = nombre;
+        li.className = 'producto';
+        return li;
+      }
+
+      function orden() {
+        const nombres = [];
+        for (const producto of menu.children) {
+          nombres.push(producto.textContent);
+        }
+        return nombres.join(', ');
+      }
+
+      menu.prepend(crear('Café'));
+      console.log('prepend → ' + orden());
+
+      te.before(crear('Medialuna'));
+      console.log('before  → ' + orden());
+
+      te.after(crear('Galleta'));
+      console.log('after   → ' + orden());
+
+      menu.append(crear('Brownie'), 'texto suelto');
+      console.log('append  → ' + orden() + ' | hijos totales: ' + menu.childNodes.length);
+    </script>
+  </body>
+</html>

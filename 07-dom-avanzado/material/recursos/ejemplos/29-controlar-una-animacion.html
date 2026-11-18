@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 29 — Pausar, terminar y cancelar una animación | Café Aroma</title>
+    <style>
+      .caja { width: 60px; height: 20px; background: #d97706; margin: 4px; }
+    </style>
+  </head>
+  <body>
+    <div id="a" class="caja"></div>
+    <div id="b" class="caja"></div>
+    <div id="c" class="caja"></div>
+
+    <script>
+      const a = document.getElementById('a').animate([{ opacity: 1 }, { opacity: 0.2 }], { duration: 1000, fill: 'forwards' });
+      console.log('A al empezar: ' + a.playState);
+
+      a.pause();
+      console.log('A tras pause: ' + a.playState);
+
+      a.play();
+      console.log('A tras play: ' + a.playState);
+
+      a.finish();
+      console.log('A tras finish: ' + a.playState + ', opacity: ' + getComputedStyle(document.getElementById('a')).opacity);
+
+      const b = document.getElementById('b').animate([{ opacity: 1 }, { opacity: 0.2 }], { duration: 1000, fill: 'forwards' });
+      b.cancel();
+      console.log('B tras cancel: ' + b.playState + ', opacity: ' + getComputedStyle(document.getElementById('b')).opacity);
+
+      const c = document.getElementById('c').animate([{ transform: 'translateX(0)' }, { transform: 'translateX(100px)' }], { duration: 1000, iterations: 2, direction: 'alternate' });
+      console.log('C: iteraciones ' + c.effect.getTiming().iterations + ', dirección ' + c.effect.getTiming().direction);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 09 — Configurar un elemento: id, className, title, hidden y disabled | Café Aroma</title>
+  </head>
+  <body>
+    <button id="pedir">Pedir</button>
+    <div id="carta"></div>
+
+    <script>
+      const carta = document.getElementById('carta');
+      const pedir = document.getElementById('pedir');
+
+      const tarjeta = document.createElement('article');
+      tarjeta.id = 'tarjeta-cafe';
+      tarjeta.className = 'tarjeta destacada';
+      tarjeta.title = 'Café de la casa';
+      tarjeta.hidden = true;
+      console.log(tarjeta.outerHTML);
+
+      tarjeta.hidden = false;
+      carta.append(tarjeta);
+      console.log('En la página: ' + carta.innerHTML);
+
+      console.log('disabled antes: ' + pedir.disabled);
+      pedir.disabled = true;
+      console.log('disabled ahora: ' + pedir.disabled + ' | ' + pedir.outerHTML);
+    </script>
+  </body>
+</html>

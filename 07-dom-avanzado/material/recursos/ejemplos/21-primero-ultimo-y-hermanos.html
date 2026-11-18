@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 21 — Primer hijo, último hijo y hermanos | Café Aroma</title>
+  </head>
+  <body>
+    <ul id="menu">
+      <li id="cafe">Café</li>
+      <li id="te">Té</li>
+      <li id="galleta">Galleta</li>
+    </ul>
+
+    <script>
+      const menu = document.getElementById('menu');
+      const te = document.getElementById('te');
+
+      console.log('primero: ' + menu.firstElementChild.textContent);
+      console.log('último: ' + menu.lastElementChild.textContent);
+      console.log('anterior al té: ' + te.previousElementSibling.textContent);
+      console.log('siguiente al té: ' + te.nextElementSibling.textContent);
+
+      console.log('anterior al primero: ' + menu.firstElementChild.previousElementSibling);
+      console.log('siguiente al último: ' + menu.lastElementChild.nextElementSibling);
+
+      const vacio = document.createElement('ul');
+      console.log('primer hijo de una lista vacía: ' + vacio.firstElementChild);
+    </script>
+  </body>
+</html>

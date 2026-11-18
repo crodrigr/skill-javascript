@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 24 — Quitar una tarea con closest | Café Aroma</title>
+  </head>
+  <body>
+    <h2>Pedidos pendientes</h2>
+    <ul id="pedidos">
+      <li class="pedido"><span class="texto">Café para Lucía</span> <button class="quitar">Quitar</button></li>
+      <li class="pedido"><span class="texto">Té para Marcos</span> <button class="quitar">Quitar</button></li>
+      <li class="pedido"><span class="texto">Galleta para Sofía</span> <button class="quitar">Quitar</button></li>
+    </ul>
+    <p>Pendientes: <span id="total">3</span></p>
+
+    <script>
+      const lista = document.getElementById('pedidos');
+      const total = document.getElementById('total');
+
+      document.querySelectorAll('.quitar').forEach((boton) => {
+        boton.addEventListener('click', () => {
+          const pedido = boton.closest('li');
+          const texto = pedido.querySelector('.texto').textContent;
+          pedido.remove();
+          total.textContent = lista.children.length;
+          console.log('Quitado: ' + texto + ' → quedan ' + total.textContent);
+        });
+      });
+
+      console.log('Botones registrados: ' + document.querySelectorAll('.quitar').length);
+    </script>
+  </body>
+</html>

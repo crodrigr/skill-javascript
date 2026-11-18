@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 04 — Insertar un nodo existente lo mueve | Café Aroma</title>
+  </head>
+  <body>
+    <h2>Pendientes</h2>
+    <ul id="pendientes">
+      <li>Café</li>
+      <li>Té</li>
+    </ul>
+    <h2>Listos</h2>
+    <ul id="listos">
+      <li>Galleta</li>
+    </ul>
+
+    <script>
+      const pendientes = document.getElementById('pendientes');
+      const listos = document.getElementById('listos');
+
+      function cantidades() {
+        return 'pendientes: ' + pendientes.children.length + ', listos: ' + listos.children.length;
+      }
+
+      console.log('Inicio → ' + cantidades());
+
+      const cafe = pendientes.children[0];
+      const devuelto = listos.appendChild(cafe);
+      console.log('appendChild → ' + cantidades());
+      console.log('appendChild devuelve el mismo nodo: ' + (devuelto === cafe));
+
+      const te = pendientes.children[0];
+      listos.insertBefore(te, listos.children[0]);
+      console.log('insertBefore → ' + cantidades());
+
+      console.log('Orden en listos: ' + listos.children[0].textContent + ', ' + listos.children[1].textContent + ', ' + listos.children[2].textContent);
+    </script>
+  </body>
+</html>

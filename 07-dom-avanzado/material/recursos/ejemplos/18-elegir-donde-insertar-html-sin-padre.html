@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 18 — insertAdjacentHTML sin padre | Café Aroma</title>
+  </head>
+  <body>
+    <!-- errores-a-proposito: esta página falla a propósito; mirá el error en la consola (F12) -->
+    <ul id="menu"><li id="cafe">Café</li></ul>
+
+    <script>
+      const huerfano = document.createElement('div');
+      console.log('Antes de insertar');
+      huerfano.insertAdjacentHTML('beforebegin', '<b>hola</b>');
+      console.log('Esta línea no se ejecuta');
+    </script>
+  </body>
+</html>

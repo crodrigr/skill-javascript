@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" width="960" height="480" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+<title id="t">Las cuatro posiciones de la inserción adyacente</title>
+<desc id="d">Un elemento p con el texto Té. beforebegin inserta antes de la etiqueta de apertura, fuera del elemento. afterbegin inserta dentro, antes de su primer hijo. beforeend inserta dentro, después de su último hijo. afterend inserta después de la etiqueta de cierre, fuera del elemento.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#64748b"/></marker></defs>
+<rect x="1" y="1" width="958" height="478" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="480" y="34" text-anchor="middle" font-size="18" font-weight="700" fill="#1f2937">insertAdjacentElement / Text / HTML</text>
+<rect x="330" y="128" width="300" height="140" rx="10" fill="#ffffff" stroke="#64748b" stroke-width="2.5"/>
+<text x="346" y="152" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14" font-weight="700" fill="#1f2937" xml:space="preserve">&lt;p id="te"&gt;</text>
+<text x="370" y="200" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="16" font-weight="700" fill="#1f2937" xml:space="preserve">Té</text>
+<text x="346" y="254" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14" font-weight="700" fill="#1f2937" xml:space="preserve">&lt;/p&gt;</text>
+<rect x="660" y="88" width="260" height="40" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+<text x="674" y="106" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="13" font-weight="700" fill="#1f2937" xml:space="preserve">beforebegin</text>
+<text x="674" y="122" text-anchor="start" font-size="11" font-weight="400" fill="#1f2937">antes del elemento (afuera)</text>
+<path d="M 656 108 L 520 108" fill="none" stroke="#d97706" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="660" y="152" width="260" height="40" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+<text x="674" y="170" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="13" font-weight="700" fill="#1f2937" xml:space="preserve">afterbegin</text>
+<text x="674" y="186" text-anchor="start" font-size="11" font-weight="400" fill="#1f2937">dentro, antes del primer hijo</text>
+<path d="M 656 172 L 520 172" fill="none" stroke="#2563eb" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="660" y="212" width="260" height="40" rx="10" fill="#ccfbf1" stroke="#0d9488" stroke-width="1.5"/>
+<text x="674" y="230" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="13" font-weight="700" fill="#1f2937" xml:space="preserve">beforeend</text>
+<text x="674" y="246" text-anchor="start" font-size="11" font-weight="400" fill="#1f2937">dentro, después del último hijo</text>
+<path d="M 656 232 L 520 232" fill="none" stroke="#0d9488" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="660" y="272" width="260" height="40" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+<text x="674" y="290" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="13" font-weight="700" fill="#1f2937" xml:space="preserve">afterend</text>
+<text x="674" y="306" text-anchor="start" font-size="11" font-weight="400" fill="#1f2937">después del elemento (afuera)</text>
+<path d="M 656 292 L 520 292" fill="none" stroke="#16a34a" stroke-width="2.5" marker-end="url(#ah)"/>
+<text x="180" y="108" text-anchor="middle" font-size="13" font-weight="700" fill="#d97706">↑ nodo antes</text>
+<text x="180" y="172" text-anchor="middle" font-size="13" font-weight="700" fill="#2563eb">↓ primer hijo nuevo</text>
+<text x="180" y="232" text-anchor="middle" font-size="13" font-weight="700" fill="#0d9488">↓ último hijo nuevo</text>
+<text x="180" y="292" text-anchor="middle" font-size="13" font-weight="700" fill="#16a34a">↓ nodo después</text>
+<rect x="40" y="340" width="880" height="60" rx="10" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+<text x="480" y="364" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2937">beforebegin y afterend necesitan que el elemento tenga un padre.</text>
+<text x="480" y="384" text-anchor="middle" font-size="14" font-weight="400" fill="#1f2937">insertAdjacentHTML interpreta HTML (riesgo con texto ajeno); insertAdjacentText, no.</text>
+<rect x="40" y="416" width="880" height="50" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="480" y="446" text-anchor="middle" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="13" font-weight="400" fill="#1f2937" xml:space="preserve">te.insertAdjacentText('beforeend', ' (nuevo)')   →   &lt;p&gt;Té (nuevo)&lt;/p&gt;</text>
+</svg>

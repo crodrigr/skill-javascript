@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 17 — insertAdjacentHTML y su riesgo | Café Aroma</title>
+  </head>
+  <body>
+    <div id="con-texto"></div>
+    <div id="con-html"></div>
+
+    <script>
+      const comentario = '<b>Hola</b> <img src="img/no-existe.png" onerror="window.hackeado = true">';
+      const conTexto = document.getElementById('con-texto');
+      const conHtml = document.getElementById('con-html');
+
+      window.hackeado = false;
+      conTexto.insertAdjacentText('beforeend', comentario);
+      console.log('Con insertAdjacentText: ' + conTexto.innerHTML);
+
+      setTimeout(() => {
+        console.log('Con insertAdjacentText, ¿se ejecutó el código? ' + window.hackeado);
+
+        conHtml.insertAdjacentHTML('beforeend', comentario);
+
+        setTimeout(() => {
+          console.log('Con insertAdjacentHTML, ¿se ejecutó el código? ' + window.hackeado);
+        }, 300);
+      }, 300);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 27 — Una transición con la propiedad style | Café Aroma</title>
+    <style>
+      .aviso { padding: 8px; background: #dbeafe; }
+    </style>
+  </head>
+  <body>
+    <div id="aviso" class="aviso">Pedido listo</div>
+
+    <script>
+      const aviso = document.getElementById('aviso');
+
+      aviso.addEventListener('transitionend', (evento) => {
+        console.log('transitionend: ' + evento.propertyName + ' → opacity calculado: ' + getComputedStyle(aviso).opacity);
+      });
+
+      aviso.style.transition = 'opacity 300ms linear';
+      getComputedStyle(aviso).opacity;
+      aviso.style.opacity = 0.2;
+
+      console.log('Animaciones activas: ' + aviso.getAnimations().length);
+      console.log('opacity en línea: ' + aviso.style.opacity);
+    </script>
+  </body>
+</html>

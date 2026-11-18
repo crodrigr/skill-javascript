@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 06 — replaceWith y replaceChild | Café Aroma</title>
+    <style>
+      .producto { padding: 4px 8px; }
+      .destacado { background: #fef9c3; }
+    </style>
+  </head>
+  <body>
+    <ul id="menu">
+      <li id="viejo" class="producto">Café</li>
+      <li id="otro" class="producto">Té</li>
+    </ul>
+
+    <script>
+      const menu = document.getElementById('menu');
+      const viejo = document.getElementById('viejo');
+      const otro = document.getElementById('otro');
+
+      const galleta = document.createElement('li');
+      galleta.textContent = 'Galleta';
+      galleta.className = 'producto';
+
+      viejo.replaceWith(galleta);
+      console.log('replaceWith → ' + menu.children[0].textContent + ', ' + menu.children[1].textContent);
+      console.log('El viejo sigue en la página: ' + viejo.isConnected + ', padre: ' + viejo.parentNode);
+
+      const medialuna = document.createElement('li');
+      medialuna.textContent = 'Medialuna';
+      medialuna.className = 'producto';
+
+      const devuelto = menu.replaceChild(medialuna, otro);
+      console.log('replaceChild → ' + menu.children[0].textContent + ', ' + menu.children[1].textContent);
+      console.log('replaceChild devuelve el reemplazado: ' + (devuelto === otro));
+    </script>
+  </body>
+</html>

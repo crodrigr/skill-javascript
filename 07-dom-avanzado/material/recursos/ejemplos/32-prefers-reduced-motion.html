@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 32 — Respetar prefers-reduced-motion | Café Aroma</title>
+    <style>
+      .aviso { padding: 8px; background: #dbeafe; }
+    </style>
+  </head>
+  <body>
+    <div id="aviso" class="aviso">Pedido listo</div>
+
+    <script>
+      const aviso = document.getElementById('aviso');
+      const consulta = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+      function duracionPara(prefiereMenos) {
+        return prefiereMenos ? 1 : 400;
+      }
+
+      console.log('Prefiere menos movimiento: ' + consulta.matches);
+      console.log('Duración si prefiere menos: ' + duracionPara(true) + ' ms');
+      console.log('Duración si no: ' + duracionPara(false) + ' ms');
+
+      const animacion = aviso.animate(
+        [{ opacity: 0 }, { opacity: 1 }],
+        { duration: duracionPara(consulta.matches), fill: 'forwards' }
+      );
+      console.log('Duración elegida: ' + animacion.effect.getTiming().duration + ' ms');
+
+      animacion.finished.then(() => {
+        console.log('Terminó → estado: ' + animacion.playState);
+      });
+    </script>
+  </body>
+</html>

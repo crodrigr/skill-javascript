@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 01 — Crear un elemento y agregarlo a la página | Café Aroma</title>
+    <style>
+      .producto { padding: 4px 8px; }
+      .destacado { background: #fef9c3; }
+    </style>
+  </head>
+  <body>
+    <h1>Menú de Aroma</h1>
+    <ul id="menu">
+      <li class="producto">Café</li>
+    </ul>
+
+    <script>
+      const menu = document.getElementById('menu');
+
+      const nuevo = document.createElement('li');
+      console.log('Recién creado → padre: ' + nuevo.parentNode + ', en la página: ' + nuevo.isConnected);
+
+      nuevo.textContent = 'Té';
+      nuevo.className = 'producto';
+
+      menu.append(nuevo);
+      console.log('Tras append → padre: ' + nuevo.parentNode.id + ', en la página: ' + nuevo.isConnected);
+      console.log('Productos en el menú: ' + menu.children.length);
+      console.log(nuevo.outerHTML);
+    </script>
+  </body>
+</html>

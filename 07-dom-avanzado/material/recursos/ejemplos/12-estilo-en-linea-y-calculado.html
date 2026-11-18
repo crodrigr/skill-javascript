@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 12 — Estilo en línea y estilo calculado | Café Aroma</title>
+    <style>
+      .rojo { color: red; }
+    </style>
+  </head>
+  <body>
+    <p id="precio" class="rojo">$4.5</p>
+
+    <script>
+      const precio = document.getElementById('precio');
+
+      console.log('style.color: ' + JSON.stringify(precio.style.color));
+      console.log('getComputedStyle.color: ' + getComputedStyle(precio).color);
+
+      precio.style.color = 'blue';
+      console.log('Tras style.color = blue → style: ' + precio.style.color);
+      console.log('Tras style.color = blue → calculado: ' + getComputedStyle(precio).color);
+
+      precio.style.color = '';
+      console.log('Tras vaciar → calculado: ' + getComputedStyle(precio).color);
+      console.log('display calculado: ' + getComputedStyle(precio).display);
+    </script>
+  </body>
+</html>

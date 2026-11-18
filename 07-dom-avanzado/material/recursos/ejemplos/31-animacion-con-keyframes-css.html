@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 31 — Animación con @keyframes de CSS | Café Aroma</title>
+    <style>
+      .caja { width: 60px; height: 60px; background: #d97706; }
+      @keyframes latido {
+        from { transform: scale(1); }
+        to { transform: scale(1.5); }
+      }
+      .late { animation: latido 300ms linear 2 alternate; }
+    </style>
+  </head>
+  <body>
+    <div id="caja" class="caja"></div>
+
+    <script>
+      const caja = document.getElementById('caja');
+
+      caja.addEventListener('animationend', (evento) => {
+        console.log('animationend: ' + evento.animationName);
+      });
+
+      caja.classList.add('late');
+
+      const animacion = caja.getAnimations()[0];
+      console.log('Tipo: ' + animacion.constructor.name + ', estado: ' + animacion.playState);
+      console.log('Nombre: ' + animacion.animationName);
+
+      animacion.finished.then(() => {
+        console.log('finished → estado: ' + animacion.playState);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 08 — Crear nodos frente a escribir HTML | Café Aroma</title>
+  </head>
+  <body>
+    <div id="con-nodos"></div>
+    <div id="con-html"></div>
+
+    <script>
+      const texto = 'Café <b>doble</b>';
+      const conNodos = document.getElementById('con-nodos');
+      const conHtml = document.getElementById('con-html');
+
+      const parrafo = document.createElement('p');
+      parrafo.textContent = texto;
+      conNodos.append(parrafo);
+
+      conHtml.innerHTML = '<p>' + texto + '</p>';
+
+      console.log('Con nodos: ' + conNodos.innerHTML);
+      console.log('Con HTML:  ' + conHtml.innerHTML);
+      console.log('Etiquetas <b> en cada uno: ' + conNodos.getElementsByTagName('b').length + ' y ' + conHtml.getElementsByTagName('b').length);
+    </script>
+  </body>
+</html>

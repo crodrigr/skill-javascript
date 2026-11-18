@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 23 — Recorrer children sin romper la lista | Café Aroma</title>
+  </head>
+  <body>
+    <ul id="a"><li>1</li><li>2</li><li>3</li><li>4</li></ul>
+    <ul id="b"><li>1</li><li>2</li><li>3</li><li>4</li></ul>
+
+    <script>
+      const a = document.getElementById('a');
+      const b = document.getElementById('b');
+
+      const hijosA = a.children;
+      for (let i = 0; i < hijosA.length; i++) {
+        hijosA[i].remove();
+      }
+      console.log('Recorriendo la colección viva → quedan: ' + a.children.length);
+
+      const copia = Array.from(b.children);
+      for (const hijo of copia) {
+        hijo.remove();
+      }
+      console.log('Recorriendo una copia con Array.from → quedan: ' + b.children.length);
+      console.log('La copia sigue teniendo: ' + copia.length + ' elementos');
+    </script>
+  </body>
+</html>

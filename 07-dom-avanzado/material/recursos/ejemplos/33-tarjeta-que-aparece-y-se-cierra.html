@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 33 — Una tarjeta que aparece y se cierra con animación | Café Aroma</title>
+    <style>
+      .tarjeta { border: 1px solid #94a3b8; padding: 8px; margin: 4px; background: #fff; }
+    </style>
+  </head>
+  <body>
+    <div id="avisos"></div>
+    <button id="nuevo">Mostrar aviso</button>
+
+    <script>
+      const avisos = document.getElementById('avisos');
+      const boton = document.getElementById('nuevo');
+      let numero = 0;
+
+      function crearAviso(texto) {
+        const tarjeta = document.createElement('article');
+        tarjeta.className = 'tarjeta';
+        tarjeta.textContent = texto + ' ';
+
+        const cerrar = document.createElement('button');
+        cerrar.className = 'cerrar';
+        cerrar.textContent = 'Cerrar';
+        tarjeta.append(cerrar);
+
+        cerrar.addEventListener('click', () => {
+          const tarjetaActual = cerrar.closest('.tarjeta');
+          const salida = tarjetaActual.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 300, fill: 'forwards' });
+          salida.finished.then(() => {
+            tarjetaActual.remove();
+            console.log('Aviso eliminado → quedan: ' + avisos.children.length);
+          });
+        });
+
+        return tarjeta;
+      }
+
+      boton.addEventListener('click', () => {
+        numero = numero + 1;
+        const tarjeta = crearAviso('Aviso ' + numero);
+        avisos.append(tarjeta);
+        const entrada = tarjeta.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 300 });
+        console.log('Aviso ' + numero + ' creado → animación: ' + entrada.playState + ', avisos: ' + avisos.children.length);
+        entrada.finished.then(() => {
+          console.log('Aviso ' + numero + ' apareció');
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 22 — closest: del botón a su tarjeta | Café Aroma</title>
+  </head>
+  <body>
+    <article class="tarjeta" id="t1">
+      <h2>Café</h2>
+      <button class="cerrar">Cerrar</button>
+    </article>
+    <article class="tarjeta" id="t2">
+      <h2>Té</h2>
+      <button class="cerrar">Cerrar</button>
+    </article>
+
+    <script>
+      document.querySelectorAll('.cerrar').forEach((boton) => {
+        const tarjeta = boton.closest('.tarjeta');
+        const nombre = tarjeta.querySelector('h2').textContent;
+        console.log('El botón de ' + nombre + ' pertenece a #' + tarjeta.id);
+      });
+
+      const primero = document.querySelector('.cerrar');
+      console.log('closest de sí mismo: ' + primero.closest('button').className);
+      console.log('closest que no existe: ' + primero.closest('ul'));
+      console.log('closest por etiqueta: ' + primero.closest('article').id);
+    </script>
+  </body>
+</html>

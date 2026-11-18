@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" width="960" height="520" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+<title id="t">La jerarquía de elementos y cómo navegarla</title>
+<desc id="d">Una sección contiene un h2 y una lista ul; la lista contiene tres elementos li: Café, Té y Galleta. Desde el li Té, parentNode o parentElement sube a la lista, previousElementSibling va a Café, nextElementSibling va a Galleta, y closest con section sube hasta la sección. Desde la lista, firstElementChild es Café y lastElementChild es Galleta.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#64748b"/></marker></defs>
+<rect x="1" y="1" width="958" height="518" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="480" y="34" text-anchor="middle" font-size="18" font-weight="700" fill="#1f2937">Desde un elemento: padre, hijos y hermanos</text>
+<rect x="360" y="62" width="240" height="40" rx="12" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+<text x="480.0" y="86.55" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">&lt;section id="carta"&gt;</text>
+<rect x="200" y="150" width="160" height="40" rx="12" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2"/>
+<text x="280.0" y="174.55" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">&lt;h2&gt;</text>
+<rect x="520" y="150" width="200" height="40" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="620.0" y="174.55" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">&lt;ul id="menu"&gt;</text>
+<rect x="400" y="250" width="130" height="40" rx="12" fill="#ccfbf1" stroke="#0d9488" stroke-width="2"/>
+<text x="465.0" y="274.55" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">&lt;li&gt; Café</text>
+<rect x="545" y="250" width="130" height="40" rx="12" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+<text x="610.0" y="274.9" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2937">&lt;li&gt; Té</text>
+<rect x="690" y="250" width="130" height="40" rx="12" fill="#ccfbf1" stroke="#0d9488" stroke-width="2"/>
+<text x="755.0" y="274.55" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">&lt;li&gt; Galleta</text>
+<line x1="480" y1="102" x2="280" y2="150" stroke="#64748b" stroke-width="2"/>
+<line x1="480" y1="102" x2="620" y2="150" stroke="#64748b" stroke-width="2"/>
+<line x1="620" y1="190" x2="465" y2="250" stroke="#64748b" stroke-width="2"/>
+<line x1="620" y1="190" x2="610" y2="250" stroke="#64748b" stroke-width="2"/>
+<line x1="620" y1="190" x2="755" y2="250" stroke="#64748b" stroke-width="2"/>
+<path d="M 600 246 L 640 196" fill="none" stroke="#d97706" stroke-width="2.5" marker-end="url(#ah)"/>
+<text x="690" y="224" text-anchor="start" font-size="12" font-weight="700" fill="#d97706">parentNode / parentElement</text>
+<path d="M 546 272 L 534 272" fill="none" stroke="#0d9488" stroke-width="3" marker-end="url(#ah)"/>
+<text x="430" y="314" text-anchor="middle" font-size="12" font-weight="700" fill="#0d9488">previousElementSibling</text>
+<path d="M 674 272 L 688 272" fill="none" stroke="#0d9488" stroke-width="3" marker-end="url(#ah)"/>
+<text x="752" y="314" text-anchor="middle" font-size="12" font-weight="700" fill="#0d9488">nextElementSibling</text>
+<text x="380" y="344" text-anchor="middle" font-size="12" font-weight="700" fill="#2563eb">firstElementChild (de &lt;ul&gt;)</text>
+<text x="790" y="344" text-anchor="middle" font-size="12" font-weight="700" fill="#2563eb">lastElementChild (de &lt;ul&gt;)</text>
+<rect x="40" y="370" width="880" height="56" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="480" y="394" text-anchor="middle" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="13" font-weight="700" fill="#1f2937" xml:space="preserve">te.closest('section')   →   &lt;section id="carta"&gt;   (sube hasta el primer ancestro que coincide)</text>
+<text x="480" y="414" text-anchor="middle" font-size="12" font-weight="400" fill="#64748b">si ninguno coincide devuelve null; el propio elemento también cuenta</text>
+<rect x="40" y="444" width="880" height="44" rx="10" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+<text x="480" y="471.0" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2937">children y los hermanos «Element» recorren solo elementos; en los extremos dan null.</text>
+</svg>

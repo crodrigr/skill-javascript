@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 10 — src, href y dataset | Café Aroma</title>
+  </head>
+  <body>
+    <div id="carta"></div>
+
+    <script>
+      const carta = document.getElementById('carta');
+
+      const foto = document.createElement('img');
+      foto.src = 'img/cafe.svg';
+      foto.alt = 'Taza de café';
+
+      const enlace = document.createElement('a');
+      enlace.href = 'carta.html';
+      enlace.textContent = 'Ver la carta';
+
+      const tarjeta = document.createElement('article');
+      tarjeta.dataset.precio = 4.5;
+      tarjeta.dataset.productoId = 'cafe-01';
+      tarjeta.append(foto, enlace);
+      carta.append(tarjeta);
+
+      console.log(tarjeta.outerHTML);
+      console.log('dataset.precio: ' + tarjeta.dataset.precio + ' (' + typeof tarjeta.dataset.precio + ')');
+      console.log('Atributo data-producto-id: ' + tarjeta.getAttribute('data-producto-id'));
+      console.log('Convertido a número y sumado 1: ' + (Number(tarjeta.dataset.precio) + 1));
+    </script>
+  </body>
+</html>

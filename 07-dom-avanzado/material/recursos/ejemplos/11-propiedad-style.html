@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 11 — La propiedad style (en camelCase) | Café Aroma</title>
+  </head>
+  <body>
+    <p id="aviso">Café agotado</p>
+
+    <script>
+      const aviso = document.getElementById('aviso');
+
+      aviso.style.backgroundColor = 'gold';
+      aviso.style.fontSize = '20px';
+      aviso.style.color = 'darkred';
+
+      console.log('Atributo style: ' + aviso.getAttribute('style'));
+      console.log('backgroundColor: ' + aviso.style.backgroundColor);
+      console.log('Con corchetes y guion: ' + aviso.style['background-color']);
+
+      aviso.style.cssText = 'color: green;';
+      console.log('Tras cssText: ' + aviso.getAttribute('style'));
+
+      aviso.style.color = '';
+      console.log('Tras vaciar color: ' + JSON.stringify(aviso.getAttribute('style')));
+    </script>
+  </body>
+</html>

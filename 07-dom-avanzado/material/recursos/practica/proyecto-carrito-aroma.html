@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Proyecto: el carrito animado de Aroma | Café Aroma</title>
+    <style>
+      .linea { padding: 4px 8px; margin: 2px 0; background: #f1f5f9; }
+      .linea button { margin-left: 8px; }
+    </style>
+  </head>
+  <body>
+    <h1>Carrito de Aroma</h1>
+    <ul id="productos">
+      <li class="producto" data-precio="4.5"><span class="nombre">Café</span> <button class="agregar">Agregar</button></li>
+      <li class="producto" data-precio="3.2"><span class="nombre">Té</span> <button class="agregar">Agregar</button></li>
+      <li class="producto" data-precio="1.8"><span class="nombre">Galleta</span> <button class="agregar">Agregar</button></li>
+    </ul>
+    <h2>Tu carrito</h2>
+    <ul id="carrito"></ul>
+    <p>Total: $<span id="total">0</span> | Líneas: <span id="cantidad">0</span></p>
+
+    <script src="js/proyecto-carrito-aroma.js"></script>
+  </body>
+</html>

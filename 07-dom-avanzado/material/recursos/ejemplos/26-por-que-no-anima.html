@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 26 — Por qué a veces no se anima | Café Aroma</title>
+    <style>
+      .caja { width: 60px; height: 60px; background: #d97706; transition: transform 400ms linear; }
+      .mover { transform: translateX(200px); }
+    </style>
+  </head>
+  <body>
+    <div id="a" class="caja"></div>
+    <div id="b" class="caja"></div>
+
+    <script>
+      const a = document.getElementById('a');
+      const b = document.getElementById('b');
+
+      a.classList.add('mover');
+      console.log('A (sin leer el estado inicial) → animaciones: ' + a.getAnimations().length + ', transform: ' + getComputedStyle(a).transform);
+
+      getComputedStyle(b).transform;
+      b.classList.add('mover');
+      console.log('B (leyendo antes) → animaciones: ' + b.getAnimations().length + ', estado: ' + b.getAnimations()[0].playState);
+    </script>
+  </body>
+</html>

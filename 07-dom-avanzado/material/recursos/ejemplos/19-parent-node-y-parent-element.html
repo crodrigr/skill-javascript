@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 19 — El padre: parentNode y parentElement | Café Aroma</title>
+  </head>
+  <body>
+    <section id="carta">
+      <ul id="menu">
+        <li id="cafe">Café</li>
+      </ul>
+    </section>
+
+    <script>
+      const cafe = document.getElementById('cafe');
+
+      console.log('padre del café: ' + cafe.parentNode.id);
+      console.log('abuelo: ' + cafe.parentNode.parentNode.id);
+      console.log('parentElement: ' + cafe.parentElement.id);
+
+      const nuevo = document.createElement('li');
+      console.log('padre de un elemento nuevo: ' + nuevo.parentNode);
+
+      console.log('padre de <html>: ' + document.documentElement.parentNode.nodeName);
+      console.log('parentElement de <html>: ' + document.documentElement.parentElement);
+      console.log('padre de document: ' + document.parentNode);
+    </script>
+  </body>
+</html>

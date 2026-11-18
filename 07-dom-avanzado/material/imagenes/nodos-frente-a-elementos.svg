@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 500" width="960" height="500" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+<title id="t">Nodos frente a elementos: childNodes y children</title>
+<desc id="d">Una lista ul escrita en varias líneas tiene cinco nodos hijos: un nodo de texto con el salto de línea, el li Café, otro nodo de texto, el li Té y un último nodo de texto. childNodes devuelve los cinco; children devuelve solo los dos elementos li.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#64748b"/></marker></defs>
+<rect x="1" y="1" width="958" height="498" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="480" y="34" text-anchor="middle" font-size="18" font-weight="700" fill="#1f2937">Los espacios entre etiquetas también son nodos</text>
+<rect x="40" y="60" width="880" height="110" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+<text x="60" y="86" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14" font-weight="700" fill="#1f2937" xml:space="preserve">&lt;ul id="menu"&gt;</text>
+<text x="60" y="108" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14" font-weight="700" fill="#1f2937" xml:space="preserve">  &lt;li&gt;Café&lt;/li&gt;</text>
+<text x="60" y="130" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14" font-weight="700" fill="#1f2937" xml:space="preserve">  &lt;li&gt;Té&lt;/li&gt;</text>
+<text x="60" y="152" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14" font-weight="700" fill="#1f2937" xml:space="preserve">&lt;/ul&gt;</text>
+<text x="660" y="112" text-anchor="start" font-size="13" font-weight="400" fill="#64748b">el salto de línea y los espacios</text>
+<text x="660" y="132" text-anchor="start" font-size="13" font-weight="400" fill="#64748b">entre etiquetas son nodos de texto</text>
+<text x="480" y="206" text-anchor="middle" font-size="16" font-weight="700" fill="#7c3aed">menu.childNodes → 5 nodos</text>
+<rect x="50" y="222" width="164" height="70" rx="12" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2"/>
+<text x="132.0" y="252.55" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">#text</text>
+<text x="132.0" y="270.55" text-anchor="middle" font-size="13" font-weight="400" fill="#1f2937">«\n  »</text>
+<rect x="226" y="222" width="164" height="70" rx="12" fill="#ccfbf1" stroke="#0d9488" stroke-width="2"/>
+<text x="308.0" y="252.55" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">&lt;li&gt;</text>
+<text x="308.0" y="270.55" text-anchor="middle" font-size="13" font-weight="400" fill="#1f2937">«Café»</text>
+<rect x="402" y="222" width="164" height="70" rx="12" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2"/>
+<text x="484.0" y="252.55" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">#text</text>
+<text x="484.0" y="270.55" text-anchor="middle" font-size="13" font-weight="400" fill="#1f2937">«\n  »</text>
+<rect x="578" y="222" width="164" height="70" rx="12" fill="#ccfbf1" stroke="#0d9488" stroke-width="2"/>
+<text x="660.0" y="252.55" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">&lt;li&gt;</text>
+<text x="660.0" y="270.55" text-anchor="middle" font-size="13" font-weight="400" fill="#1f2937">«Té»</text>
+<rect x="754" y="222" width="164" height="70" rx="12" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2"/>
+<text x="836.0" y="252.55" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">#text</text>
+<text x="836.0" y="270.55" text-anchor="middle" font-size="13" font-weight="400" fill="#1f2937">«\n»</text>
+<text x="480" y="336" text-anchor="middle" font-size="16" font-weight="700" fill="#0d9488">menu.children → 2 elementos</text>
+<rect x="226" y="352" width="164" height="56" rx="12" fill="#ccfbf1" stroke="#0d9488" stroke-width="2"/>
+<text x="308.0" y="375.55" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">&lt;li&gt;</text>
+<text x="308.0" y="393.55" text-anchor="middle" font-size="13" font-weight="400" fill="#1f2937">Café</text>
+<rect x="578" y="352" width="164" height="56" rx="12" fill="#ccfbf1" stroke="#0d9488" stroke-width="2"/>
+<text x="660.0" y="375.55" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">&lt;li&gt;</text>
+<text x="660.0" y="393.55" text-anchor="middle" font-size="13" font-weight="400" fill="#1f2937">Té</text>
+<path d="M 308 294 L 308 350" fill="none" stroke="#0d9488" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#ah)"/>
+<path d="M 660 294 L 660 350" fill="none" stroke="#0d9488" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#ah)"/>
+<rect x="40" y="430" width="880" height="60" rx="10" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+<text x="480" y="454" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2937">Casi siempre querés children (solo elementos). childNodes incluye los textos de espacios.</text>
+<text x="480" y="474" text-anchor="middle" font-size="14" font-weight="400" fill="#1f2937">children no tiene forEach (es una HTMLCollection); childNodes sí.</text>
+</svg>

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 18 — Elegir dónde y cómo insertar | Café Aroma</title>
+  </head>
+  <body>
+    <ul id="menu"><li id="cafe">Café</li></ul>
+
+    <script>
+      const huerfano = document.createElement('div');
+      const hijo = document.createElement('b');
+
+      const sinPadre = huerfano.insertAdjacentElement('beforebegin', hijo);
+      console.log('beforebegin sin padre → devuelve: ' + sinPadre);
+
+      const dentro = huerfano.insertAdjacentElement('afterbegin', hijo);
+      console.log('afterbegin sin padre → devuelve: ' + dentro.nodeName + ' | ' + huerfano.outerHTML);
+
+      const cafe = document.getElementById('cafe');
+      const con = cafe.insertAdjacentElement('afterend', document.createElement('li'));
+      console.log('afterend con padre → devuelve: ' + con.nodeName);
+
+      console.log('Padre del café: ' + cafe.parentNode.id + ' | hijos: ' + cafe.parentNode.children.length);
+    </script>
+  </body>
+</html>
