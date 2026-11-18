@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 19 — classList.toggle con una condición | Café Aroma</title>
+  </head>
+  <body>
+    <ul id="menu">
+      <li id="cafe" class="producto destacado oferta">Café</li>
+    </ul>
+
+    <script>
+      const cafe = document.getElementById('cafe');
+      const sinStock = 0;
+      const conStock = 5;
+
+      console.log('toggle agotado con stock 0 → ' + cafe.classList.toggle('agotado', sinStock === 0));
+      console.log('otra vez con stock 0 → ' + cafe.classList.toggle('agotado', sinStock === 0));
+      console.log('class: ' + cafe.getAttribute('class'));
+
+      console.log('toggle agotado con stock 5 → ' + cafe.classList.toggle('agotado', conStock === 0));
+      console.log('class: ' + cafe.getAttribute('class'));
+
+      console.log('toggle nuevo con false → ' + cafe.classList.toggle('nuevo', false));
+      console.log('class: ' + cafe.getAttribute('class'));
+    </script>
+  </body>
+</html>

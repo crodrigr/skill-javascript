@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 02 — El script al final del body | Café Aroma</title>
+  </head>
+  <body>
+    <h1 id="titulo" class="titulo">Menú de Aroma</h1>
+    <ul id="menu">
+      <li class="producto">Café</li>
+      <li class="producto destacado">Té</li>
+      <li class="producto">Galleta</li>
+      <li class="producto">Medialuna</li>
+    </ul>
+
+    <script>
+      const titulo = document.getElementById('titulo');
+      console.log('El script está al final del <body>: ' + titulo.textContent);
+    </script>
+  </body>
+</html>

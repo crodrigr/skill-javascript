@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 04 — getElementsByClassName: todos los de una clase | Café Aroma</title>
+  </head>
+  <body>
+    <h1 id="titulo" class="titulo">Menú de Aroma</h1>
+    <ul id="menu">
+      <li class="producto">Café</li>
+      <li class="producto destacado">Té</li>
+      <li class="producto">Galleta</li>
+      <li class="producto">Medialuna</li>
+    </ul>
+
+    <script>
+      const productos = document.getElementsByClassName('producto');
+      console.log('Cantidad: ' + productos.length);
+      console.log('El primero: ' + productos[0].textContent);
+      console.log('El último: ' + productos[productos.length - 1].textContent);
+
+      for (let i = 0; i < productos.length; i++) {
+        console.log((i + 1) + '. ' + productos[i].textContent);
+      }
+
+      console.log('Con dos clases: ' + document.getElementsByClassName('producto destacado').length);
+      console.log('Clase inexistente: ' + document.getElementsByClassName('agotado').length);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 17 — classList.add y classList.remove | Café Aroma</title>
+  </head>
+  <body>
+    <ul id="menu">
+      <li id="cafe" class="producto">Café</li>
+    </ul>
+
+    <script>
+      const cafe = document.getElementById('cafe');
+      console.log('Inicio: ' + cafe.getAttribute('class'));
+
+      console.log('Lo que devuelve add: ' + cafe.classList.add('destacado'));
+      console.log('Tras add: ' + cafe.getAttribute('class'));
+
+      cafe.classList.add('destacado');
+      console.log('add repetido: ' + cafe.getAttribute('class'));
+
+      cafe.classList.add('oferta', 'nuevo');
+      console.log('add con dos clases: ' + cafe.getAttribute('class'));
+
+      cafe.classList.remove('producto');
+      console.log('Tras remove: ' + cafe.getAttribute('class'));
+
+      cafe.classList.remove('inexistente');
+      console.log('remove de una inexistente: ' + cafe.getAttribute('class'));
+    </script>
+  </body>
+</html>

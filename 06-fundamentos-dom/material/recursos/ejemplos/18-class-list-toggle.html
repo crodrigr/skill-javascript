@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 18 — classList.toggle: alternar una clase | Café Aroma</title>
+  </head>
+  <body>
+    <ul id="menu">
+      <li id="cafe" class="producto">Café</li>
+    </ul>
+    <button id="marcar">Destacar el café</button>
+
+    <script>
+      const cafe = document.getElementById('cafe');
+      const boton = document.getElementById('marcar');
+
+      boton.addEventListener('click', () => {
+        const destacado = cafe.classList.toggle('destacado');
+        console.log('destacado: ' + destacado + ' | class="' + cafe.getAttribute('class') + '"');
+      });
+
+      console.log('Registrado. class="' + cafe.getAttribute('class') + '"');
+    </script>
+  </body>
+</html>

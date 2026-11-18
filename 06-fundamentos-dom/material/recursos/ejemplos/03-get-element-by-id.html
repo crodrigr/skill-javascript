@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 03 — getElementById: un elemento por su id | Café Aroma</title>
+  </head>
+  <body>
+    <h1 id="titulo" class="titulo">Menú de Aroma</h1>
+    <ul id="menu">
+      <li class="producto">Café</li>
+      <li class="producto destacado">Té</li>
+      <li class="producto">Galleta</li>
+      <li class="producto">Medialuna</li>
+    </ul>
+
+    <script>
+      const titulo = document.getElementById('titulo');
+      console.log(titulo.textContent);
+      console.log(titulo.nodeName + ' / ' + titulo.className);
+
+      const noExiste = document.getElementById('subtitulo');
+      console.log(noExiste);
+      console.log(noExiste === null);
+    </script>
+  </body>
+</html>

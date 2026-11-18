@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 08 — Colección viva y colección estática | Café Aroma</title>
+  </head>
+  <body>
+    <h1 id="titulo" class="titulo">Menú de Aroma</h1>
+    <ul id="menu">
+      <li class="producto">Café</li>
+      <li class="producto destacado">Té</li>
+      <li class="producto">Galleta</li>
+      <li class="producto">Medialuna</li>
+    </ul>
+
+    <script>
+      const viva = document.getElementsByClassName('producto');
+      const estatica = document.querySelectorAll('.producto');
+      console.log('Antes → viva: ' + viva.length + ', estática: ' + estatica.length);
+
+      document.querySelector('li.destacado').classList.remove('producto');
+
+      console.log('Después → viva: ' + viva.length + ', estática: ' + estatica.length);
+    </script>
+  </body>
+</html>

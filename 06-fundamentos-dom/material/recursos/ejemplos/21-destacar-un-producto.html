@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 21 — Destacar un producto con un clic | Café Aroma</title>
+  </head>
+  <body>
+    <ul id="menu">
+      <li class="producto"><span class="nombre">Café</span> <button>Destacar</button></li>
+      <li class="producto"><span class="nombre">Té</span> <button>Destacar</button></li>
+      <li class="producto"><span class="nombre">Galleta</span> <button>Destacar</button></li>
+    </ul>
+
+    <script>
+      const productos = document.querySelectorAll('.producto');
+
+      productos.forEach((producto) => {
+        const boton = producto.querySelector('button');
+        const nombre = producto.querySelector('.nombre').textContent;
+
+        boton.addEventListener('click', () => {
+          const destacado = producto.classList.toggle('destacado');
+          boton.setAttribute('aria-pressed', destacado);
+          console.log(nombre + ': destacado=' + destacado + ' | aria-pressed=' + boton.getAttribute('aria-pressed'));
+        });
+      });
+
+      console.log('Botones registrados: ' + productos.length);
+    </script>
+  </body>
+</html>

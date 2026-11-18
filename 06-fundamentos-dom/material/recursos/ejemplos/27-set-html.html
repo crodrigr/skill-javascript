@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 27 — setHTML: HTML saneado, si el navegador lo tiene | Café Aroma</title>
+  </head>
+  <body>
+    <div id="destino"></div>
+
+    <script>
+      const comentario = '<b>Hola</b> <img src="img/no-existe.png" onerror="window.hackeado = true"><script>window.hackeado = true<\/script>';
+      const destino = document.getElementById('destino');
+
+      window.hackeado = false;
+
+      if (typeof destino.setHTML === 'function') {
+        destino.setHTML(comentario);
+        console.log('Camino: setHTML');
+      } else {
+        destino.textContent = comentario;
+        console.log('Camino: textContent (este navegador no tiene setHTML)');
+      }
+
+      setTimeout(() => {
+        console.log('HTML resultante: ' + destino.innerHTML);
+        console.log('¿Se ejecutó código? ' + window.hackeado);
+      }, 300);
+    </script>
+  </body>
+</html>

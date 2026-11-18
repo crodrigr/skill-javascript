@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+<title id="t">innerHTML frente a textContent y setHTML</title>
+<desc id="d">Un comentario de una persona usuaria contiene la etiqueta b con Hola y una imagen con un atributo onerror que ejecuta código. Con textContent todo se muestra como texto y no se ejecuta nada. Con innerHTML el HTML se interpreta y el onerror ejecuta código, lo que es un riesgo. Con setHTML se conserva la negrita y se elimina la imagen con el onerror, aunque setHTML no está disponible en todos los navegadores.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#64748b"/></marker></defs>
+<rect x="1" y="1" width="958" height="538" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="480" y="34" text-anchor="middle" font-size="18" font-weight="700" fill="#1f2937">El mismo comentario, tres formas de mostrarlo</text>
+<rect x="30" y="56" width="900" height="62" rx="10" fill="#fff7f7" stroke="#dc2626" stroke-width="2"/>
+<text x="480" y="80" text-anchor="middle" font-size="13" font-weight="400" fill="#64748b">Comentario de una persona usuaria (no confiable)</text>
+<text x="480" y="104" text-anchor="middle" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14" font-weight="700" fill="#1f2937" xml:space="preserve">&lt;b&gt;Hola&lt;/b&gt; &lt;img src="x" onerror="window.hackeado = true"&gt;</text>
+<rect x="30" y="150" width="292" height="290" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<text x="176" y="184" text-anchor="middle" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="17" font-weight="700" fill="#1f2937" xml:space="preserve">textContent</text>
+<text x="176" y="214" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">se muestra como TEXTO</text>
+<rect x="46" y="234" width="260" height="90" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="176" y="256" text-anchor="middle" font-size="11" font-weight="400" fill="#64748b">se ve así:</text>
+<text x="176" y="282" text-anchor="middle" font-size="13" font-weight="400" fill="#1f2937">&lt;b&gt;Hola&lt;/b&gt; &lt;img src="x"</text>
+<text x="176" y="304" text-anchor="middle" font-size="13" font-weight="400" fill="#1f2937">onerror="…"&gt;</text>
+<text x="176" y="358" text-anchor="middle" font-size="13" font-weight="400" fill="#1f2937">no se ejecuta nada</text>
+<text x="176" y="410" text-anchor="middle" font-size="15" font-weight="700" fill="#1f2937">✅ seguro</text>
+<rect x="334" y="150" width="292" height="290" rx="12" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+<text x="480" y="184" text-anchor="middle" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="17" font-weight="700" fill="#1f2937" xml:space="preserve">innerHTML</text>
+<text x="480" y="214" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">se INTERPRETA como HTML</text>
+<rect x="350" y="234" width="260" height="90" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="480" y="256" text-anchor="middle" font-size="11" font-weight="400" fill="#64748b">se ve así:</text>
+<text x="480" y="282" text-anchor="middle" font-size="13" font-weight="400" fill="#1f2937">Hola   +  una imagen</text>
+<text x="480" y="304" text-anchor="middle" font-size="13" font-weight="400" fill="#1f2937">que falla al cargar</text>
+<text x="480" y="358" text-anchor="middle" font-size="13" font-weight="400" fill="#1f2937">onerror ejecuta código</text>
+<text x="480" y="410" text-anchor="middle" font-size="15" font-weight="700" fill="#1f2937">⚠️ riesgo (XSS)</text>
+<rect x="638" y="150" width="292" height="290" rx="12" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+<text x="784" y="184" text-anchor="middle" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="17" font-weight="700" fill="#1f2937" xml:space="preserve">setHTML</text>
+<text x="784" y="214" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">se SANEA y se inserta</text>
+<rect x="654" y="234" width="260" height="90" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="784" y="256" text-anchor="middle" font-size="11" font-weight="400" fill="#64748b">se ve así:</text>
+<text x="784" y="282" text-anchor="middle" font-size="13" font-weight="400" fill="#1f2937">Hola</text>
+<text x="784" y="304" text-anchor="middle" font-size="13" font-weight="400" fill="#1f2937">(sin la imagen ni onerror)</text>
+<text x="784" y="358" text-anchor="middle" font-size="13" font-weight="400" fill="#1f2937">no se ejecuta nada</text>
+<text x="784" y="410" text-anchor="middle" font-size="15" font-weight="700" fill="#1f2937">✅ si el navegador la tiene</text>
+<rect x="40" y="462" width="880" height="62" rx="10" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+<text x="480" y="486" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2937">Con texto de otra persona, usá textContent. Si necesitás HTML, usá setHTML() con detección.</text>
+<text x="480" y="506" text-anchor="middle" font-size="14" font-weight="400" fill="#1f2937">setHTML() tiene disponibilidad limitada: comprobá typeof elemento.setHTML === "function".</text>
+</svg>

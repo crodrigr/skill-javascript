@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 22 — nodeName y textContent | Café Aroma</title>
+  </head>
+  <body>
+    <p id="precio">Café: <strong>$4.5</strong></p>
+
+    <script>
+      const precio = document.getElementById('precio');
+      const importe = precio.querySelector('strong');
+
+      console.log(precio.nodeName + ' / ' + importe.nodeName);
+      console.log(document.nodeName + ' / ' + document.body.nodeName);
+
+      console.log('Texto: ' + precio.textContent);
+
+      importe.textContent = '$5.0';
+      console.log('Cambié el importe: ' + precio.textContent);
+
+      precio.textContent = 'Café: <strong>$6</strong>';
+      console.log('Asigné texto con etiquetas: ' + precio.textContent);
+      console.log('Cómo quedó el HTML: ' + precio.innerHTML);
+    </script>
+  </body>
+</html>

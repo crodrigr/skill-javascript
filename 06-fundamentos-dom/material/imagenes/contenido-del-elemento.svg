@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+<title id="t">textContent, outerText, innerHTML y outerHTML</title>
+<desc id="d">Un párrafo con id nota que dice Hola, un span oculto con el texto oculto, y mundo. textContent lee Hola oculto mundo, incluido el texto oculto, y al asignarse reemplaza el contenido por texto. outerText lee Hola mundo, solo lo visible, y al asignarse reemplaza el elemento completo. innerHTML lee el HTML de adentro y al asignarse lo interpreta. outerHTML lee el elemento con su etiqueta y al asignarse reemplaza el elemento.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#64748b"/></marker></defs>
+<rect x="1" y="1" width="958" height="538" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="480" y="34" text-anchor="middle" font-size="18" font-weight="700" fill="#1f2937">Cuatro formas de leer y cambiar el contenido</text>
+<rect x="30" y="58" width="900" height="56" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+<text x="480" y="94" text-anchor="middle" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="16" font-weight="700" fill="#1f2937" xml:space="preserve">&lt;p id="nota"&gt;Hola &lt;span hidden&gt;(oculto)&lt;/span&gt;mundo&lt;/p&gt;</text>
+<rect x="30" y="136" width="444" height="156" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="46" y="166" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="17" font-weight="700" fill="#1f2937" xml:space="preserve">textContent</text>
+<text x="46" y="198" text-anchor="start" font-size="13" font-weight="700" fill="#1f2937">lee: "Hola (oculto)mundo"</text>
+<text x="46" y="224" text-anchor="start" font-size="13" font-weight="400" fill="#1f2937">incluye el texto oculto</text>
+<text x="46" y="262" text-anchor="start" font-size="13" font-weight="400" fill="#1f2937">asignar: reemplaza el contenido por TEXTO</text>
+<rect x="486" y="136" width="444" height="156" rx="12" fill="#ccfbf1" stroke="#0d9488" stroke-width="2"/>
+<text x="502" y="166" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="17" font-weight="700" fill="#1f2937" xml:space="preserve">outerText</text>
+<text x="502" y="198" text-anchor="start" font-size="13" font-weight="700" fill="#1f2937">lee: "Hola mundo"</text>
+<text x="502" y="224" text-anchor="start" font-size="13" font-weight="400" fill="#1f2937">solo el texto visible</text>
+<text x="502" y="262" text-anchor="start" font-size="13" font-weight="400" fill="#1f2937">asignar: reemplaza el ELEMENTO completo</text>
+<rect x="30" y="306" width="444" height="156" rx="12" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+<text x="46" y="336" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="17" font-weight="700" fill="#1f2937" xml:space="preserve">innerHTML</text>
+<text x="46" y="368" text-anchor="start" font-size="13" font-weight="700" fill="#1f2937">lee: Hola &lt;span hidden&gt;(oculto)&lt;/span&gt;mundo</text>
+<text x="46" y="394" text-anchor="start" font-size="13" font-weight="400" fill="#1f2937">el HTML de adentro</text>
+<text x="46" y="432" text-anchor="start" font-size="13" font-weight="400" fill="#1f2937">asignar: INTERPRETA etiquetas (riesgo)</text>
+<rect x="486" y="306" width="444" height="156" rx="12" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+<text x="502" y="336" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="17" font-weight="700" fill="#1f2937" xml:space="preserve">outerHTML</text>
+<text x="502" y="368" text-anchor="start" font-size="13" font-weight="700" fill="#1f2937">lee: &lt;p id="nota"&gt;…&lt;/p&gt;</text>
+<text x="502" y="394" text-anchor="start" font-size="13" font-weight="400" fill="#1f2937">el elemento con su etiqueta</text>
+<text x="502" y="432" text-anchor="start" font-size="13" font-weight="400" fill="#1f2937">asignar: reemplaza el ELEMENTO completo</text>
+<rect x="40" y="474" width="880" height="56" rx="10" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+<text x="480" y="498" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2937">Para mostrar texto: textContent. Para mostrar HTML propio: innerHTML.</text>
+<text x="480" y="518" text-anchor="middle" font-size="14" font-weight="400" fill="#1f2937">Con texto de otra persona: textContent o setHTML.</text>
+</svg>

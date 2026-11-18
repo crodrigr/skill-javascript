@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 14 — Atributos booleanos: basta con que existan | Café Aroma</title>
+  </head>
+  <body>
+    <form method="get">
+      <input id="oferta" type="checkbox" name="oferta" value="si" checked>
+    </form>
+    <button id="pedir" disabled>Pedir</button>
+    <p id="aviso" hidden>Café agotado</p>
+
+    <script>
+      const boton = document.getElementById('pedir');
+      const aviso = document.getElementById('aviso');
+      const oferta = document.getElementById('oferta');
+
+      console.log('getAttribute de disabled: ' + JSON.stringify(boton.getAttribute('disabled')));
+      console.log('disabled: ' + boton.disabled);
+
+      boton.setAttribute('disabled', 'false');
+      console.log('Tras setAttribute("disabled", "false"): ' + boton.disabled);
+
+      boton.removeAttribute('disabled');
+      console.log('Tras removeAttribute: ' + boton.disabled);
+
+      console.log('hidden: ' + aviso.hidden);
+      aviso.toggleAttribute('hidden');
+      console.log('hidden tras toggleAttribute: ' + aviso.hidden);
+
+      console.log('checked: ' + oferta.checked + ' | atributo: ' + JSON.stringify(oferta.getAttribute('checked')));
+    </script>
+  </body>
+</html>

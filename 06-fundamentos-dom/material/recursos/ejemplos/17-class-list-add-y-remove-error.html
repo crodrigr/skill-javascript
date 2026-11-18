@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 17 — Una clase con espacios | Café Aroma</title>
+  </head>
+  <body>
+    <!-- errores-a-proposito: esta página falla a propósito; mirá el error en la consola (F12) -->
+    <ul id="menu">
+      <li id="cafe" class="producto">Café</li>
+    </ul>
+
+    <script>
+      const cafe = document.getElementById('cafe');
+      console.log('Antes de agregar');
+      cafe.classList.add('dos palabras');
+      console.log('Esta línea no se ejecuta');
+    </script>
+  </body>
+</html>

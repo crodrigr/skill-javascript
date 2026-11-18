@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 12 — getAttributeNames: listar los atributos | Café Aroma</title>
+  </head>
+  <body>
+    <article class="tarjeta">
+      <h2 id="nombre">Café</h2>
+      <img id="foto" src="img/cafe.svg" alt="Taza de café">
+      <a id="carta" href="carta.html" target="_blank">Ver la carta</a>
+      <button id="pedir" class="pedir">Pedir</button>
+    </article>
+
+    <script>
+      const foto = document.getElementById('foto');
+      console.log(foto.getAttributeNames());
+
+      for (const nombre of foto.getAttributeNames()) {
+        console.log(nombre + ' = ' + foto.getAttribute(nombre));
+      }
+
+      const boton = document.getElementById('pedir');
+      console.log(boton.getAttributeNames().length + ' atributos en el botón');
+    </script>
+  </body>
+</html>

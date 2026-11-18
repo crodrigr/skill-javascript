@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 02 — El mismo código en el head | Café Aroma</title>
+    <script>
+      const titulo = document.getElementById('titulo');
+      console.log('El script está en el <head>: ' + titulo);
+      console.log(titulo.textContent);
+    </script>
+  </head>
+  <body>
+    <!-- errores-a-proposito: esta página falla a propósito; mirá el error en la consola (F12) -->
+    <h1 id="titulo" class="titulo">Menú de Aroma</h1>
+    <ul id="menu">
+      <li class="producto">Café</li>
+      <li class="producto destacado">Té</li>
+      <li class="producto">Galleta</li>
+      <li class="producto">Medialuna</li>
+    </ul>
+  </body>
+</html>

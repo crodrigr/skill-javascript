@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 20 — classList.replace: cambiar una clase por otra | Café Aroma</title>
+  </head>
+  <body>
+    <ul id="menu">
+      <li id="cafe" class="producto activo">Café</li>
+    </ul>
+
+    <script>
+      const cafe = document.getElementById('cafe');
+      console.log('Inicio: ' + cafe.getAttribute('class'));
+
+      console.log('replace activo → inactivo: ' + cafe.classList.replace('activo', 'inactivo'));
+      console.log('class: ' + cafe.getAttribute('class'));
+
+      console.log('replace activo → otra: ' + cafe.classList.replace('activo', 'otra'));
+      console.log('class: ' + cafe.getAttribute('class'));
+    </script>
+  </body>
+</html>

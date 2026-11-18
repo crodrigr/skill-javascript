@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 25 — outerHTML: el elemento completo | Café Aroma</title>
+  </head>
+  <body>
+    <div id="caja">
+      <h2 id="titulo">Café</h2>
+    </div>
+
+    <script>
+      const caja = document.getElementById('caja');
+      const titulo = document.getElementById('titulo');
+
+      console.log('outerHTML: ' + titulo.outerHTML);
+      console.log('innerHTML: ' + titulo.innerHTML);
+
+      titulo.outerHTML = '<h3 id="titulo">Café de la casa</h3>';
+
+      console.log('La caja ahora: ' + caja.innerHTML.trim());
+      console.log('La variable guarda: ' + titulo.nodeName + ' → ' + titulo.textContent);
+      console.log('Lo que hay en la página: ' + document.getElementById('titulo').nodeName);
+    </script>
+  </body>
+</html>

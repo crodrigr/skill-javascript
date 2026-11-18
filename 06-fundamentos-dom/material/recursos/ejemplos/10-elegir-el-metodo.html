@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 10 — Elegir el método de búsqueda | Café Aroma</title>
+  </head>
+  <body>
+    <h1 id="titulo" class="titulo">Menú de Aroma</h1>
+    <ul id="menu">
+      <li class="producto">Café</li>
+      <li class="producto destacado">Té</li>
+      <li class="producto">Galleta</li>
+      <li class="producto">Medialuna</li>
+    </ul>
+
+    <script>
+      console.log('getElementById: ' + document.getElementById('menu').nodeName);
+      console.log('getElementsByClassName: ' + document.getElementsByClassName('producto').length);
+      console.log('getElementsByTagName: ' + document.getElementsByTagName('li').length);
+      console.log('querySelector: ' + document.querySelector('#menu .producto').textContent);
+      console.log('querySelectorAll: ' + document.querySelectorAll('#menu .producto').length);
+    </script>
+  </body>
+</html>

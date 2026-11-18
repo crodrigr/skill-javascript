@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Proyecto: el menú de Aroma con vida | Café Aroma</title>
+    <style>
+      .destacado { background: #fef9c3; }
+      .agotado { color: #94a3b8; text-decoration: line-through; }
+      .pedido { font-weight: bold; }
+    </style>
+  </head>
+  <body>
+    <h1 id="titulo">Menú de Aroma</h1>
+    <p>Pedidos: <span id="contador">0</span> | Total: $<span id="total">0</span></p>
+    <button id="ocultar">Ocultar agotados</button>
+    <ul id="menu">
+      <li class="producto" data-precio="4.5"><span class="nombre">Café</span> <button class="pedir">Pedir</button> <button class="marcar">Destacar</button></li>
+      <li class="producto" data-precio="3.2"><span class="nombre">Té</span> <button class="pedir">Pedir</button> <button class="marcar">Destacar</button></li>
+      <li class="producto agotado" data-precio="1.8"><span class="nombre">Galleta</span> <button class="pedir">Pedir</button> <button class="marcar">Destacar</button></li>
+      <li class="producto" data-precio="2.2"><span class="nombre">Medialuna</span> <button class="pedir">Pedir</button> <button class="marcar">Destacar</button></li>
+      <li class="producto agotado" data-precio="3.5"><span class="nombre">Brownie</span> <button class="pedir">Pedir</button> <button class="marcar">Destacar</button></li>
+    </ul>
+    <p id="mensaje"></p>
+
+    <script src="js/proyecto-menu-aroma.js"></script>
+  </body>
+</html>

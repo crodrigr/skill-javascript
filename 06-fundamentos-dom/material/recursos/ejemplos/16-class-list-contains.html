@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 16 — classList.contains: ¿tiene esta clase? | Café Aroma</title>
+  </head>
+  <body>
+    <ul id="menu">
+      <li id="cafe" class="producto destacado oferta">Café</li>
+    </ul>
+
+    <script>
+      const cafe = document.getElementById('cafe');
+
+      console.log('oferta: ' + cafe.classList.contains('oferta'));
+      console.log('agotado: ' + cafe.classList.contains('agotado'));
+      console.log('Oferta (con mayúscula): ' + cafe.classList.contains('Oferta'));
+
+      if (cafe.classList.contains('destacado')) {
+        console.log('El café es un producto destacado');
+      }
+    </script>
+  </body>
+</html>

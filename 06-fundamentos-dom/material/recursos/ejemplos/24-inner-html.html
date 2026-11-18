@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 24 — innerHTML: leer y asignar HTML | Café Aroma</title>
+  </head>
+  <body>
+    <ul id="menu"><li>Café</li><li>Té</li></ul>
+
+    <script>
+      const menu = document.getElementById('menu');
+
+      console.log('Leído: ' + menu.innerHTML);
+
+      menu.innerHTML = '<li>Galleta</li><li><b>Medialuna</b></li>';
+      console.log('Asignado: ' + menu.innerHTML);
+      console.log('Solo el texto: ' + menu.textContent);
+
+      menu.innerHTML = '';
+      console.log('Vacío: "' + menu.innerHTML + '"');
+    </script>
+  </body>
+</html>

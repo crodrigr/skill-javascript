@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 11 — getAttribute y setAttribute | Café Aroma</title>
+  </head>
+  <body>
+    <article class="tarjeta">
+      <h2 id="nombre">Café</h2>
+      <img id="foto" src="img/cafe.svg" alt="Taza de café">
+      <a id="carta" href="carta.html" target="_blank">Ver la carta</a>
+      <button id="pedir" class="pedir">Pedir</button>
+    </article>
+
+    <script>
+      const enlace = document.getElementById('carta');
+      const foto = document.getElementById('foto');
+
+      console.log('href: ' + enlace.getAttribute('href'));
+      console.log('target: ' + enlace.getAttribute('target'));
+      console.log('src: ' + foto.getAttribute('src'));
+      console.log('Atributo inexistente (rel): ' + enlace.getAttribute('rel'));
+
+      enlace.setAttribute('href', 'menu.html');
+      foto.setAttribute('src', 'img/te.svg');
+      foto.setAttribute('alt', 'Taza de té');
+
+      console.log('href ahora: ' + enlace.getAttribute('href'));
+      console.log('src ahora: ' + foto.getAttribute('src') + ' | alt: ' + foto.getAttribute('alt'));
+      console.log('Tipo del valor: ' + typeof foto.getAttribute('src'));
+    </script>
+  </body>
+</html>

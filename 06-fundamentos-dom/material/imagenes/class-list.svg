@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+<title id="t">La propiedad classList</title>
+<desc id="d">El atributo class del elemento es producto destacado oferta, y classList lo presenta como una lista con tres clases en las posiciones 0, 1 y 2. A la derecha, los miembros de classList y lo que devuelven: length da 3, item de 0 da producto, contains de oferta da true, add y remove no devuelven valor, toggle devuelve un booleano, toggle con condición fuerza el resultado y replace devuelve true o false.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#64748b"/></marker></defs>
+<rect x="1" y="1" width="958" height="558" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="480" y="34" text-anchor="middle" font-size="18" font-weight="700" fill="#1f2937">class es un texto; classList es una lista de clases</text>
+<rect x="30" y="60" width="900" height="66" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+<text x="480" y="102" text-anchor="middle" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="16" font-weight="700" fill="#1f2937" xml:space="preserve">&lt;li id="cafe" class="producto destacado oferta"&gt;Café&lt;/li&gt;</text>
+<rect x="60" y="150" width="140" height="44" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="130.0" y="176.9" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2937">producto</text>
+<text x="130" y="216" text-anchor="middle" font-size="12" font-weight="400" fill="#64748b">posición 0</text>
+<rect x="220" y="150" width="140" height="44" rx="12" fill="#ccfbf1" stroke="#0d9488" stroke-width="2"/>
+<text x="290.0" y="176.9" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2937">destacado</text>
+<text x="290" y="216" text-anchor="middle" font-size="12" font-weight="400" fill="#64748b">posición 1</text>
+<rect x="380" y="150" width="140" height="44" rx="12" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+<text x="450.0" y="176.9" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2937">oferta</text>
+<text x="450" y="216" text-anchor="middle" font-size="12" font-weight="400" fill="#64748b">posición 2</text>
+<rect x="30" y="276" width="444" height="46" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+<text x="44" y="305" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" font-weight="700" fill="#1f2937" xml:space="preserve">length</text>
+<text x="466" y="305" text-anchor="end" font-size="12" font-weight="400" fill="#1f2937">→ 3 (la cantidad)</text>
+<rect x="30" y="332" width="444" height="46" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+<text x="44" y="361" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" font-weight="700" fill="#1f2937" xml:space="preserve">item(0)</text>
+<text x="466" y="361" text-anchor="end" font-size="12" font-weight="400" fill="#1f2937">→ 'producto' (o null)</text>
+<rect x="30" y="388" width="444" height="46" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+<text x="44" y="417" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" font-weight="700" fill="#1f2937" xml:space="preserve">contains('oferta')</text>
+<text x="466" y="417" text-anchor="end" font-size="12" font-weight="400" fill="#1f2937">→ true / false</text>
+<rect x="30" y="444" width="444" height="46" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+<text x="44" y="473" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" font-weight="700" fill="#1f2937" xml:space="preserve">add('nueva')</text>
+<text x="466" y="473" text-anchor="end" font-size="12" font-weight="400" fill="#1f2937">→ agrega, sin duplicar</text>
+<rect x="486" y="276" width="444" height="46" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+<text x="500" y="305" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" font-weight="700" fill="#1f2937" xml:space="preserve">remove('oferta')</text>
+<text x="922" y="305" text-anchor="end" font-size="12" font-weight="400" fill="#1f2937">→ quita, sin error</text>
+<rect x="486" y="332" width="444" height="46" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+<text x="500" y="361" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" font-weight="700" fill="#1f2937" xml:space="preserve">toggle('destacado')</text>
+<text x="922" y="361" text-anchor="end" font-size="12" font-weight="400" fill="#1f2937">→ true / false (si quedó)</text>
+<rect x="486" y="388" width="444" height="46" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+<text x="500" y="417" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" font-weight="700" fill="#1f2937" xml:space="preserve">toggle('agotado', stock === 0)</text>
+<text x="922" y="417" text-anchor="end" font-size="12" font-weight="400" fill="#1f2937">→ fuerza: pone o quita</text>
+<rect x="486" y="444" width="444" height="46" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+<text x="500" y="473" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" font-weight="700" fill="#1f2937" xml:space="preserve">replace('activo', 'inactivo')</text>
+<text x="922" y="473" text-anchor="end" font-size="12" font-weight="400" fill="#1f2937">→ true / false</text>
+<rect x="40" y="500" width="880" height="44" rx="10" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+<text x="480" y="527.0" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2937">Las demás clases no se tocan. Una clase con espacios da InvalidCharacterError.</text>
+</svg>

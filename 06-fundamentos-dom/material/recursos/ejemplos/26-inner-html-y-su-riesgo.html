@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 26 — innerHTML y su riesgo | Café Aroma</title>
+  </head>
+  <body>
+    <div id="con-texto"></div>
+    <div id="con-inner"></div>
+
+    <script>
+      const comentario = '<b>Hola</b> <img src="img/no-existe.png" onerror="window.hackeado = true">';
+      const conTexto = document.getElementById('con-texto');
+      const conInner = document.getElementById('con-inner');
+
+      window.hackeado = false;
+      conTexto.textContent = comentario;
+      console.log('Cómo quedó con textContent: ' + conTexto.innerHTML);
+
+      setTimeout(() => {
+        console.log('Con textContent, ¿se ejecutó el código? ' + window.hackeado);
+
+        conInner.innerHTML = comentario;
+
+        setTimeout(() => {
+          console.log('Con innerHTML, ¿se ejecutó el código? ' + window.hackeado);
+        }, 300);
+      }, 300);
+    </script>
+  </body>
+</html>

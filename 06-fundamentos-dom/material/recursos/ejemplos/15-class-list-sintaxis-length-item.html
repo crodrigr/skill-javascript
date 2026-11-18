@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 15 — classList: la lista de clases | Café Aroma</title>
+  </head>
+  <body>
+    <ul id="menu">
+      <li id="cafe" class="producto destacado oferta">Café</li>
+    </ul>
+
+    <script>
+      const cafe = document.getElementById('cafe');
+
+      console.log('class: "' + cafe.getAttribute('class') + '"');
+      console.log('length: ' + cafe.classList.length);
+      console.log('item(0): ' + cafe.classList.item(0));
+      console.log('item(2): ' + cafe.classList.item(2));
+      console.log('item(9): ' + cafe.classList.item(9));
+      console.log('Con corchetes [1]: ' + cafe.classList[1]);
+
+      for (const clase of cafe.classList) {
+        console.log('clase: ' + clase);
+      }
+    </script>
+  </body>
+</html>

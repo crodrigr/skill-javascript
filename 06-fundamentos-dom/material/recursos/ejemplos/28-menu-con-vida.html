@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 28 — El menú de Aroma con vida | Café Aroma</title>
+  </head>
+  <body>
+    <h1 id="titulo">Menú de Aroma</h1>
+    <p>Pedidos: <span id="contador">0</span></p>
+    <ul id="menu">
+      <li class="producto"><span class="nombre">Café</span> <button class="pedir">Pedir</button></li>
+      <li class="producto"><span class="nombre">Té</span> <button class="pedir">Pedir</button></li>
+      <li class="producto"><span class="nombre">Galleta</span> <button class="pedir">Pedir</button></li>
+    </ul>
+    <p id="mensaje"></p>
+
+    <script>
+      const contador = document.getElementById('contador');
+      const mensaje = document.getElementById('mensaje');
+      let total = 0;
+
+      document.querySelectorAll('.producto').forEach((producto) => {
+        const boton = producto.querySelector('.pedir');
+        const nombre = producto.querySelector('.nombre').textContent;
+
+        boton.addEventListener('click', () => {
+          total = total + 1;
+          producto.classList.add('pedido');
+          boton.setAttribute('disabled', '');
+          boton.textContent = 'Pedido ✔';
+          contador.textContent = total;
+          mensaje.textContent = 'Último pedido: ' + nombre;
+          console.log(nombre + ' → total ' + total + ' | class="' + producto.getAttribute('class') + '" | ' + boton.outerHTML);
+        });
+      });
+
+      console.log('Menú listo con ' + document.querySelectorAll('.producto').length + ' productos');
+    </script>
+  </body>
+</html>

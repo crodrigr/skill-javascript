@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 13 — toggleAttribute y removeAttribute | Café Aroma</title>
+  </head>
+  <body>
+    <article class="tarjeta">
+      <h2 id="nombre">Café</h2>
+      <img id="foto" src="img/cafe.svg" alt="Taza de café">
+      <a id="carta" href="carta.html" target="_blank">Ver la carta</a>
+      <button id="pedir" class="pedir">Pedir</button>
+    </article>
+
+    <script>
+      const boton = document.getElementById('pedir');
+
+      console.log('toggle 1 → ' + boton.toggleAttribute('disabled') + ' (deshabilitado: ' + boton.disabled + ')');
+      console.log('toggle 2 → ' + boton.toggleAttribute('disabled') + ' (deshabilitado: ' + boton.disabled + ')');
+      console.log('toggle con true → ' + boton.toggleAttribute('disabled', true));
+      console.log('toggle con true otra vez → ' + boton.toggleAttribute('disabled', true));
+
+      boton.removeAttribute('disabled');
+      console.log('Tras removeAttribute: ' + boton.disabled);
+
+      const enlace = document.getElementById('carta');
+      enlace.removeAttribute('target');
+      console.log('target ahora: ' + enlace.getAttribute('target'));
+
+      enlace.removeAttribute('inventado');
+      console.log('Quitar un atributo que no existe no da error');
+    </script>
+  </body>
+</html>

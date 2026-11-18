@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 23 — outerText frente a textContent | Café Aroma</title>
+  </head>
+  <body>
+    <div id="caja">
+      <p id="nota">Hola <span hidden>(oculto)</span>mundo</p>
+    </div>
+
+    <script>
+      const nota = document.getElementById('nota');
+
+      console.log('textContent: ' + JSON.stringify(nota.textContent));
+      console.log('outerText: ' + JSON.stringify(nota.outerText));
+
+      nota.outerText = 'Texto nuevo';
+
+      console.log('¿Existe todavía #nota? ' + document.getElementById('nota'));
+      console.log('La caja ahora: ' + JSON.stringify(document.getElementById('caja').textContent.trim()));
+    </script>
+  </body>
+</html>
